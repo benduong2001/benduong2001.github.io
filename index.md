@@ -13,7 +13,7 @@
 ### Typography Image Data Science Project
 
 
-[Typography Image Data Science Project](/pdf/sample_presentation.pdf)
+[Typography Image Data Science Project](typography.md)
 <img src="images/fonts.png?raw=true"/>
 <img src="images/convfont.png?raw=true"/>
 ---
