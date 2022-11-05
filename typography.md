@@ -1,6 +1,9 @@
 
-# Geospatial Data Science Project: New York City Traffic
+# Typography Image Data Science Project
 This image data science project is a personal practice of unstructured image data. Much like the traffic project, I found the data first and that decided the project's direction. The dataset is images of all english alphabet letters and symbols in varying fonts. 
+
+**All of this is part of a Kaggle article tutorial that I authored.
+https://www.kaggle.com/code/bensonduong/font-type-image-classification
 
 ![](images/convfont.png) 
 ## Convolutional Neural Network
@@ -14,7 +17,4 @@ The font types include designations like "serif", or "sans-serif", and are actua
 * This grouping was automatically performed using unsupervised machine learning, rather than making a person manually categorize individuals fonts by hand.
 * Various unsupervised methods for dimensionality reduction were used, including PCA and Spectral Embedding, and finally k-means clustering was employed to actually group up points.
 
-All of this is part of a Kaggle article tutorial that I authored.
-
-https://www.kaggle.com/code/bensonduong/font-type-image-classification
 
