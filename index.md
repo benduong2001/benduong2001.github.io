@@ -9,12 +9,7 @@
 <img src="images/traffic_data.png?raw=true"/>
 
 ---
-[Project 2 Title](/pdf/sample_presentation.pdf)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
-
----
-
-
-
-
+[Typography Image Data Science Project](/pdf/sample_presentation.pdf)
+<img src="images/font.png?raw=true"/>
+<img src="images/convfont.png?raw=true"/>
 ---
