@@ -2,7 +2,7 @@
 # Typography Image Data Science Project
 This image data science project is a personal practice of unstructured image data. Much like the traffic project, I found the data first and that decided the project's direction. The dataset is images of all english alphabet letters and symbols in varying fonts. 
 
-**All of this is part of a Kaggle article tutorial that I authored.**
+### **All of this is part of a Kaggle article tutorial that I authored.**
 
 [(Click to view project)](https://www.kaggle.com/code/bensonduong/font-type-image-classification)
 
