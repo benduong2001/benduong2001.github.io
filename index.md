@@ -10,6 +10,6 @@
 
 ---
 [Typography Image Data Science Project](/pdf/sample_presentation.pdf)
-<img src="images/font.png?raw=true"/>
+<img src="images/fonts.png?raw=true"/>
 <img src="images/convfont.png?raw=true"/>
 ---
