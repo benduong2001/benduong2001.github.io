@@ -1,11 +1,10 @@
 
 # Geospatial Data Science Project: New York City Traffic
+This image data science project is a personal practice of unstructured image data. Much like the traffic project, I found the data first and that decided the project's direction. The dataset is images of all english alphabet letters and symbols in varying fonts. 
 
 ![](images/convfont.png) 
 ## Convolutional Neural Network
 
-
-This image data science project is a personal practice of unstructured image data. Much like the traffic project, I found the data first and that decided the project's direction. The dataset is images of all english alphabet letters and symbols in varying fonts. 
 The final endproduct of the project is an image classification model that can take in photo-scanned text documents, and automatically categorize the type of font most prevalent in the document. It will involve a convolutional neural network of variable input size, meaning it can take in images of varying dimensions.
 
 ![](images/fonts.png) 
