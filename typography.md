@@ -4,7 +4,7 @@ This image data science project is a personal practice of unstructured image dat
 
 **All of this is part of a Kaggle article tutorial that I authored.**
 
-[](https://www.kaggle.com/code/bensonduong/font-type-image-classification)
+![](https://www.kaggle.com/code/bensonduong/font-type-image-classification)
 
 
 ![](images/convfont.png) 
