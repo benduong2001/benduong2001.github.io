@@ -4,13 +4,13 @@
 * 
 * 
 
-### Food Rating Prediction given User Text Reviews'Emotion/Sentiments
+## Food Rating Prediction given User Text Reviews
 * This sentiment analysis prediction will predict whether a user's rating for a restaurant is negative, given the text data of their google review.
 * For this task, deep learning, 
 * In-depth Feature Engineering will be all that is needed to transform unstructured text data into explainable and structured, tabular data. 
 
 
-
+#### Results and Evaluation
 
 * Finally, a peek at the 20 strongest coefficients of the prediction model, and their corresponding words.
 * In other words, these following words in a google review are the highest associated with a user giving a restaurant a bad rating. 
