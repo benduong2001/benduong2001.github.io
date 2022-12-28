@@ -10,7 +10,7 @@
 * In-depth Feature Engineering will be all that is needed to transform unstructured text data into explainable and structured, tabular data. 
 
 
-#### Results and Evaluation
+#### **Results and Evaluation**
 
 * Finally, a peek at the 20 strongest coefficients of the prediction model, and their corresponding words.
 * In other words, these following words in a google review are the highest associated with a user giving a restaurant a bad rating. 
