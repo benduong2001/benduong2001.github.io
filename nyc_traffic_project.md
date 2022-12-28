@@ -1,6 +1,6 @@
 # Geospatial Data Science Project: New York City Traffic
 
-![](images/leaflet_gif.gif) 
+![](images/images_nyc_traffic/leaflet_gif.gif) 
 * Demonstration of Traffic Prediction App made with Flask and Leaflet.js
 
 This GIS data science project is an exploration of traffic volume statistics in New York City. It is an independent project that I've worked since Fall 2021.
