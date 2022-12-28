@@ -14,7 +14,7 @@
 
 #### **Results and Evaluation**
 * The final predictions on the test data showed remarkable accuracy; the confusion matrix also showed that the undersampling procedure fixed the class imbalance.
-![](images/images_food_recommendation/food_sentiment_coefficients.png) 
+![](images/images_food_recommendation/food_sentiment_confusion_matrix.png) 
 
 * Finally, a peek at the 20 strongest coefficients of the prediction model, and their corresponding words.
 * In other words, the presence of these following words in a google review are heavily associated with a user giving a restaurant a **bad rating**. 
