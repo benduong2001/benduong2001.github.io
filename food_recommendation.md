@@ -14,11 +14,11 @@
 * 
 
 #### **Modeling, with Class Imbalance Undersampling**
-* Logistic Regression was used. However, the target data had class imbalance where good ratings were over-represented. There are probably some explanations behind this (maybe users tend to be polite or optimistic). To address this, 10 models were trained separately, where each model's training data under-sampled the over-representative good ratings. These 10 models had each of their coefficients normalized for equal scaling, and each coefficient across the 10 models was averaged, (alongside the intercept).
+* Logistic Regression was used. However, the target data had class imbalance where good ratings were over-represented. There are probably some explanations behind this (maybe users tend to be polite or optimistic). To address this, 10 models were trained separately, where each model's training data had to under-sample the over-representative good ratings. These 10 models had each of their coefficients normalized for equal scaling, and each coefficient across the 10 models was averaged, (alongside the intercept).
 
 #### **Results and Evaluation**
-* The results on the test data showed that this prediction had a remarkable 72-85% accuracy in determining if a user would rate a restaurant as good or bad based on their google review; 
-* The confusion matrix also showed that the undersampling procedure fixed the class imbalance; had this not been done, the prediction model would have just given almost every review a positive rating.
+* The results on the test data showed that this prediction had a remarkable 79% accuracy in determining if a user would rate a restaurant as good or bad based on their google review; 
+* The confusion matrix also showed that the undersampling procedure fixed the class imbalance; had this not been done, the prediction model would have just given almost every review a good rating.
 
 ![](images/images_food_recommendation/food_sentiment_confusion_matrix.png) 
 
@@ -32,7 +32,10 @@
 
 ## User - Restaurant Interaction Prediction 
 
-* Unlike the previous task, this one will employ more advanced Deep Learning and pre-trained ML tools.
+* This task determines how likely a given user would dine a given restaurant (regardless if their eventual opinion), based on the user's history of previosuly cosen restaurants (if available) and the restaurant's history. 
+* Unlike the previous task, this one will employ more advanced deep learning and pre-trained ML tools. 
+
+* Using Jaccard Similarity in terms of users is not a good option, since it is very disconnected.
 
 #### **Word2Vec**
 * Gensim's Word2Vec model can make vector representations for a vocabulary of words.
