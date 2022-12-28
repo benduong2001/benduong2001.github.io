@@ -6,12 +6,6 @@ This image data science project is a personal practice of unstructured image dat
 
 [(Click to view project)](https://www.kaggle.com/code/bensonduong/font-type-image-classification)
 
-
-![](images/images_font/convfont.png) 
-## Convolutional Neural Network
-
-The final endproduct of the project is an image classification model that can take in photo-scanned text documents, and automatically categorize the type of font most prevalent in the document. It will involve a convolutional neural network of variable input size, meaning it can take in images of varying dimensions.
-
 ![](images/images_font/fonts_grouped.png) 
 ## Unsupervised Methods and Clustering
 
@@ -20,3 +14,7 @@ The font types include designations like "serif", or "sans-serif", and are actua
 * Various unsupervised methods for dimensionality reduction were used, including PCA and Spectral Embedding, and finally k-means clustering was employed to actually group up points.
 
 
+![](images/images_font/convfont.png) 
+## Convolutional Neural Network
+
+The final endproduct of the project is an image classification model that can take in photo-scanned text documents, and automatically categorize the type of font most prevalent in the document. It will involve a convolutional neural network of variable input size, meaning it can take in images of varying dimensions.
