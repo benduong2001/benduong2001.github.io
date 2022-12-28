@@ -37,6 +37,7 @@
 #### **Word2Vec**
 * Gensim's Word2Vec model can make vector representations for a vocabulary of words.
 * One of Word2Vec's fun features is the ability to do "arithmetic" with words. For the custom food dataset vocabulary that we trained Word2Vec on, we expect things like "barbeque - july 4th + thanksgiving" to equal "turkey" (i.e. July 4th is to barbeque, as Thanksgiving is to turkey). 
+
 ![](images/images_food_recommendation/food_word_arithmetic.png) 
 
 
