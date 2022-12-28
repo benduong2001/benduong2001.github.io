@@ -4,13 +4,17 @@
 * 
 * 
 
-## Food Rating Prediction given User Text Reviews
+## Restaurant Rating Prediction given User Text Reviews
 * This sentiment analysis prediction will predict whether a user's rating for a restaurant is negative, given the text data of their google review.
 * For this task, deep learning, 
 * In-depth Feature Engineering will be all that is needed to transform unstructured text data into explainable and structured, tabular data. 
 
+#### **Data Preparation and Feature Engineering**
+
+* 
+
 #### **Modeling, with Class Imbalance Undersampling**
-* Logistic Regression was used. However, the target data had class imbalance where good ratings were over-represented. There are probably some explanations behind this (maybe users tend to be polite or optimistic). To address this, 10 models were trained separately, where each model's training data under-sampled the over-representative good ratings. These 10 models had each of their coefficients normalized for equal scaling, which allowed to get each coefficient's average, alongside the intercept.
+* Logistic Regression was used. However, the target data had class imbalance where good ratings were over-represented. There are probably some explanations behind this (maybe users tend to be polite or optimistic). To address this, 10 models were trained separately, where each model's training data under-sampled the over-representative good ratings. These 10 models had each of their coefficients normalized for equal scaling, and each coefficient across the 10 models was averaged, (alongside the intercept).
 
 #### **Results and Evaluation**
 * The results on the test data showed that this prediction had a remarkable 72-85% accuracy in determining if a user would rate a restaurant as good or bad based on their google review; 
@@ -25,6 +29,23 @@
 
 * This makes sense, as most of these words have negative connotations, and even more impressively, it manages to pick out words that aren't just negative "emotional" words (like worst, or bland)- it also includes words that are otherwise arguably neutral but deemed negative *in the context of food at a restaurant* (overpriced, burnt, dry, cold)
 * This demonstrates our intricate feature engineering process was successful in extracting meaningfulness from the unstructured text data of the google reviews.
+
+## User - Restaurant Interaction Prediction 
+
+* Unlike the previous task, this one will employ more advanced Deep Learning and pre-trained ML tools.
+
+#### **Word2Vec**
+* Gensim's Word2Vec model can make vector representations for a vocabulary of words.
+* One of Word2Vec's fun features is the ability to do "arithmetic" with words. For the custom food dataset vocabulary that we trained Word2Vec on, we expect things like "barbeque - july 4th + thanksgiving" to equal "turkey" (i.e. July 4th is to barbeque, as Thanksgiving is to turkey). 
+![](images/images_food_recommendation/food_word_arithmetic.png) 
+
+
+
+
+
+
+
+
 
 
 
