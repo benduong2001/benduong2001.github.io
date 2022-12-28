@@ -32,7 +32,7 @@
 
 ## User - Restaurant Interaction Prediction 
 
-* This task determines how likely a given user would dine a given restaurant (regardless if their eventual opinion), based on the user's history of previosuly cosen restaurants (if available) and the restaurant's history. 
+* This task determines how likely a given user would dine a given restaurant (regardless if their eventual opinion), based on the user's history of previosuly cosen restaurants (if available) and the restaurant's history, or [***collaborative filtering***](https://en.wikipedia.org/wiki/Collaborative_filtering).
 * Unlike the previous task, this one will employ more advanced deep learning and pre-trained ML tools. 
 
 * Using Jaccard Similarity in terms of users is not a good option, since it is very disconnected.
