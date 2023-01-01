@@ -3,7 +3,7 @@
 * This Data Science project explores food related datasets for tasks involving customer recommendation: 
 
 
-## Restaurant Rating Prediction given User Text Reviews
+## **Restaurant Rating Prediction given User Text Reviews**
 * This sentiment analysis prediction will predict whether a user's rating for a restaurant is negative, given the text data of their google review.
 * In-depth Feature Engineering will be all that is needed to transform unstructured text data into explainable and structured, tabular data. 
 
@@ -37,7 +37,7 @@ vocabulary size.
 * This makes sense, as most of these words have negative connotations, and even more impressively, it manages to pick out words that aren't just negative "emotional" words (like worst, or bland)- it also includes words that are otherwise arguably neutral but deemed negative *in the context of food at a restaurant* (overpriced, burnt, dry, cold)
 * This demonstrates our intricate feature engineering process was successful in extracting meaningfulness from the unstructured text data of the google reviews.
 
-## User - Restaurant Interaction Prediction 
+## **User - Restaurant Interaction Prediction**
 
 * This task determines how likely a given user would dine a given restaurant (regardless if their eventual opinion), based on the user's history of previosuly chosen restaurants (if available) and the restaurant's history of customers, or [***collaborative filtering***](https://en.wikipedia.org/wiki/Collaborative_filtering).
 * Unlike the previous task, this one will employ more advanced deep learning and pre-trained ML tools. 
