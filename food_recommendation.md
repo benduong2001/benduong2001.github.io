@@ -35,17 +35,29 @@
 * This task determines how likely a given user would dine a given restaurant (regardless if their eventual opinion), based on the user's history of previosuly chosen restaurants (if available) and the restaurant's history of customers, or [***collaborative filtering***](https://en.wikipedia.org/wiki/Collaborative_filtering).
 * Unlike the previous task, this one will employ more advanced deep learning and pre-trained ML tools. 
 
-* Using Jaccard Similarity in terms of users is not a good option, since it is very disconnected.
-
 #### **Word2Vec**
 * Gensim's Word2Vec model can make vector representations for a vocabulary of words.
 * One of Word2Vec's fun features is the ability to do "arithmetic" with words. For the custom food dataset vocabulary that we trained Word2Vec on, we expect things like "barbeque - july 4th + thanksgiving" to equal "turkey" (i.e. July 4th is to barbeque, as Thanksgiving is to turkey). 
 
 ![](images/images_food_recommendation/food_word_arithmetic.png) 
 
+* The vector representation of a restaurant is obtained by getting the "average vector" (or centroid) of the Word2vec vector representations of the words seen in that restaurant's reviews. For exploratory purposes, it's also nice to check the word that "represents" a restaurant - which is just the word whose vector representation to that average vector.
+* Sometimes, that representative word is very obvious, being a very frequently appearing word in the reviews (like pizza)
 
+![](images/images_food_recommendation/restaurant_embedding_pizza.png) 
 
+* Other times, it is a subtle word that might not even have appeared in the reviews at all. For this restaurant with only 1 review, it was deemed mediterranean, even though the word mediterranean is nowhere to be seen. Only 1 word might have tipped it to that label - "Gyro"
 
+![](images/images_food_recommendation/restaurant_embedding_gyro.png) 
+
+#### **Clustering**
+
+* After doing this, each restaurant should have its own vector representation; the same could be done to each user. This can be mapped to scatterplots (made with TSNE): each point in space on the left scatterplot is a restaurant, while on the right are users. 
+* Furthermore, it is possible to group up the vector representations
+
+![](images/images_food_recommendation/restaurant_embedding_gyro.png) 
+
+* By using k-means clustering, we found a way to group the restaurants based on the textual content of their reviews, and group the users by the textual content of the reviews they've written.
 
 
 
