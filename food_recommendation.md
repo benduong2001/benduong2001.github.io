@@ -1,17 +1,24 @@
 # Food Recommendation Data Science Project
 
-* This Data Science project explores food related datasets for tasks involving customer recommendation:
-* 
-* 
+* This Data Science project explores food related datasets for tasks involving customer recommendation: 
+
 
 ## Restaurant Rating Prediction given User Text Reviews
 * This sentiment analysis prediction will predict whether a user's rating for a restaurant is negative, given the text data of their google review.
-* For this task, deep learning, 
 * In-depth Feature Engineering will be all that is needed to transform unstructured text data into explainable and structured, tabular data. 
 
 #### **Data Preparation and Feature Engineering**
 
-* 
+
+1. Preprocessing was done on the review text column like lowercasing, and replacement of non alphanumeric characters with whitespace.
+2. TF-IDF vectorization was done on the processed review text column, dropping  NLTK’s English stop-words list. This produced a matrix with column count as the
+vocabulary size. 
+3. The review rows of the new TF-IDF matrix were grouped separately by the corresponding binary rating category. 
+4. Then within each group, the rows were collapsed with a column-wise mean (i. e. np.mean with axis = 0). This produced a new matrix that had a row count of 2 and a column count of vocabulary size.
+5. Do a column-wise argmax (i. e. axis = 0) on the new array, and filter only for the columns where the argmax row index corresponds to the category for bad ratings. Use these column indices and the vocabulary mapping of the saved TF-IDF vectorizer object to retrieve the words.
+6. The previous steps basically filtered for the words that have a stronger "belongingness" to bad reviews compared to good reviews, using TF-IDF. But now, it was decided that among these words, only 100 is needed. While all of these words have stronger relevance to bad reviews, some are  stronger than others, so these words are sorted by the largest absolute difference (between the 2 rows), and the topmost 100 got picked.
+7. With these 100 words, and typical bag-of-words count vectorized matrix was produced upon the original reviews dataset, and serves as the input matrix to the model.
+
 
 #### **Modeling, with Class Imbalance Undersampling**
 * Logistic Regression was used. However, the target data had class imbalance where good ratings were over-represented. There are probably some explanations behind this (maybe users tend to be polite or optimistic). To address this, 10 models were trained separately, where each model's training data had to under-sample the over-representative good ratings. These 10 models had each of their coefficients normalized for equal scaling, and each coefficient across the 10 models was averaged, (alongside the intercept).
@@ -41,7 +48,8 @@
 
 ![](images/images_food_recommendation/food_word_arithmetic.png) 
 
-* The vector representation of a restaurant is obtained by getting the "average vector" (or centroid) of the Word2vec vector representations of the words seen in that restaurant's reviews. For exploratory purposes, it's also nice to check the word that "represents" a restaurant - which is just the word whose vector representation to that average vector.
+* The vector representation of a restaurant is obtained by getting the "average vector" (or centroid) of the Word2vec vector representations of the words seen in that restaurant's reviews. 
+* For exploratory purposes, it's also nice to check the word that "represents" a restaurant - which is just the word whose vector representation to that average vector.
 * Sometimes, that representative word is very obvious, being a very frequently appearing word in the reviews (like pizza)
 
 ![](images/images_food_recommendation/restaurant_embedding_pizza.png) 
