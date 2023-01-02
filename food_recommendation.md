@@ -71,9 +71,9 @@ vocabulary size.
 
 * While this is not necessary, it would be insightful to actually see what kinds of groups these mean for restaurants and users. Using TF-IDF on the words that show up in each group's collection of reviews, the leading keywords are extracted. Examples are shown
 
-![](images/images_food_recommendation/colored_embeddings_scatterplot_.png) 
+![](images/images_food_recommendation/keywords_business.png) 
 
-![](images/images_food_recommendation/colored_embeddings_scatterplot_.png) 
+![](images/images_food_recommendation/keywords_user.png) 
 
 * The overarching direction of this project is to connect user-types to restaurant-types. For example, restaurants of Group 4 tends to make desserts (sweets, confectionery, pastries), and users of group 0 tends to eat mostly desserts. Ideally, to give dessert restaurant recommendations to dessert-lovers.
 
