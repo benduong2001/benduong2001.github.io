@@ -49,7 +49,7 @@ vocabulary size.
 ![](images/images_food_recommendation/food_word_arithmetic.png) 
 
 * The vector representation of a restaurant is obtained by getting the "average vector" (or centroid) of the Word2vec vector representations of the words seen in that restaurant's reviews. 
-* For exploratory purposes, it's also nice to check the word that "represents" a restaurant - which is just the word whose vector representation to that average vector.
+* For exploratory purposes, it's also nice to check the word that "represents" a restaurant - which is just the word whose vector representation is closest to that average vector.
 * Sometimes, that representative word is very obvious, being a very frequently appearing word in the reviews (like pizza)
 
 ![](images/images_food_recommendation/restaurant_embedding_pizza.png) 
