@@ -63,11 +63,19 @@ vocabulary size.
 * After doing this, each restaurant should have its own vector representation; the same could be done to each user. This can be mapped to scatterplots (made with TSNE): each point in space on the left scatterplot is a restaurant, while on the right are users. 
 * Furthermore, it is possible to group up the vector representations
 
-![](images/images_food_recommendation/uncolored_embeddings_scatterplot.png) 
+![](images/images_food_recommendation/uncolored_embeddings_scatterplot_.png) 
 
 * By using k-means clustering, we found a way to group the restaurants based on the textual content of their reviews, and group the users by the textual content of the reviews they've written.
 
-![](images/images_food_recommendation/colored_embeddings_scatterplot.png) 
+![](images/images_food_recommendation/colored_embeddings_scatterplot_.png) 
+
+* While this is not necessary, it would be insightful to actually see what kinds of groups these mean for restaurants and users. Using TF-IDF on the words that show up in each group's collection of reviews, the leading keywords are extracted. Examples are shown
+
+![](images/images_food_recommendation/colored_embeddings_scatterplot_.png) 
+
+![](images/images_food_recommendation/colored_embeddings_scatterplot_.png) 
+
+* The overarching direction of this project is to connect user-types to restaurant-types. For example, restaurants of Group 4 tends to make desserts (sweets, confectionery, pastries), and users of group 0 tends to eat mostly desserts. Ideally, to give dessert restaurant recommendations to dessert-lovers.
 
 
 
