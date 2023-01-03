@@ -77,12 +77,12 @@ vocabulary size.
 
 * The overarching direction of this project is to connect user-types to restaurant-types. For example, restaurants of Group 4 tends to make desserts (sweets, confectionery, pastries), and users of group 0 tends to eat mostly desserts. Ideally, to give dessert restaurant recommendations to dessert-lovers.
 
-#### **Prediction Modeling: Binary Classification on if a given user and restaurant are likely to interact**
+#### **Prediction Modeling: Binary Classification**
 
 * Finally, the last part is to create a prediction model that answers whether or not a given user is likely to interact with a given restaurant... with the underlying data being based on the types of food that the given restaurant serves and the types of food the user has eaten at other restaurants.
 * 2 different model versions will be created and trained towards the same goal of binary classification: a regular single-layered logistic regression with Sklearn; and a Multi-layered Deep Neural Network with TensorFlow
 * For this interaction problem, it is necessary to manually create "artificial, unseen" pair; every user-restaurant pair in the dataset is real and observed, so there is no "negative" samples to work with. An elaborate sampling procedure was developed that tries to find never-before-seen (thus negative) combinations of users and restaurant, in a way that tried to be natually random as possible. This of course brings into consideration that
-* After creating the negative samples (roughly the same amount as positive samples), a 2D PCA Scatterplot was created, and verified that the artificial samples were a as almost naturally random as intended (2 overlapping clouds of points)
+* After creating the negative samples (roughly the same amount as positive samples), a 2D PCA Scatterplot was created, to verify that the artificial samples were almost naturally random as intended (showing that they are perfectly similar as 2 indistinguishable, overlapping clouds of points - blue and green)
 
 ![](images/images_food_recommendation/NN_PCA.png) 
 
@@ -99,7 +99,7 @@ vocabulary size.
 
 * This model uses 3 layers (2 ReLU, 1 sigmoid), with Binary Cross Entropy Loss.
 * For metrics of the Multi-Layered Neural Network as the prediction model, it is around 70% accurate in correctly determining whether or not a given user has visited a given restaurant.
-* While this metric is clearly an improvement from the logistic regression, it is not far enough of a jump in improvement. At this stage, it is wise to see if using Deep Neural Networks over Logistic Regression gives diminishing returns.
+* While this metric is clearly an improvement from the logistic regression, it is not far enough of a jump in improvement. At this stage, it is wise to see if using Deep Neural Networks over Logistic Regression run into diminishing returns.
 
 ![](images/images_food_recommendation/NN_Confusion_matrix.png) 
 
