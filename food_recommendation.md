@@ -82,14 +82,14 @@ vocabulary size.
 
 ![](images/images_food_recommendation/keywords_users.png) 
 
-* The overarching direction of this project is to connect user-types to restaurant-types. For example, restaurants of Group 4 tends to make desserts (sweets, confectionery, pastries), and users of group 0 tends to eat mostly desserts. Ideally, to give dessert restaurant recommendations to dessert-lovers.
+* The overarching direction of this project is to connect user-types to restaurant-types. For example, restaurants of Group 4 tends to make desserts (sweets, confectionery, pastries), and users of group 0 tends to eat mostly desserts. Ideally this project seeks to connect these dessert-lovers to these dessert restaurants.
 
 #### **Prediction Modeling: Binary Classification**
 
 * Finally, the last part is to create a prediction model that answers whether or not a given user is likely to interact with a given restaurant... with the underlying data being based on the types of food that the given restaurant serves and the types of food the user has eaten at other restaurants.
 * 2 different model versions will be created and trained towards the same goal of binary classification: a regular single-layered logistic regression with Sklearn; and a Multi-layered Deep Neural Network with TensorFlow
-* For this interaction problem, it is necessary to manually create "artificial, unseen" pair; every user-restaurant pair in the dataset is real and observed, so there is no "negative" samples to work with. An elaborate sampling procedure was developed that tries to find never-before-seen (thus negative) combinations of users and restaurant, in a way that tried to be natually random as possible. This of course brings into consideration that
-* After creating the negative samples (roughly the same amount as positive samples), a 2D PCA Scatterplot was created, to verify that the artificial samples were almost naturally random as intended (showing that they are perfectly similar as 2 indistinguishable, overlapping clouds of points - blue and green)
+* For this interaction problem, it is necessary to manually create "artificial, unseen" pair; every user-restaurant pair in the dataset is real and observed, so there is no "negative" samples to work with. An elaborate sampling procedure was developed that tries to find never-before-seen (thus negative) combinations of users and restaurant, in a way that tried to be natually random as possible. This of course brings into consideration an unspoken assumption that the given dataset is an extremely accurate representation of real life; in other words, we are assuming there is no cases where the artificial pairs we created actually do exist in real life but weren't in the dataset.
+* After creating the negative samples (roughly the same amount as positive samples), a 2D PCA scatterplot was created to verify that the artificial samples were almost naturally random as intended (showing that they are perfectly similar as 2 indistinguishable, overlapping clouds of points - blue and green)
 
 ![](images/images_food_recommendation/NN_PCA.png) 
 
