@@ -39,7 +39,7 @@ vocabulary size.
 
 ## **User - Restaurant Interaction Prediction**
 
-* This task determines how likely a given user would dine a given restaurant (regardless if their eventual opinion), based on the user's history of previosuly chosen restaurants (if available) and the restaurant's history of customers, or [***collaborative filtering***](https://en.wikipedia.org/wiki/Collaborative_filtering).
+* This task determines how likely a given user would dine at a given restaurant (regardless if their eventual opinion), based on the user's history of previosuly chosen restaurants (if available) and the restaurant's history of customers, or [***collaborative filtering***](https://en.wikipedia.org/wiki/Collaborative_filtering).
 * Unlike the previous task, this one will employ more advanced deep learning and pre-trained ML tools. 
 
 #### **Word2Vec**
@@ -58,7 +58,7 @@ vocabulary size.
 
 ![](images/images_food_recommendation/restaurant_embedding_gyro.png) 
 
-#### **Clustering**
+#### **Unsupervised ML: Grouping Apart the Restaurants and Users with K-Means Clustering**
 
 * After doing this, each restaurant should have its own vector representation; the same could be done to each user. This can be mapped to scatterplots (made with TSNE): each point in space on the left scatterplot is a restaurant, while on the right are users. 
 * Furthermore, it is possible to group up the vector representations
@@ -77,10 +77,31 @@ vocabulary size.
 
 * The overarching direction of this project is to connect user-types to restaurant-types. For example, restaurants of Group 4 tends to make desserts (sweets, confectionery, pastries), and users of group 0 tends to eat mostly desserts. Ideally, to give dessert restaurant recommendations to dessert-lovers.
 
+#### **Prediction Modeling: Binary Classification on if a given user and restaurant are likely to interact**
 
+* Finally, the last part is to create a prediction model that answers whether or not a given user is likely to interact with a given restaurant... with the underlying data being based on the types of food that the given restaurant serves and the types of food the user has eaten at other restaurants.
+* 2 different model versions will be created and trained towards the same goal of binary classification: a regular single-layered logistic regression with Sklearn; and a Multi-layered Deep Neural Network with TensorFlow
+* For this interaction problem, it is necessary to manually create "artificial, unseen" pair; every user-restaurant pair in the dataset is real and observed, so there is no "negative" samples to work with. An elaborate sampling procedure was developed that tries to find never-before-seen (thus negative) combinations of users and restaurant, in a way that tried to be natually random as possible. This of course brings into consideration that
+* After creating the negative samples (roughly the same amount as positive samples), a 2D PCA Scatterplot was created, and verified that the artificial samples were a as almost naturally random as intended (2 overlapping clouds of points)
 
+![](images/images_food_recommendation/NN_PCA.png) 
 
+* The input matrix is basically concatenating the user and restaurant embeddings from earlier for each pair. Since the embedding sizes for the user and restaurant were both 100, the input matrix's shape is N rows by 200 columns, where N = the number of "real, observed" samples + "artificial, unseen" samples.
 
+**Logistic Regression**
+
+* For metrics of the Logistic Regression as the prediction model, it is around 60% accurate in correctly determining whether or not a given user has visited a given restaurant.
+* This score isn't awful, but clearly not good enough either; nevertheless, it is a good starting point open to more adjustments to the model; for example, the embedding sizes of the user and restaurants Word2Vec vector representations can be increased from 100 to 1000 dimensions (for a 2000 dimensional matrix)
+
+![](images/images_food_recommendation/LogReg_Confusion_matrix.png) 
+
+**Multi-Layered Neural Network**
+
+* This model uses 3 layers (2 ReLU, 1 sigmoid), with Binary Cross Entropy Loss.
+* For metrics of the Multi-Layered Neural Network as the prediction model, it is around 70% accurate in correctly determining whether or not a given user has visited a given restaurant.
+* While this metric is clearly an improvement from the logistic regression, it is not far enough of a jump in improvement. At this stage, it is wise to see if using Deep Neural Networks over Logistic Regression gives diminishing returns.
+
+![](images/images_food_recommendation/NN_Confusion_matrix.png) 
 
 
 
