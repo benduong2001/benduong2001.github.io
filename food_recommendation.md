@@ -1,7 +1,14 @@
 # Food Recommendation Data Science Project
 
-* This Data Science project explores food related datasets for tasks involving customer recommendation: 
+* This Data Science project explores food related datasets (unstructured text data) for prediction data analysis tasks involving customer recommendation: 
 
+* This project will show:
+   * Articulately-reasoned Feature Engineering on transforming unstructured data (text) into tabular structured data to train logistic regression on, using NLP techniques (Word2Vec and Tf-Idf).
+   * Data Analysis and results extendable to useful business questions on customer recommendation
+   * Predictions models with promising results and accuracy
+   * Succinct and Intuitive Data visualizations
+   * A balanced use of both basic machine learning (e.g. Sklearn logistic regression) vs deep learning (e.g. multi-layered neural networks, pretrained models)- understanding when either should be used appropriately, thereby seeing their pro's and con's.
+   * Python code that includes object oriented programming.
 
 ## **Restaurant Rating Prediction given User Text Reviews**
 * This sentiment analysis prediction will predict whether a user's rating for a restaurant is negative, given the text data of their google review.
