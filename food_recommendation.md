@@ -11,7 +11,7 @@
    * Python code that includes object oriented programming.
 
 ## **Restaurant Rating Prediction given User Text Reviews**
-* This sentiment analysis prediction will predict whether a user's rating for a restaurant is negative, given the text data of their google review.
+* For this 1st task, a basic sentiment analysis model will be made and trained to predict whether a user's rating for a restaurant is negative or not, given the text data of their google review.
 * In-depth Feature Engineering will be all that is needed to transform unstructured text data into explainable and structured, tabular data. 
 
 #### **Data Preparation and Feature Engineering**
@@ -46,7 +46,7 @@ vocabulary size.
 
 ## **User - Restaurant Interaction Prediction**
 
-* This task determines how likely a given user would dine at a given restaurant (regardless if their eventual opinion), based on the user's history of previosuly chosen restaurants (if available) and the restaurant's history of customers, or [***collaborative filtering***](https://en.wikipedia.org/wiki/Collaborative_filtering).
+* This 2nd task determines how likely a given user would dine at a given restaurant (regardless if their eventual opinion), based on the user's history of previosuly chosen restaurants (if available) and the restaurant's history of customers. In other words, [***collaborative filtering***](https://en.wikipedia.org/wiki/Collaborative_filtering).
 * Unlike the previous task, this one will employ more advanced deep learning and pre-trained ML tools. 
 
 #### **Word2Vec**
