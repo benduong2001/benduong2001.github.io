@@ -8,7 +8,7 @@
    * Predictions models with promising results and accuracy
    * Succinct and Intuitive Data visualizations
    * A balanced use of both basic machine learning (e.g. Sklearn logistic regression) vs deep learning (e.g. multi-layered neural networks, pretrained models)- understanding when either should be used appropriately, thereby seeing their pro's and con's.
-   * Python code that includes object oriented programming, and pyspark.
+   * Python code that includes object oriented programming, and Pyspark. It is also designed in a way to be updateable for new incoming data
 
 ## **Restaurant Rating Prediction given User Text Reviews**
 * For this 1st task, a basic sentiment analysis model will be made and trained to predict whether a user's rating for a restaurant is negative or not, given the text data of their google review.
