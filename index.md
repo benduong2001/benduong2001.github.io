@@ -20,4 +20,5 @@
 
 ### Restaurant User Recommendation Project
 [Food Recommendation Data Science Project](food_recommendation.md)
+<img src="images/images_food_recommendation/keywords_business.png?raw=true"/>
 ---
