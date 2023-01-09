@@ -14,7 +14,7 @@
 * For this 1st task, a basic sentiment analysis model will be made and trained to predict whether a user's rating for a restaurant is negative or not, given the text data of their google review.
 * In-depth Feature Engineering will be all that is needed to transform unstructured text data into explainable and structured, tabular data. 
 
-#### **Data Preparation and Feature Engineering**
+### **Data Preparation and Feature Engineering**
 
 
 1. Preprocessing was done on the review text column like lowercasing, and replacement of non alphanumeric characters with whitespace.
@@ -27,11 +27,11 @@ vocabulary size.
 7. With these 100 words, and typical bag-of-words count vectorized matrix was produced upon the original reviews dataset, and serves as the input matrix to the model.
 
 
-#### **Modeling, with Class Imbalance Undersampling**
+### **Modeling, with Class Imbalance Undersampling**
 
 * Logistic Regression was used. However, the target data had class imbalance where good ratings were over-represented. There are probably some explanations behind this (maybe users tend to be polite or optimistic). To address this, 10 models were trained separately, where each model's training data had to under-sample the over-representative good ratings. These 10 models had each of their coefficients normalized for equal scaling, and each coefficient across the 10 models was averaged, (alongside the intercept).
 
-#### **Results and Evaluation**
+### **Results and Evaluation**
 
 * The results on the test data showed that this prediction had a remarkable 79% accuracy in determining if a user would rate a restaurant as good or bad based on their google review; 
 * The confusion matrix also showed that the undersampling procedure fixed the class imbalance; had this not been done, the prediction model would have just given almost every review a good rating.
@@ -51,7 +51,7 @@ vocabulary size.
 * This 2nd task determines how likely a given user would dine at a given restaurant (regardless if their eventual opinion), based on the user's history of previosuly chosen restaurants (if available) and the restaurant's history of customers. In other words, [***collaborative filtering***](https://en.wikipedia.org/wiki/Collaborative_filtering).
 * Unlike the previous task, this one will employ more advanced deep learning and pre-trained ML tools. 
 
-#### **Word2Vec**
+### **Word2Vec**
 
 * Gensim's Word2Vec model can make vector representations for a vocabulary of words.
 * One of Word2Vec's fun features is the ability to do "arithmetic" with words. For the custom food dataset vocabulary that we trained Word2Vec on, we expect things like "barbeque - july 4th + thanksgiving" to equal "turkey" (i.e. July 4th is to barbeque, as Thanksgiving is to turkey). 
@@ -68,7 +68,7 @@ vocabulary size.
 
 ![](images/images_food_recommendation/restaurant_embedding_gyro.png) 
 
-#### **Unsupervised ML: Grouping Apart the Restaurants and Users with K-Means Clustering**
+### **Unsupervised ML: Grouping Apart the Restaurants and Users with K-Means Clustering**
 
 * After doing this, each restaurant should have its own vector representation; the same could be done to each user. This can be mapped to scatterplots (made with TSNE): each point in space on the left scatterplot is a restaurant, while on the right are users. 
 * Furthermore, it is possible to group up the vector representations
@@ -87,7 +87,7 @@ vocabulary size.
 
 * The overarching direction of this project is to connect user-types to restaurant-types. For example, restaurants of Group 4 tends to make desserts (sweets, confectionery, pastries), and users of group 0 tends to eat mostly desserts. Ideally this project seeks to connect these dessert-lovers to these dessert restaurants.
 
-#### **Prediction Modeling: Binary Classification**
+### **Prediction Modeling: Binary Classification**
 
 * Finally, the last part is to create a prediction model that answers whether or not a given user is likely to interact with a given restaurant... with the underlying data being based on the types of food that the given restaurant serves and the types of food the user has eaten at other restaurants.
 * 2 different model versions will be created and trained towards the same goal of binary classification: a regular single-layered logistic regression with Sklearn; and a Multi-layered Deep Neural Network with TensorFlow
