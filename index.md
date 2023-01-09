@@ -1,5 +1,10 @@
-## Data Science Project Portfolio
+# Data Science Project Portfolio
 
+---
+
+### Restaurant User Recommendation Project
+[Food Recommendation Data Science Project](food_recommendation.md)
+<img src="images/images_food_recommendation/keywords_business.png?raw=true"/>
 ---
 
 ### NYC Traffic Project
@@ -15,10 +20,4 @@
 [Typography Image Data Science Project](typography.md)
 <img src="images/fonts.png?raw=true"/>
 <img src="images/convfont.png?raw=true"/>
----
-
-
-### Restaurant User Recommendation Project
-[Food Recommendation Data Science Project](food_recommendation.md)
-<img src="images/images_food_recommendation/keywords_business.png?raw=true"/>
 ---
