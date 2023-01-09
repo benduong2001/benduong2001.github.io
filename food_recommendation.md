@@ -5,12 +5,12 @@
 * This project will show:
    * Articulately-reasoned Feature Engineering on transforming unstructured data (text) into tabular, structured data to train logistic regression on using NLP techniques (Word2Vec and Tf-Idf).
    * Data Analysis and results applicable to useful business questions on customer recommendation
-   * Predictions models with promising results and accuracy
    * Succinct and Intuitive Data visualizations
-   * A balanced use of both basic machine learning (e.g. Sklearn logistic regression) vs deep learning (e.g. multi-layered neural networks, pretrained models)- understanding when either should be used appropriately, thereby seeing their pro's and con's.
-   * Python code that includes object oriented programming, and Pyspark. It is also designed in a way to be updateable for new incoming data
+   * A balanced use of both basic machine learning (e.g. Sklearn logistic regression) vs deep learning (e.g. multi-layered neural networks, pretrained models)- nuanced understanding when either should be used appropriately, thereby seeing their pro's and con's.
+   * Python code that includes object oriented programming, and Pyspark. It is also designed in a way to be updateable, and extensible for new incoming data
 
 ## **Restaurant Rating Prediction given User Text Reviews**
+
 * For this 1st task, a basic sentiment analysis model will be made and trained to predict whether a user's rating for a restaurant is negative or not, given the text data of their google review.
 * In-depth Feature Engineering will be all that is needed to transform unstructured text data into explainable and structured, tabular data. 
 
@@ -28,9 +28,11 @@ vocabulary size.
 
 
 #### **Modeling, with Class Imbalance Undersampling**
+
 * Logistic Regression was used. However, the target data had class imbalance where good ratings were over-represented. There are probably some explanations behind this (maybe users tend to be polite or optimistic). To address this, 10 models were trained separately, where each model's training data had to under-sample the over-representative good ratings. These 10 models had each of their coefficients normalized for equal scaling, and each coefficient across the 10 models was averaged, (alongside the intercept).
 
 #### **Results and Evaluation**
+
 * The results on the test data showed that this prediction had a remarkable 79% accuracy in determining if a user would rate a restaurant as good or bad based on their google review; 
 * The confusion matrix also showed that the undersampling procedure fixed the class imbalance; had this not been done, the prediction model would have just given almost every review a good rating.
 
@@ -50,6 +52,7 @@ vocabulary size.
 * Unlike the previous task, this one will employ more advanced deep learning and pre-trained ML tools. 
 
 #### **Word2Vec**
+
 * Gensim's Word2Vec model can make vector representations for a vocabulary of words.
 * One of Word2Vec's fun features is the ability to do "arithmetic" with words. For the custom food dataset vocabulary that we trained Word2Vec on, we expect things like "barbeque - july 4th + thanksgiving" to equal "turkey" (i.e. July 4th is to barbeque, as Thanksgiving is to turkey). 
 
@@ -88,24 +91,20 @@ vocabulary size.
 
 * Finally, the last part is to create a prediction model that answers whether or not a given user is likely to interact with a given restaurant... with the underlying data being based on the types of food that the given restaurant serves and the types of food the user has eaten at other restaurants.
 * 2 different model versions will be created and trained towards the same goal of binary classification: a regular single-layered logistic regression with Sklearn; and a Multi-layered Deep Neural Network with TensorFlow
-* For this interaction problem, it is necessary to manually create "artificial, unseen" pair; every user-restaurant pair in the dataset is real and observed, so there is no "negative" samples to work with. An elaborate sampling procedure was developed that tries to find never-before-seen (thus negative) combinations of users and restaurant, in a way that tried to be natually random as possible. This of course brings into consideration an unspoken assumption that the given dataset is an extremely accurate representation of real life; in other words, we are assuming there is no cases where the artificial pairs we created actually do exist in real life but weren't in the dataset.
-* After creating the negative samples (roughly the same amount as positive samples), a 2D PCA scatterplot was created to verify that the artificial samples were almost naturally random as intended (showing that they are perfectly similar as 2 indistinguishable, overlapping clouds of points - blue and green)
-
-![](images/images_food_recommendation/NN_PCA.png) 
-
+* For this interaction problem, it is necessary to manually create "artificial, unseen" pair; every user-restaurant pair in the dataset is real and observed, so there is no "negative" samples to work with. A sampling procedure was developed that tries to find "negative" (a.k.a. never-before-seen) combinations of users and restaurant. This of course brings into consideration an unspoken assumption that the given dataset is an extremely accurate representation of real life; in other words, we are assuming there is no cases where the artificial pairs we created actually do exist in real life but weren't in the dataset.
 * The input matrix is basically concatenating the user and restaurant embeddings from earlier for each pair. Since the embedding sizes for the user and restaurant were both 100, the input matrix's shape is N rows by 200 columns, where N = the number of "real, observed" samples + "artificial, unseen" samples.
 
 **Logistic Regression**
 
-* For metrics of the Logistic Regression as the prediction model, it is around 60% accurate in correctly determining whether or not a given user has visited a given restaurant.
-* This score isn't awful, but clearly not good enough either; nevertheless, it is a good starting point open to more adjustments to the model; for example, the embedding sizes of the user and restaurants Word2Vec vector representations can be increased from 100 to 1000 dimensions (for a 2000 dimensional matrix)
+* The baseline model will use logistic regression: in terms of metrics, it's around 63-66% accurate in correctly determining whether or not a given user has visited a given restaurant. Its AUC score is 64%.
+* For a baseline model, this score isn't awful, but clearly not good enough either; nevertheless, it is a good starting point open to more adjustments to the model; for example, the embedding sizes of the user and restaurants Word2Vec vector representations can be increased from 100 to 1000 dimensions (for a 2000 dimensional matrix)
 
 ![](images/images_food_recommendation/LogReg_Confusion_matrix.png) 
 
 **Multi-Layered Neural Network**
 
 * This model uses 3 layers (2 ReLU, 1 sigmoid), with Binary Cross Entropy Loss.
-* For metrics of the Multi-Layered Neural Network as the prediction model, it is around 70% accurate in correctly determining whether or not a given user has visited a given restaurant.
+* For metrics of the Multi-Layered Neural Network as the prediction model, it is around 73% accurate in correctly determining whether or not a given user has visited a given restaurant.
 * While this metric is clearly an improvement from the logistic regression, it is not far enough of a jump in improvement. At this stage, it is wise to see if using Deep Neural Networks over Logistic Regression run into diminishing returns.
 
 ![](images/images_food_recommendation/NN_Confusion_matrix.png) 
