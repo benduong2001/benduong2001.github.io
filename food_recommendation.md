@@ -11,7 +11,7 @@
 
 ## **Restaurant Rating Prediction given User Text Reviews**
 
-* For this 1st task, a basic sentiment analysis model will be made and trained to predict whether a user's rating for a restaurant is negative or not, given the text data of their google review.
+* For this 1st task, a basic sentiment analysis model will be made and trained to predict whether a user's rating for a restaurant is negative or not, given the text data of their text review.
 * In-depth Feature Engineering will be all that is needed to transform unstructured text data into explainable and structured, tabular data. 
 
 ### **Data Preparation and Feature Engineering**
@@ -33,7 +33,7 @@ vocabulary size.
 
 ### **Results and Evaluation**
 
-* The results on the test data showed that this prediction had a remarkable 79% accuracy in determining if a user would rate a restaurant as good or bad based on their google review; 
+* The results on the test data showed that this prediction had a remarkable 79% accuracy in determining if a user would rate a restaurant as good or bad based on their text review; 
 * The confusion matrix also showed that the undersampling procedure fixed the class imbalance; had this not been done, the prediction model would have just given almost every review a good rating.
 
 ![](images/images_food_recommendation/food_sentiment_confusion_matrix.png) 
