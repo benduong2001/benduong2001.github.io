@@ -86,7 +86,7 @@ vocabulary size.
 ![](images/images_food_recommendation/keywords_users.png) 
 
 * The overarching direction of this project is to connect user-types to restaurant-types. For example, restaurants of Group 4 tends to make desserts (sweets, confectionery, pastries), and user-group 0 tends to eat mostly desserts. 
-* **In other words, we are grouping up restaurants by the food they serve, and grouping up the restaurant-goers by the food they review, and hoping that a one-to-one correspondence (if it even exists) becomes visible between restaurant-types and customer-types in terms of food.** This would allow us to recommend the dessert-lovers (as seen above in group 0) to the dessert restaurants (as seen above in group 4). ...And recommend Italian food lovers to italian restaurants, and etc.
+* **In other words, we are grouping up restaurants by the food they serve, and grouping up the restaurant-goers by the food they review, and hoping that a one-to-one correspondence (if it even exists) becomes visible between restaurant-types and customer-types in terms of food.** This would allow us to recommend the dessert-lovers (as seen above in group 0) to the dessert restaurants (as seen above in group 4). ...And recommend Italian food lovers to Italian restaurants, and etc.
 
 ### **Prediction Modeling: Binary Classification**
 
