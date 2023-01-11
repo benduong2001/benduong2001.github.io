@@ -64,7 +64,7 @@ vocabulary size.
 
 ![](images/images_food_recommendation/restaurant_embedding_pizza.png) 
 
-* Other times, it is a subtle word that might not even have appeared in the reviews at all. For this restaurant with only 1 review, it was deemed mediterranean, even though the word mediterranean is nowhere to be seen. Only 1 word might have tipped it to that label - "Gyro"
+* Other times, it is a subtle word that might not even have appeared in the reviews at all. For this restaurant with only 1 review, it was deemed mediterranean, even though the word mediterranean is nowhere to be seen. Only 1 word might have tipped it to that label - "Gyro" (a Greek dish)
 
 ![](images/images_food_recommendation/restaurant_embedding_gyro.png) 
 
@@ -75,7 +75,8 @@ vocabulary size.
 
 ![](images/images_food_recommendation/uncolored_embeddings_scatterplot_.png) 
 
-* By using k-means clustering, we found a way to group the restaurants based on the textual content of their reviews, and group the users by the textual content of the reviews they've written.
+* By using k-means clustering, we found a way to group the restaurants based on the textual content of their reviews, and group the users by the textual content of the reviews they've written. 
+* **In other words, we are grouping up restaurants by the food they serve, and grouping up the restaurant-goers by the food they review, and hoping that a one-to-one correspondence becomes visible between restaurant-types and customer-types in terms of food**.
 
 ![](images/images_food_recommendation/colored_embeddings_scatterplot_.png) 
 
@@ -85,7 +86,8 @@ vocabulary size.
 
 ![](images/images_food_recommendation/keywords_users.png) 
 
-* The overarching direction of this project is to connect user-types to restaurant-types. For example, restaurants of Group 4 tends to make desserts (sweets, confectionery, pastries), and users of group 0 tends to eat mostly desserts. Ideally this project seeks to connect these dessert-lovers to these dessert restaurants.
+* The overarching direction of this project is to connect user-types to restaurant-types. For example, restaurants of Group 4 tends to make desserts (sweets, confectionery, pastries), and users of group 0 tends to eat mostly desserts. 
+* **Ideally this project seeks to connect these dessert-lovers to these dessert restaurants!** And Italian food lovers to italian restaurants, and etc.
 
 ### **Prediction Modeling: Binary Classification**
 
