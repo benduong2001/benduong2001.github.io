@@ -54,7 +54,7 @@ vocabulary size.
 ### **Word2Vec**
 
 * Gensim's Word2Vec model can make vector representations for a vocabulary of words.
-* One of Word2Vec's fun features is the ability to do "arithmetic" with words. For the custom food dataset vocabulary that we trained Word2Vec on, we expect things like "barbeque - july 4th + thanksgiving" to equal "turkey" (i.e. July 4th is to barbeque, as Thanksgiving is to turkey). 
+* One of Word2Vec's famous features is the ability to do "arithmetic" with words. For the custom food dataset vocabulary that we trained Word2Vec on, we expect things like "barbeque - july 4th + thanksgiving", which basically asks **"If July 4th is to barbeque, then Thanksgiving is to ...?)."**. The top leading words are related to **turkey**. 
 
 ![](images/images_food_recommendation/food_word_arithmetic.png) 
 
@@ -64,7 +64,7 @@ vocabulary size.
 
 ![](images/images_food_recommendation/restaurant_embedding_pizza.png) 
 
-* Other times, it is a subtle word that might not even have appeared in the reviews at all. For this restaurant with only 1 review, it was deemed mediterranean, even though the word mediterranean is nowhere to be seen. Only 1 word might have tipped it to that label - "Gyro" (a Greek dish)
+* Other times, it is a subtle word that might not even have appeared in the reviews at all. For this restaurant with only 1 review, it was deemed "mediterranean", even though the word "mediterranean" is nowhere to be found. Only 1 word may have been all that was needed to tip it to that label - "Gyro" (a Greek dish)
 
 ![](images/images_food_recommendation/restaurant_embedding_gyro.png) 
 
