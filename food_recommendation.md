@@ -3,6 +3,7 @@
 * This Data Science project explores food related datasets (unstructured text data) for prediction data analysis tasks involving customer recommendation. Two tasks or "sub-projects" were done:
     * Task 1 is about predicting whether a given user will rate a given restaurant negatively, with their text reviews as input data.
     * Task 2 is about predicting whether a given user likely would visit a given restaurant, using text and images as input data.
+       * During the feature analysis, the unsupervised ML code also serendipitously uncovered indirect associations shared amongst users and restaurants (that would have been too subtle for a human analyst to notice), allowing a automated way to divide the users and restaurants demographic into indirect sub-groups, based on the types of restaurants they visit and the types of customers they get -respectively.
 
 * This project will show:
    * Articulately-reasoned Feature Engineering using NLP techniques (Word2Vec and Tf-Idf), to transform unstructured text data into a structured tabular format, so that it can be compatibly trained with linear models as baseline (specifically logistic regression).
