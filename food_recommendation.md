@@ -2,12 +2,15 @@
 
 * This Data Science project explores food related datasets (unstructured text data) for prediction data analysis tasks involving customer recommendation: 
 
+
 * This project will show:
    * Articulately-reasoned Feature Engineering on transforming unstructured data (text) into tabular, structured data to train logistic regression on using NLP techniques (Word2Vec and Tf-Idf).
    * Data Analysis and results applicable to useful business questions on customer recommendation
    * Succinct and Intuitive Data visualizations
    * A balanced use of both basic machine learning (e.g. Sklearn logistic regression) vs deep learning (e.g. multi-layered neural networks, pretrained models)- nuanced understanding when either should be used appropriately, thereby seeing their pro's and con's.
    * Python code that includes object oriented programming, and Pyspark. It is also designed in a way to be updateable, and extensible for new incoming data
+
+[**Link to Github Repo**](https://github.com/benduong2001/Food-Recommendation)
 
 ## **Restaurant Rating Prediction given User Text Reviews**
 
@@ -87,6 +90,7 @@ vocabulary size.
 
 * The overarching direction of this project is to connect user-types to restaurant-types. For example, restaurants of Group 4 tends to make desserts (sweets, confectionery, pastries), and user-group 0 tends to eat mostly desserts. 
 * **In other words, we are grouping up restaurants by the food they serve, and grouping up the restaurant-goers by the food they review, and hoping that a one-to-one correspondence (if it even exists) becomes visible between restaurant-types and customer-types in terms of food.** This would allow us to recommend the dessert-lovers (as seen above in group 0) to the dessert restaurants (as seen above in group 4). ...And recommend Italian food lovers to Italian restaurants, and etc.
+* To see more examples of these restaurant and user "groups", scroll to the bottom half of [the visualization notebook in the github repo](https://github.com/benduong2001/Food-Recommendation/blob/main/src/visualizations/visualization_notebook.ipynb)
 
 ### **Prediction Modeling: Binary Classification**
 
