@@ -12,7 +12,7 @@
    * A balanced use of both basic machine learning (e.g. Sklearn logistic regression) vs deep learning (e.g. multi-layered neural networks, pretrained models)- nuanced understanding when either should be used appropriately, thereby seeing their pro's and con's.
    * Python code that includes object oriented programming, and Pyspark. It is also designed in a way to be updateable, and extensible for new incoming data
 
-[**Link to Github Repo**](https://github.com/benduong2001/Food-Recommendation)
+[(Link to Github Repo)](https://github.com/benduong2001/Food-Recommendation)
 
 ## **Sub-Project 1: Restaurant Rating Prediction given User Text Reviews**
 
