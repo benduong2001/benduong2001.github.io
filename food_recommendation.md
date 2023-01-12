@@ -1,10 +1,11 @@
 # Food Recommendation Data Science Project
 
-* This Data Science project explores food related datasets (unstructured text data) for prediction data analysis tasks involving customer recommendation: 
-
+* This Data Science project explores food related datasets (unstructured text data) for prediction data analysis tasks involving customer recommendation. Two tasks or "sub-projects" were done:
+    * Task 1 is about predicting whether a given user will rate a given restaurant negatively, with their text reviews as input data.
+    * Task 2 is about predicting whether a given user likely would visit a given restaurant, using text and images as input data.
 
 * This project will show:
-   * Articulately-reasoned Feature Engineering on transforming unstructured data (text) into tabular, structured data to train logistic regression on using NLP techniques (Word2Vec and Tf-Idf).
+   * Articulately-reasoned Feature Engineering using NLP techniques (Word2Vec and Tf-Idf), to transform unstructured text data into a structured tabular format, so that it can be compatibly trained with linear models as baseline (specifically logistic regression).
    * Data Analysis and results applicable to useful business questions on customer recommendation
    * Succinct and Intuitive Data visualizations
    * A balanced use of both basic machine learning (e.g. Sklearn logistic regression) vs deep learning (e.g. multi-layered neural networks, pretrained models)- nuanced understanding when either should be used appropriately, thereby seeing their pro's and con's.
@@ -12,7 +13,7 @@
 
 [**Link to Github Repo**](https://github.com/benduong2001/Food-Recommendation)
 
-## **Restaurant Rating Prediction given User Text Reviews**
+## **Sub-Project 1: Restaurant Rating Prediction given User Text Reviews**
 
 * For this 1st task, a basic sentiment analysis model will be made and trained to predict whether a user's rating for a restaurant is negative or not, given the text data of their text review.
 * In-depth Feature Engineering will be all that is needed to transform unstructured text data into explainable and structured, tabular data. 
@@ -49,9 +50,9 @@ vocabulary size.
 * This makes sense, as most of these words have negative connotations, and even more impressively, it manages to pick out words that aren't just negative "emotional" words (like worst, or bland)- it also includes words that are otherwise arguably neutral but deemed negative *in the context of food at a restaurant* (overpriced, burnt, dry, cold)
 * This demonstrates our intricate feature engineering process was successful in extracting meaningfulness from the unstructured text data of the google reviews.
 
-## **User - Restaurant Interaction Prediction**
+## **Sub-Project 2: Predicting if a User will visit a Restaurant**
 
-* This 2nd task determines how likely a given user would dine at a given restaurant (regardless if their eventual opinion), based on the user's history of previosuly chosen restaurants (if available) and the restaurant's history of customers. In other words, [***collaborative filtering***](https://en.wikipedia.org/wiki/Collaborative_filtering).
+* This 2nd task on user-restaurant determines how likely a given user would dine at a given restaurant, based on the user's history of previosuly chosen restaurants (if available) and the restaurant's history of customers. In other words, [***collaborative filtering***](https://en.wikipedia.org/wiki/Collaborative_filtering).
 * Unlike the previous task, this one will employ more advanced deep learning and pre-trained ML tools. 
 
 ### **Word2Vec**
@@ -90,7 +91,7 @@ vocabulary size.
 
 * The overarching direction of this project is to connect user-types to restaurant-types. For example, restaurants of Group 4 tends to make desserts (sweets, confectionery, pastries), and user-group 0 tends to eat mostly desserts. 
 * **In other words, we are grouping up restaurants by the food they serve, and grouping up the restaurant-goers by the food they review, and hoping that a one-to-one correspondence (if it even exists) becomes visible between restaurant-types and customer-types in terms of food.** This would allow us to recommend the dessert-lovers (as seen above in group 0) to the dessert restaurants (as seen above in group 4). ...And recommend Italian food lovers to Italian restaurants, and etc.
-* To see more examples of these restaurant and user "groups", scroll to the bottom half of [the visualization notebook in the github repo](https://github.com/benduong2001/Food-Recommendation/blob/main/src/visualizations/visualization_notebook.ipynb)
+* To see more examples of these restaurant/user "groups" and their "most identifiable keywords", scroll to the [bottom half of the visualization notebook in the github repo](https://github.com/benduong2001/Food-Recommendation/blob/main/src/visualizations/visualization_notebook.ipynb)
 
 ### **Prediction Modeling: Binary Classification**
 
