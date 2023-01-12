@@ -6,6 +6,9 @@ This image data science project is a personal practice of unstructured image dat
 
 [(Click to view project)](https://www.kaggle.com/code/bensonduong/font-type-image-classification)
 
+### **Github Repo**
+[(Click to view Github)](https://github.com/benduong2001/dsproject_font_decorator)
+
 ![](images/images_font/fonts_grouped.png) 
 ## Unsupervised Methods and Clustering
 
