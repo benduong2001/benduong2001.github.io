@@ -130,9 +130,9 @@ vocabulary size.
 ![](images/images_food_recommendation/NN_Confusion_matrix.png) 
 
 
-* Overall, this model does not yet have a procedure for never-before user
+* Overall, this model does not yet have a procedure for never-before-seen users and restaurants.
 * This model also must acknowledge several considerations: 
    * The dataset used is only limited to the customers who willingly and manually wrote a review for a restaurant.
-   * This dataset lacks the geo-location of the restaurants, which might be essential to this specific prediction task. 
+   * This dataset lacks the geo-location of the restaurants, which might be essential to this specific prediction task. Realistically, people will be unlikely to eat at a given restaurant if it is far away from their house, and logically can only eat at nearby restaurants, even if the far-away restaurant aligns better with their preferences than their local ones. This is a glaring inadequacy of this dataset (and in turn, the tasks that we can do with it).
 
 
