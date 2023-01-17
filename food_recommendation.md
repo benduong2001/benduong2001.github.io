@@ -1,6 +1,6 @@
 # Food Recommendation Data Science Project
 
-* This Data Science project explores food related datasets (unstructured text data) for prediction data analysis tasks involving customer recommendation. Two tasks or "sub-projects" were done:
+* This independent data science project of mines, explores food related datasets (unstructured text data) for prediction data analysis tasks involving customer recommendation. Two tasks or "sub-projects" were done:
     * Task 1 is about predicting whether a given user will rate a given restaurant negatively, with their text reviews as input data.
     * Task 2 is about predicting whether a given user likely would visit a given restaurant, using text and images as input data.
        * During the feature analysis, the unsupervised ML code also serendipitously uncovered indirect associations shared amongst users and restaurants (that would have been too subtle for a human analyst to notice), allowing a automated way to divide the users and restaurants demographic into indirect sub-groups, based on the types of restaurants they visit and the types of customers they get -respectively.
@@ -83,33 +83,33 @@ vocabulary size.
 ![](images/images_food_recommendation/restaurant_embedding_gyro.png) 
 
 * From this, each review was preprocessed, filtered of any non-alphanumeric characters, tokenized, and filtered of any words that didn't exist in the bag-of-words. 
-* Then for each restaurant, all of the remaining words for each review they are associated with are turned into a Word2Vec vector using the custom-trained Word2Vec model from earlier, then re-weighted by TF-IDF, and averaged column-wise. The exact same process is done for each user.
+* Then for each restaurant, all of the remaining words for each review they are associated with are turned into a Word2Vec vector using the custom-trained Word2Vec model from earlier, then re-weighted by TF-IDF, and averaged column-wise. The exact same process is done for each user. 
 
-### Image Recognition with Pre-trained VGGNET16
+### **Image Recognition with Pre-trained VGGNET16**
 
 * Some of the reviews comes with images of the food submitted by the users; this could be fed through a pre-trained VGGNET16 convolutional neural network, which then labels the object in the image, outputting the most likely possible words it might be. These words are attached to the text review as though it was part of the review.
 * The python code accomodates this procedure, but was switched off for the baseline model since it's quite computationally costly.
 
-### **Unsupervised ML: Grouping Apart the Restaurants and Users with K-Means Clustering**
+### **Unsupervised ML: Dividing the Restaurants and Users into Distinct Sub-groups with K-Means Clustering**
 
 * After doing this, each restaurant and each user should have its own vector representation; This can be mapped to 2D scatterplots (made with TSNE): each point in space on the left scatterplot is a restaurant, while on the right are users. 
 * Furthermore, it is possible to group up the vector representations. 
 
 ![](images/images_food_recommendation/uncolored_embeddings_scatterplot_.png) 
 
-* By using k-means clustering, I found a way to group the restaurants based on the textual content of the reviews written about it, and group the users by the textual content of the reviews they've written. 
+* By using k-means clustering, I found a separate the restaurants into distinct sub-groups based on the textual content of the reviews written about it, and do the same for users.
 
 ![](images/images_food_recommendation/colored_embeddings_scatterplot_.png) 
 
-* While this is not necessary, it would be insightful to actually see what kinds of groups these mean for restaurants and users. Using TF-IDF on the words that show up in each group's collection of reviews, the leading keywords are extracted. Examples are shown
+* While this is not necessary, it would be insightful to actually see if there's any actual meaningfulness in the sub-groups that was automatically created by the K-means clustering. mean for restaurants and users. The "most distinctive" keywords" of each sub-group was extracted, using TF-IDF.
 
 ![](images/images_food_recommendation/keywords_business.png) 
 
 ![](images/images_food_recommendation/keywords_users.png) 
 
-* The overarching direction of this project is to connect user-types to restaurant-types. For example, restaurants of Group 4 tends to make desserts (sweets, confectionery, pastries), and user-group 0 tends to eat mostly desserts. 
-* **In other words, we are grouping up restaurants by the food they serve, and grouping up the restaurant-goers by the food they review, and hoping that a one-to-one correspondence (if it even exists) becomes visible between restaurant-types and customer-types in terms of food.** This would allow us to recommend the dessert-lovers (as seen above in group 0) to the dessert restaurants (as seen above in group 4). ...And recommend Italian food lovers to Italian restaurants, and etc.
-* To see more examples of these restaurant/user "groups" and their "most identifiable keywords", scroll to the [bottom half of the visualization notebook in the github repo](https://github.com/benduong2001/Food-Recommendation/blob/main/src/visualizations/visualization_notebook.ipynb)
+* The overarching direction of this project is to connect user sub-groups to restaurant sub-groups. For example, restaurant-group 4 tends to make desserts (sweets, confectionery, pastries), and user-group 0 tends to eat mostly desserts. 
+* **In other words, we are grouping up restaurants by the food they serve, and grouping up the restaurant-goers by the food they review, and hoping that a one-to-one correspondence (if it even exists) becomes visible between restaurant-types and customer-types in terms of food.** This would allow us to recommend the dessert-lovers (as seen above in user-group 0) to the dessert restaurants (as seen above in restaurant-group 4) ...and recommend Italian food lovers to Italian restaurants, seafood-lovers to seafood restaurants, and etc.
+* To see more examples of these restaurant/user "sub-groups" and their "most distinctive keywords", scroll to the [bottom half of the visualization notebook in the github repo](https://github.com/benduong2001/Food-Recommendation/blob/main/src/visualizations/visualization_notebook.ipynb)
 
 ### **Prediction Modeling: Binary Classification**
 
@@ -121,7 +121,7 @@ vocabulary size.
 **Logistic Regression**
 
 * The baseline model will use logistic regression: in terms of metrics, it's around 63-66% accurate in correctly determining whether or not a given user has visited a given restaurant. Its AUC score is 64%.
-* For a baseline model, this score isn't awful, but clearly not good enough either; nevertheless, it is a good starting point open to more adjustments to the model; for example, the embedding sizes of the user and restaurants Word2Vec vector representations can be increased from 100 to 1000 dimensions (for a 2000 dimensional matrix)
+* For a baseline model, this score isn't awful, but clearly not good enough either; nevertheless, it is a good starting point open to more adjustments to the model; for example, the embedding sizes of the user and restaurants Word2Vec vector representations can be increased from 100 to 1000 dimensions.
 
 ![](images/images_food_recommendation/LogReg_Confusion_matrix.png) 
 
@@ -129,14 +129,15 @@ vocabulary size.
 
 * This model uses 3 layers (2 ReLU, 1 sigmoid), with Binary Cross Entropy Loss.
 * For metrics of the Multi-Layered Neural Network as the prediction model, it is around 73% accurate in correctly determining whether or not a given user has visited a given restaurant.
-* While this metric is clearly an improvement from the logistic regression, it is not far enough of a jump in improvement. At this stage, it is wise to see if using Deep Neural Networks over Logistic Regression run into diminishing returns.
+* While this metric is clearly an improvement from the logistic regression, it is not far enough of a jump in improvement. At this stage, it is wise to see if using Deep Neural Networks over Logistic Regression run into diminishing returns. But one could also argue that as much as Deep Learning overuses "black-box" methods, model explainability was abandoned a long time ago the moment Word2Vec was used, so there is likely very little to lose by using even more deep learning.
 
 ![](images/images_food_recommendation/NN_Confusion_matrix.png) 
 
+**Conclusion**
 
 * Overall, this model does not yet have a procedure for never-before-seen users and restaurants.
 * This model also must acknowledge several considerations: 
    * The dataset used is only limited to the customers who willingly and manually wrote a review for a restaurant. This model cannot be extended to the general population of more casual resaurant-goers. Thus, this model's goal is more so whether a reviewer will review a restaurant or not.
    * This dataset lacks the geo-location of the restaurants, which might be essential to this specific prediction task. Realistically, people will be unlikely to eat at a given restaurant if it is far away from their house, and logically can only eat at nearby restaurants, even if the far-away restaurant aligns better with their food preferences than their local ones. This is a glaring inadequacy of this dataset (and in turn, the tasks that we can do with it).
-
+   * Some of the techniques used in the feature engineering are outdated. For future improvements of this project, Word2Vec can be replaced with more modern NLP methods like BERT Embeddings, while VGGNET16 can be replaced with more modern CNN architecture like Resnet.
 
