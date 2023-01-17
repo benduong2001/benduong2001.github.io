@@ -60,7 +60,11 @@ vocabulary size.
 * The user and restaurant are both represented by vectors of the same dimension. These vectors are in turn the compressed summaries of all the information about a given user / restaurant. 
    * The vector for a user is the TF-IDF weighted centroid (i.e. the average vector) of the Word2Vec vector representations of each food-related word that showed up in all of the reviews that the user has written.
    * The vector for a restaurant is the TF-IDF weighted centroid (i.e. the average vector) of the Word2Vec representations of each food-related word that showed up in all of the reviews about the restaurant.
- 
+
+![](images/images_food_recommendation/model_architecture.png) 
+
+* This graph visually summarizes the model architecture. As one can see, 80% of the time is actually for the feature engineering, while the prediction model itself is merely a 20% part at the end - a binary classification that's as simple as logistic regression (for the baseline version at least).
+
 ### **Word2Vec**
 
 * In order to approximately select only the food-related words, a completely separate dataset was used: a recipe dataset where one of the columns was a list of ingredients for each recipe; While it's impossible to get a universal list of every food-related word that exists, this is sufficient enough to build a bag-of-words. 
@@ -132,7 +136,7 @@ vocabulary size.
 
 * Overall, this model does not yet have a procedure for never-before-seen users and restaurants.
 * This model also must acknowledge several considerations: 
-   * The dataset used is only limited to the customers who willingly and manually wrote a review for a restaurant.
-   * This dataset lacks the geo-location of the restaurants, which might be essential to this specific prediction task. Realistically, people will be unlikely to eat at a given restaurant if it is far away from their house, and logically can only eat at nearby restaurants, even if the far-away restaurant aligns better with their preferences than their local ones. This is a glaring inadequacy of this dataset (and in turn, the tasks that we can do with it).
+   * The dataset used is only limited to the customers who willingly and manually wrote a review for a restaurant. This model cannot be extended to the general population of more casual resaurant-goers. Thus, this model's goal is more so whether a reviewer will review a restaurant or not.
+   * This dataset lacks the geo-location of the restaurants, which might be essential to this specific prediction task. Realistically, people will be unlikely to eat at a given restaurant if it is far away from their house, and logically can only eat at nearby restaurants, even if the far-away restaurant aligns better with their food preferences than their local ones. This is a glaring inadequacy of this dataset (and in turn, the tasks that we can do with it).
 
 
