@@ -6,14 +6,11 @@
 * This independent data science project of mines, explores food related datasets (unstructured text data) for prediction data analysis tasks involving customer recommendation. Two tasks or "sub-projects" were done:
     * Task 1 is about predicting whether a given user will rate a given restaurant negatively, with their text reviews as input data.
     * Task 2 is about predicting whether a given user likely would visit a given restaurant, using text and images as input data.
-       * During the feature analysis, the unsupervised ML code also serendipitously uncovered indirect associations shared amongst users and restaurants (that would have been too subtle for a human analyst to notice), allowing a automated way to divide the users and restaurants demographic into indirect sub-groups, based on the types of restaurants they visit and the types of customers they get -respectively. 
+       * During the data preparation, I was also able to uncover indirectly-associated sub-groups in the restaurants and customer demographics, based on food, which in itself is a useful and applicable byproduct.
 
 * This project will show:
-   * Articulately-reasoned Feature Engineering using NLP techniques (Word2Vec and Tf-Idf), to transform unstructured text data into a structured tabular format, so that it can be compatibly trained with linear models as baseline (specifically logistic regression).
    * Data Analysis and results applicable to useful business questions on customer recommendation, such as providing insights to user demographic sub-groups.
    * Succinct and Intuitive Data visualizations
-   * A balanced use of both basic machine learning (e.g. Sklearn logistic regression) vs deep learning (e.g. multi-layered neural networks, pretrained models)- nuanced understanding when either should be used appropriately, thereby seeing their pro's and con's.
-   * Python code that includes object oriented programming, and Pyspark. It is also designed in a way to be updateable, and extensible for new incoming data
 
 [(Link to Github Repo)](https://github.com/benduong2001/Food-Recommendation)
 
@@ -108,13 +105,9 @@
 * For this interaction problem, it is necessary to manually create "artificial, unseen" pairs; since every user-restaurant pair in the dataset is real and observed, there is no "nonexistent pair" samples to compare the observed pairs against. A sampling procedure was developed that tries to find "negative" (a.k.a. never-before-seen) combinations of users and restaurant. This of course brings into consideration an unspoken assumption that the given dataset is an extremely accurate representation of real life; in other words, I am assuming there are no cases where the artificial pairs that I created actually did exist in real life, but wasn't recorded in the dataset.
 
 * The final input that the prediction model will train on is a large set of user-restaurant pairs, equally divided between "real, observed" pairs and "artificial, unseen" pairs. 
-* The baseline model will use logistic regression: in terms of metrics, it's around 63-66% accurate in correctly determining whether or not a given user has visited a given restaurant. For a baseline model, this score isn't too awful, but is a good starting point open to more adjustments to the model.
 
-![](images/images_food_recommendation/LogReg_Confusion_matrix.png) 
-
-**Multi-Layered Neural Network**
-
-* For metrics of the Multi-Layered Neural Network as the prediction model, it is around 73% accurate in correctly determining whether or not a given user has visited a given restaurant.
+* After training the prediction model, the metrics are summarized below: it is around 73% accurate in correctly determining whether or not a given user has visited a given restaurant.
+   * Specifically, it is able to correctly label 73% of actually existing user-restaurant pairs as real, and 68% of invented pairs as fake.
 
 ![](images/images_food_recommendation/NN_Confusion_matrix.png) 
 
