@@ -101,7 +101,7 @@ vocabulary size.
 
 ![](images/images_food_recommendation/colored_embeddings_scatterplot_.png) 
 
-* While this is not necessary, it would be insightful to actually see if there's any actual meaningfulness in the sub-groups that was automatically created by the K-means clustering, for restaurants and users. To do so, I extracted the "most distinctive" keywords" of each sub-group, using a method that employs TF-IDF.
+* While this is not necessary, it would be insightful to see if there's any actual meaningfulness in the sub-groups that was automatically created by the K-means clustering, for restaurants and users. To do so, I extracted the "most distinctive" keywords" of each sub-group, using a method that employs TF-IDF.
 
 ![](images/images_food_recommendation/keywords_business.png) 
 
