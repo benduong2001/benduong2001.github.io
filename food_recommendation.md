@@ -1,6 +1,6 @@
 # Food Recommendation Data Science Project
 
-[(**Click here for a more in-depth and technical version of this page!**)](/food_recommendation_technical.md)
+[(Click here for a more in-depth and technical version of this page!)](/food_recommendation_technical.md)
 
 
 * This independent data science project of mines, explores food related datasets (unstructured text data) for prediction data analysis tasks involving customer recommendation. Two tasks or "sub-projects" were done:
