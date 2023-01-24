@@ -3,11 +3,11 @@
 * This independent data science project of mines, explores food related datasets (unstructured text data) for prediction data analysis tasks involving customer recommendation. Two tasks or "sub-projects" were done:
     * Task 1 is about predicting whether a given user will rate a given restaurant negatively, with their text reviews as input data.
     * Task 2 is about predicting whether a given user likely would visit a given restaurant, using text and images as input data.
-       * During the feature analysis, the unsupervised ML code also serendipitously uncovered indirect associations shared amongst users and restaurants (that would have been too subtle for a human analyst to notice), allowing a automated way to divide the users and restaurants demographic into indirect sub-groups, based on the types of restaurants they visit and the types of customers they get -respectively.
+       * During the feature analysis, the unsupervised ML code also serendipitously uncovered indirect associations shared amongst users and restaurants (that would have been too subtle for a human analyst to notice), allowing a automated way to divide the users and restaurants demographic into indirect sub-groups, based on the types of restaurants they visit and the types of customers they get -respectively. 
 
 * This project will show:
    * Articulately-reasoned Feature Engineering using NLP techniques (Word2Vec and Tf-Idf), to transform unstructured text data into a structured tabular format, so that it can be compatibly trained with linear models as baseline (specifically logistic regression).
-   * Data Analysis and results applicable to useful business questions on customer recommendation
+   * Data Analysis and results applicable to useful business questions on customer recommendation, such as providing insights to user demographic sub-groups.
    * Succinct and Intuitive Data visualizations
    * A balanced use of both basic machine learning (e.g. Sklearn logistic regression) vs deep learning (e.g. multi-layered neural networks, pretrained models)- nuanced understanding when either should be used appropriately, thereby seeing their pro's and con's.
    * Python code that includes object oriented programming, and Pyspark. It is also designed in a way to be updateable, and extensible for new incoming data
@@ -56,7 +56,7 @@ vocabulary size.
 
 ### **Overview**
 
-* The model should take a given user and a given restaurant as input, and output 1 or 0 if the user will visit and eat at that restaurant (or not).
+* The model should take a given user and a given restaurant as input, and output a value between 1 and 0 if the user will visit and eat at that restaurant (or not).
 * The user and restaurant are both represented by vectors of the same dimension. These vectors are in turn the compressed summaries of all the information about a given user / restaurant. 
    * The vector for a user is the TF-IDF weighted centroid (i.e. the average vector) of the Word2Vec vector representations of each food-related word that showed up in all of the reviews that the user has written.
    * The vector for a restaurant is the TF-IDF weighted centroid (i.e. the average vector) of the Word2Vec representations of each food-related word that showed up in all of the reviews about the restaurant.
@@ -87,41 +87,43 @@ vocabulary size.
 
 ### **Image Recognition with Pre-trained VGGNET16**
 
-* Some of the reviews comes with images of the food submitted by the users; this could be fed through a pre-trained VGGNET16 convolutional neural network, which then labels the object in the image, outputting the most likely possible words it might be. These words are attached to the text review as though it was part of the review.
+* Some of the reviews comes with images of the food submitted by the users; this could be fed through a pre-trained VGGNET16 convolutional neural network, which then labels the object in the image, outputting the most likely possible words it might be. The words are then filtered to only get food-related words using the food vocabulary as made by the recipe dataset. These words are attached to the text review as though it was part of the review. 
+   * For example, if an image in a review is a picture of a cupcake on a plate on a table by a window, the VGGNET16 model might output the top predictions as "cupcake", "window", "table", "plate". Assuming that the food vocabulary I created is large enough to include the word "cupcake", then that would be the only word that will be used from the image.
 * The python code accomodates this procedure, but was switched off for the baseline model since it's quite computationally costly.
 
 ### **Unsupervised ML: Dividing the Restaurants and Users into Distinct Sub-groups with K-Means Clustering**
 
-* After doing this, each restaurant and each user should have its own vector representation; This can be mapped to 2D scatterplots (made with TSNE): each point in space on the left scatterplot is a restaurant, while on the right are users. 
-* Furthermore, it is possible to group up the vector representations. 
+* After doing this, each restaurant and each user should have its own vector representation; this can be mapped to 2D scatterplots (transformed with TSNE): each point in space on the left scatterplot is a restaurant, while on the right are users. 
 
 ![](images/images_food_recommendation/uncolored_embeddings_scatterplot_.png) 
 
-* By using k-means clustering, I found a separate the restaurants into distinct sub-groups based on the textual content of the reviews written about it, and do the same for users.
+* Furthermore, it is possible to group up the vector representation using the technique of k-means clustering. I separated the restaurants into distinct sub-groups based on the textual content of the reviews written about it, and did the same for users.
 
 ![](images/images_food_recommendation/colored_embeddings_scatterplot_.png) 
 
-* While this is not necessary, it would be insightful to actually see if there's any actual meaningfulness in the sub-groups that was automatically created by the K-means clustering. mean for restaurants and users. The "most distinctive" keywords" of each sub-group was extracted, using TF-IDF.
+* While this is not necessary, it would be insightful to actually see if there's any actual meaningfulness in the sub-groups that was automatically created by the K-means clustering, for restaurants and users. To do so, I extracted the "most distinctive" keywords" of each sub-group, using a method that employs TF-IDF.
 
 ![](images/images_food_recommendation/keywords_business.png) 
 
 ![](images/images_food_recommendation/keywords_users.png) 
 
-* The overarching direction of this project is to connect user sub-groups to restaurant sub-groups. For example, restaurant-group 4 tends to make desserts (sweets, confectionery, pastries), and user-group 0 tends to eat mostly desserts. 
-* **In other words, we are grouping up restaurants by the food they serve, and grouping up the restaurant-goers by the food they review, and hoping that a one-to-one correspondence (if it even exists) becomes visible between restaurant-types and customer-types in terms of food.** This would allow us to recommend the dessert-lovers (as seen above in user-group 0) to the dessert restaurants (as seen above in restaurant-group 4) ...and recommend Italian food lovers to Italian restaurants, seafood-lovers to seafood restaurants, and etc.
+* The overarching direction of my project is to connect user sub-groups to restaurant sub-groups. For example, restaurant-group 4 tends to make desserts (sweets, confectionery, pastries), and user-group 0 tends to eat mostly desserts. 
+* **In other words, I am grouping up restaurants by the food they serve, and grouping up the restaurant-goers by the food they review, and hoping that a one-to-one correspondence (if it even exists) becomes visible between restaurant-types and customer-types in terms of food.** This would allow me to recommend the dessert-lovers (as seen above in user-group 0) to the dessert restaurants (as seen above in restaurant-group 4) ...and recommend Italian food lovers to Italian restaurants, seafood-lovers to seafood restaurants, and so on.
 * To see more examples of these restaurant/user "sub-groups" and their "most distinctive keywords", scroll to the [bottom half of the visualization notebook in the github repo](https://github.com/benduong2001/Food-Recommendation/blob/main/src/visualizations/visualization_notebook.ipynb)
 
 ### **Prediction Modeling: Binary Classification**
 
 * Finally, the last part is to create a prediction model that answers whether or not a given user is likely to interact with a given restaurant... with the underlying data being based on the types of food that the given restaurant serves and the types of food the user has eaten at other restaurants.
 * 2 different model versions will be created and trained towards the same goal of binary classification: a regular single-layered logistic regression with Sklearn; and a Multi-layered Deep Neural Network with TensorFlow
-* For this interaction problem, it is necessary to manually create "artificial, unseen" pair; every user-restaurant pair in the dataset is real and observed, so there is no "negative" samples to work with. A sampling procedure was developed that tries to find "negative" (a.k.a. never-before-seen) combinations of users and restaurant. This of course brings into consideration an unspoken assumption that the given dataset is an extremely accurate representation of real life; in other words, we are assuming there is no cases where the artificial pairs we created actually do exist in real life but weren't in the dataset.
-* The input matrix is basically concatenating the user and restaurant embeddings from earlier for each pair. Since the embedding sizes for the user and restaurant were both 100, the input matrix's shape is N rows by 200 columns, where N = the number of "real, observed" samples + "artificial, unseen" samples.
+* For this interaction problem, it is necessary to manually create "artificial, unseen" pairs; since every user-restaurant pair in the dataset is real and observed, there is no "nonexistent pair" samples to compare the observed pairs against. A sampling procedure was developed that tries to find "negative" (a.k.a. never-before-seen) combinations of users and restaurant. This of course brings into consideration an unspoken assumption that the given dataset is an extremely accurate representation of real life; in other words, I am assuming there are no cases where the artificial pairs that I created actually did exist in real life, but wasn't recorded in the dataset.
+
+* The final input matrix that the model will train on, will have an equal share of "real, observed" user-restaurant pairs and "artificial, unseen" user-restaurant pairs. Each row of the matrix, a user-restaurant pair, is made by normalizing both the user and restaurant vectors, and then multiplying them element-wise (which should be possible since the user and restaurant vectors have the same lengths). This is essentially cosine similarity, but before the summing-step of the dot product.
+   * The original way of combining information from the user and restaurant embeddings was just concatenating the 2 side-by-side, but this yielded bad accuracy.
 
 **Logistic Regression**
 
 * The baseline model will use logistic regression: in terms of metrics, it's around 63-66% accurate in correctly determining whether or not a given user has visited a given restaurant. Its AUC score is 64%.
-* For a baseline model, this score isn't awful, but clearly not good enough either; nevertheless, it is a good starting point open to more adjustments to the model; for example, the embedding sizes of the user and restaurants Word2Vec vector representations can be increased from 100 to 1000 dimensions.
+* For a baseline model, this score isn't too awful, but is a good starting point open to more adjustments to the model; for example, the embedding sizes of the user and restaurants Word2Vec vector representations can be increased from 100 to 1000 dimensions.
 
 ![](images/images_food_recommendation/LogReg_Confusion_matrix.png) 
 
@@ -129,7 +131,7 @@ vocabulary size.
 
 * This model uses 3 layers (2 ReLU, 1 sigmoid), with Binary Cross Entropy Loss.
 * For metrics of the Multi-Layered Neural Network as the prediction model, it is around 73% accurate in correctly determining whether or not a given user has visited a given restaurant.
-* While this metric is clearly an improvement from the logistic regression, it is not far enough of a jump in improvement. At this stage, it is wise to see if using Deep Neural Networks over Logistic Regression run into diminishing returns. But one could also argue that as much as Deep Learning overuses "black-box" methods, model explainability was abandoned a long time ago the moment Word2Vec was used, so there is likely very little to lose by using even more deep learning.
+* While this metric is clearly an improvement from the logistic regression, it is not far enough of a jump in improvement. At this stage, it is wise to see if using Deep Neural Networks over Logistic Regression run into diminishing returns. But one could also argue that as much as Deep Learning overuses "black-box" methods, feature explainability was abandoned a long time ago the moment Word2Vec was used, so there is likely very little to lose by using even more deep learning.
 
 ![](images/images_food_recommendation/NN_Confusion_matrix.png) 
 
@@ -140,4 +142,7 @@ vocabulary size.
    * The dataset used is only limited to the customers who willingly and manually wrote a review for a restaurant. This model cannot be extended to the general population of more casual resaurant-goers. Thus, this model's goal is more so whether a reviewer will review a restaurant or not.
    * This dataset lacks the geo-location of the restaurants, which might be essential to this specific prediction task. Realistically, people will be unlikely to eat at a given restaurant if it is far away from their house, and logically can only eat at nearby restaurants, even if the far-away restaurant aligns better with their food preferences than their local ones. This is a glaring inadequacy of this dataset (and in turn, the tasks that we can do with it).
    * Some of the techniques used in the feature engineering are outdated. For future improvements of this project, Word2Vec can be replaced with more modern NLP methods like BERT Embeddings, while VGGNET16 can be replaced with more modern CNN architecture like Resnet.
+* However, the data analysis done along the way, still had useful results: 
+   * I made a trained a Word2Vec model for food.
+   * I found a way to divide restaurants and customers into distinct sub-groups simply by the types of food they were eating, as seen in the scatterplot of colored groups. This type of information can still be useful as a base data in any future "spinoff" projects.
 
