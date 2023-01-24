@@ -35,8 +35,7 @@
 
 ![](images/images_food_recommendation/food_sentiment_coefficients.png) 
 
-* This makes sense, as most of these words have negative connotations, and even more impressively, it manages to pick out words that aren't just negative, "emotional" words (like worst, or bland)- it also includes words that are otherwise arguably neutral but deemed negative *in the context of food at a restaurant* (overpriced, burnt, dry, cold)
-* 
+* This makes sense, as most of these words have negative connotations, and even more impressively, it manages to pick out words that aren't just negative, "emotional" words (like worst, or bland)- it also includes words that are otherwise arguably neutral but deemed negative *in the context of a restaurant* (dry, cold). It doesn't even need to be related to food, but service itself (slow, rude).
 
 ## **Sub-Project 2: Predicting if a User will visit a Restaurant**
 
@@ -99,7 +98,7 @@
 * **In other words, I am grouping up restaurants by the food they serve, and grouping up the restaurant-goers by the food they review, and hoping that a one-to-one correspondence (if it even exists) becomes visible between restaurant-types and customer-types in terms of food.** This would allow me to recommend the dessert-lovers (as seen above in user-group 0) to the dessert restaurants (as seen above in restaurant-group 4) ...and recommend Italian food lovers to Italian restaurants, seafood-lovers to seafood restaurants, and so on.
 * To see more examples of these restaurant/user "sub-groups" and their "most distinctive keywords", scroll to the [bottom half of the visualization notebook in the github repo](https://github.com/benduong2001/Food-Recommendation/blob/main/src/visualizations/visualization_notebook.ipynb)
 
-### **Prediction Modeling: Binary Classification**
+### **Results and Evaluation**
 
 * Finally, the last part is to create a prediction model that answers whether or not a given user is likely to interact with a given restaurant... with the underlying data being based on the types of food that the given restaurant serves and the types of food the user has eaten at other restaurants.
 * For this interaction problem, it is necessary to manually create "artificial, unseen" pairs; since every user-restaurant pair in the dataset is real and observed, there is no "nonexistent pair" samples to compare the observed pairs against. A sampling procedure was developed that tries to find "negative" (a.k.a. never-before-seen) combinations of users and restaurant. This of course brings into consideration an unspoken assumption that the given dataset is an extremely accurate representation of real life; in other words, I am assuming there are no cases where the artificial pairs that I created actually did exist in real life, but wasn't recorded in the dataset.
