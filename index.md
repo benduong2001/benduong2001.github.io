@@ -14,7 +14,6 @@
 ---
 
 ### NYC Traffic Project
-
 [NYC Traffic Data Science Project](nyc_traffic_project.md)
 <img src="images/leaflet_gif.gif?raw=true"/>
 <img src="images/traffic_data.png?raw=true"/>
