@@ -17,16 +17,22 @@
 ## What I did
 My contributions to the project:
 * Our team's final prediction model was a conglomerate of 3 prediction sub-models, and I was responsible for building and training 2 of them.
-  * A prediction model for the average of the offer rates for a given order. This would be used to label any incoming offer as "cheap" if it is below-average for that order. With just linear regression, I got it to a 87% accuracy.
-  * A prediction model for the standard deviation of the offer rates for a given order. This extends the last model, and can label any incoming offer as "really cheap" if below-average for that order by a large difference.
+  * A prediction model for the average of the offer rates for a given order. This would be used as a threshold to label any incoming offer as "cheap" if it is below-average for that order. With just linear regression, I got it to a 87% accuracy.
+  * A prediction model for the standard deviation of the offer rates for a given order. This extends the last model, labelling any incoming offer as "really cheap" if below-average for that order by a large difference (of the standard deviation). With random forest classification, the accuracy was 67%.
 * I was the person who managed to integrate external, geographic data sources into our project. 
   * The original data already provided by Flock Freight only had zipcode columns as the geographic data.
   * I wrote ETL scripts to extract GIS data from online government census data sources, and integrated them into the pre-existing dataset through geographic data preprocessing with Geopandas. 
   * These supplementary geographic features turned out to be very helpful for the feature engineering, and even strongly influential for the in improving the prediction models' accuracies, compared to if we only limited ourselves to the pre-existing, non-geographic feature.
   * By doing this, I was also able to let our team incorporate maps into our data visualizations.
 ## Challenges Faced and How They Got Resolved
-* 
-* 
-* 
-
+Among several challenges I faced, most involved the standard deviation prediction sub-model.
+* Handling imbalanced data: the target column for the standard deviation model was highly imbalanced; it was a severely right-skewed distribution lower-bounded at 0 inclusive. This aspect inhibited the regression accuracy to have scores below even 50%.
+  * **Redefining the target column**: when right-skewed distributions >= 0 like this appear, I usually normalize it by log-transforming it (Log(x+1)), which usually reshapes it into a bell-curve; but in this case, the column was still severely right-skewed after log-normalization. Several different combinations of transformation attempts led to dead-ends, and so I decided to ordinalize the column into 2 binary classes with a median threshold.
+  * **Alternative Metrics to Accuracy**: Because class imbalance, a high test set accuracy would be potentially deceiving since the model would just label everything as the majority class. For this reason, I had to use other metrics or ways to assess the model, such as visualizing confusion matrices and ROC AUC Scores.
+  * **Over-sampling of the minority classes**.
+  * **Sample weighting**: a reason as to why the target column was distributed like so was because in many cases, Flock Freight closed many orders by picking offers too early; this meant the target column couldn't truly be representative of real-life data, and that for the observations that were "low" (i.e. on the left side of the distribution or close to 0), it was impossible to tell if the value was truly low in real life or if it was a potentially high value that was cut off too prematurely. For that reason, orders that were closed very early were given less trust or weight during the training and error.
+* Model Choices:
+  * As mentioned, the target column had to be re-defined as binary classification. The downside of this is that the model is basically simplified as just predicting "high" vs "low" standard deviation. Logistic Regression was used for the baseline, and the final model used Random Forest.
+* Improving model accuracy:
+  * **Geographic Feature Engineering**: as mentioned previously, adding geographic features brought up the accuracy from 59% to 67%.
 
