@@ -25,16 +25,16 @@ My contributions to the project:
   * These supplementary geographic features turned out to be very helpful for the feature engineering, and even strongly influential for the in improving the prediction models' accuracies, compared to if we only limited ourselves to the pre-existing, non-geographic feature.
   * By doing this, I was also able to let our team incorporate maps into our data visualizations.
 
-## Challenges Faced and Ways they got resolved.
+## Challenges Faced & Overcoming.
 
-This real-world project came with real-world nuances and imperfections that served as challenges. Each had various solutions.
-* Handling imbalanced data: the target column for the standard deviation model was highly imbalanced; it was a severely right-skewed distribution lower-bounded at 0 inclusive. This aspect inhibited the regression accuracy to have scores below even 50%.
-  * **Redefining the target column**: when right-skewed distributions >= 0 like this appear, I usually normalize it by log-transforming it (Log(x+1)), which usually reshapes it into a bell-curve; but in this case, the column was still severely right-skewed after log-normalization. Several different combinations of transformation attempts led to dead-ends, and so I decided to ordinalize the column into 2 binary classes with a median threshold.
-  * **Alternative Metrics to Accuracy**: Because class imbalance, a high test set accuracy would be potentially deceiving since the model would just label everything as the majority class. For this reason, I had to use other metrics or ways to assess the model, such as visualizing confusion matrices and ROC AUC Scores.
+This real-world project came with real-world nuances and imperfections that served as challenges. Not all of them had singular solutions, and needed a combination of several solutions.
+* **Handling imbalanced data**: the target column for the standard deviation sub-model was highly imbalanced; it was a severely right-skewed distribution lower-bounded at 0 inclusive. This aspect inhibited the regression accuracy to have scores below even 50%.
+  * **Redefining the target column**: in other projects, zero-bounded right-skewed distributions like these can be re-shaped into a bell-curve by log-transformation (Log(x+1)). But in this case, the column was still severely right-skewed after log-normalization. Several different combinations of transformation attempts led to dead-ends, and so I decided to ordinalize the column into 2 binary classes with a median threshold.
+  * **Alternative Metrics to Accuracy**: Because of class imbalance, a high test set accuracy would be potentially deceiving since the model would just label everything as the majority class. For this reason, I had to use other metrics to assess the model, such as visualizing the confusion matrix or looking at ROC AUC Scores.
   * **Over-sampling of the minority classes**.
-  * **Sample weighting**: a reason as to why the target column was distributed like so was because in many cases, Flock Freight closed many orders by picking offers too early; this meant the target column couldn't truly be representative of real-life data, and that for the observations that were "low" (i.e. on the left side of the distribution or close to 0), it was impossible to tell if the value was truly low in real life or if it was a potentially high value that was cut off too prematurely. For that reason, orders that were closed very early were given less trust or weight during the training and error.
-* Model Choices:
-  * As mentioned, the target column had to be re-defined as binary classification. The downside of this is that the model is basically simplified as just predicting "high" vs "low" standard deviation. Logistic Regression was used for the baseline, and the final model used Random Forest.
-* Improving model accuracy:
+  * **Sample weighting**: a reason as to why the target column was distributed like so, was because in many cases, Flock Freight closed many orders by picking offers too early; this meant the target column couldn't truly be representative of real-life data, and that for the observations that were "low" (i.e. on the left side of the distribution close to 0), it was impossible to tell if the value was truly low in real life... or if it could have been a potentially high value that was cut off too prematurely. For that reason, orders that were closed very early were given less trust or weight during the training and error.
+* **Model Choices**:
+  * As mentioned, the target column had to be re-defined as binary classification. The downside of this is that the model is basically simplified as just predicting "high" vs "low" standard deviation. The baseline model used Logistic Regression, and the final model used Random Forest.
+* **Improving model accuracy**:
   * **Geographic Feature Engineering**: as mentioned previously, adding geographic features brought up the accuracy from 59% to 67%.
-
+  
