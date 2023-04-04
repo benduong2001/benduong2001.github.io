@@ -37,5 +37,6 @@ This real-world project came with real-world nuances and imperfections that serv
 * **Model Choices**:
   * As mentioned, the target column had to be re-defined as binary classification. The downside of this is that the model is basically simplified as just predicting "high" vs "low" standard deviation. The baseline model used Logistic Regression, and the final model used Random Forest.
 * **Improving model accuracy**:
-  * **Geographic Feature Engineering**: as mentioned previously, adding geographic features brought up the accuracy from 59% to 67%.
+I employed various actions and improved the baseline model's accuracy from being 58% to 67%. These included adding further features, or doing further data-cleaning.
+  * **Geographic Feature Engineering**: as mentioned previously, adding geographic features helped the accuracy. These include the metropolitan region that the origin and destination zipcodes of the order resided in, or the population density and weather conditions on the route between the 2 locations. Several T-Tests showed that these features indeed had a statistical significance with respect to the offer rate standard deviation per order.
   
