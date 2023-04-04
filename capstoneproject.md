@@ -26,7 +26,7 @@ My contributions to the project:
   * These supplementary geographic features turned out to be very helpful for the feature engineering, and even strongly influential for the in improving the prediction models' accuracies, compared to if we only limited ourselves to the pre-existing, non-geographic feature.
   * By including this newfound geo-data, I was also able to let our team incorporate maps into our data visualizations.
 
-## Challenges Faced & Overcoming.
+## Challenges Faced & Overcoming Them.
 
 This real-world project came with real-world nuances and imperfections that served as challenges. Not all of them had singular solutions, and needed a combination of several solutions.
 * **Handling imbalanced data**: the target column for the standard deviation sub-model was highly imbalanced; it was a severely right-skewed distribution lower-bounded at 0 inclusive. This aspect inhibited the regression accuracy to have scores below even 50%.
