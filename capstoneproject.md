@@ -6,11 +6,12 @@
 * I was part of a 6-month capstone project with 3 other students, under the mentorship of Flock Freight, a delivery logistics company.
 * The background to Flock Freight's mission is as follows:
   * A company needs to deliver an **order**  from Point A to Point B, but lack their own trucking or delivery services to do so.
-  * Trucking Service companies, or "Carriers", are willing to give **offers** to deliver any shipments at a given cost
-  * Flock Freight is the intermediary, or "Freight Broker", between both parties. For a given **Company X** in need to deliver **Order X**, a number of **N** carriers - ("**Carrier i**") will give offers ("**Offer i**") to deliver it for a certain cost a.k.a. shipping rate ("**rate i**"), so "i" is 1,2, 3....N.
+  * Trucking Service companies, or "**Carriers**", are willing to give **offers** to deliver any shipments at a given cost
+  * Flock Freight is the intermediary, or "Freight Broker", between both parties. 
+    * For a given **Company X** in need to deliver **Order X**, a number of **N** carriers - ("**Carrier i**") will give offers ("**Offer i**") to deliver it for a certain cost a.k.a. shipping rate ("**rate i**"), so "i" is 1,2, 3....N.
   * And Flock Freight's questions are: 
-    * Given just information about Order X alone, how can one predict N - the number of carriers that will make an offer, beforehand?
-    * Given just information about Order X alone, how can one predict the cheapest offer rate they might get on that order?
+    * Knowing just Order X alone, predict N - the number of carriers that will make an offer.
+    * Knowing just Order X alone, predict the cheapest offer rate the order might get.
 * Flock Freight gave our team data about the orders themselves, which were just: the origin and destination zipcodes of the shipment order,the date of deadline, and physical characteristics about it (i.e. whether it's hazardous, or needs refridgeration).
 
 ## What I did
