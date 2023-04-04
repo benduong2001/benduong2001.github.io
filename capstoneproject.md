@@ -16,7 +16,9 @@
 
 ## What I did
 My contributions to the project:
-* Our team's final prediction model was a conglomerate of 3 prediction sub-models, and I was responsible for buildng and training 2 of them.
+* Our team's final prediction model was a conglomerate of 3 prediction sub-models, and I was responsible for building and training 2 of them.
+  * A prediction model for the average of the offer rates for a given order. This would be used to label any incoming offer as "cheap" if it is below-average for that order. With just linear regression, I got it to a 87% accuracy.
+  * A prediction model for the standard deviation of the offer rates for a given order. This extends the last model, and can label any incoming offer as "really cheap" if below-average for that order by a large difference.
 * I was the person who managed to integrate external, geographic data sources into our project. 
   * The original data already provided by Flock Freight only had zipcode columns as the geographic data.
   * I wrote ETL scripts to extract GIS data from online government census data sources, and integrated them into the pre-existing dataset through geographic data preprocessing with Geopandas. 
