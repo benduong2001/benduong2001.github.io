@@ -24,8 +24,10 @@ My contributions to the project:
   * I wrote ETL scripts to extract GIS data from online government census data sources, and integrated them into the pre-existing dataset through geographic data preprocessing with Geopandas. 
   * These supplementary geographic features turned out to be very helpful for the feature engineering, and even strongly influential for the in improving the prediction models' accuracies, compared to if we only limited ourselves to the pre-existing, non-geographic feature.
   * By doing this, I was also able to let our team incorporate maps into our data visualizations.
-## Challenges Faced and How They Got Resolved
-Among several challenges I faced, most involved the standard deviation prediction sub-model.
+
+## Challenges Faced and Ways they got resolved.
+
+This real-world project came with real-world nuances and imperfections that served as challenges. Each had various solutions.
 * Handling imbalanced data: the target column for the standard deviation model was highly imbalanced; it was a severely right-skewed distribution lower-bounded at 0 inclusive. This aspect inhibited the regression accuracy to have scores below even 50%.
   * **Redefining the target column**: when right-skewed distributions >= 0 like this appear, I usually normalize it by log-transforming it (Log(x+1)), which usually reshapes it into a bell-curve; but in this case, the column was still severely right-skewed after log-normalization. Several different combinations of transformation attempts led to dead-ends, and so I decided to ordinalize the column into 2 binary classes with a median threshold.
   * **Alternative Metrics to Accuracy**: Because class imbalance, a high test set accuracy would be potentially deceiving since the model would just label everything as the majority class. For this reason, I had to use other metrics or ways to assess the model, such as visualizing confusion matrices and ROC AUC Scores.
