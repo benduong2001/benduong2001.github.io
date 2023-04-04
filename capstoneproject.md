@@ -13,17 +13,18 @@
     * Knowing just Order X alone, predict N - the number of carriers that will make an offer.
     * Knowing just Order X alone, predict the cheapest offer rate the order might get.
 * Flock Freight gave our team data about the orders themselves, which were just: the origin and destination zipcodes of the shipment order,the date of deadline, and physical characteristics about it (i.e. whether it's hazardous, or needs refridgeration).
+* After 20 weeks of intense collaboration and learning from Flock-Freight, my team and I constructed a final prediction model for determining if a given offer was worthy of selection. The new model was able to reduce Flock Freight's costs by 9.8%. We also authored a research paper documenting our findings, and attended a project showcase where we presented our work to peers, college faculty, and industry professionals.
 
 ## What I did
 My contributions to the project:
 * Our team's final prediction model was a conglomerate of 3 prediction sub-models, and I was responsible for building and training 2 of them.
-  * A prediction model for the average of the offer rates for a given order. This would be used as a threshold to label any incoming offer as "cheap" if it is below-average for that order. With just linear regression, I got it to a 87% accuracy.
+  * A prediction model for the average of the offer rates for a given order. This would be used as a threshold to label any incoming offer as "cheap" if it is below-average for that order. With linear regression, the accuracy was 87%.
   * A prediction model for the standard deviation of the offer rates for a given order. This extends the last model, labelling any incoming offer as "really cheap" if below-average for that order by a large difference (of the standard deviation). With random forest classification, the accuracy was 67%.
 * I was the person who managed to integrate external, geographic data sources into our project. 
   * The original data already provided by Flock Freight only had zipcode columns as the geographic data.
   * I wrote ETL scripts to extract GIS data from online government census data sources, and integrated them into the pre-existing dataset through geographic data preprocessing with Geopandas. 
   * These supplementary geographic features turned out to be very helpful for the feature engineering, and even strongly influential for the in improving the prediction models' accuracies, compared to if we only limited ourselves to the pre-existing, non-geographic feature.
-  * By doing this, I was also able to let our team incorporate maps into our data visualizations.
+  * By including this newfound geo-data, I was also able to let our team incorporate maps into our data visualizations.
 
 ## Challenges Faced & Overcoming.
 
