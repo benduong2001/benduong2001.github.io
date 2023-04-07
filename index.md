@@ -27,7 +27,7 @@ Hello, I am **Benson Duong**. I am a Data Science student at the University of C
 ---
 ### San Diego Airbnb Listings Project
 [San Diego Airbnb Listings Project](airbnb_sd.md)
-<img src="images/airbnb_sd_cover_img.png?raw=true"/>
+<img src="images/images_airbnb_sd/sd_airbnb_cover_img.png?raw=true"/>
 ---
 
 
