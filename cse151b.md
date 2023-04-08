@@ -1,7 +1,7 @@
 # Deep Learning Image Auto-Captioner with PyTorch
 
 
-![](/images/images_cse151b_pa3/image_autocaptioner)
+![](/images/images_cse151b/image_autocaptioner.png)
 
 * This is a class project for CSE151B at UC San Diego, where I worked with Takuro Kitasawa, Rye Gleason, and Jeremy Nurding.
 * In this project, we developed and trained an AI generative model that could take in input images, and auto-generate English captions properly describing the image's content with correct grammar.
@@ -10,4 +10,4 @@
     * The Convolutional Neural Network serves as the Encoder, and the LSTM serves as the Decoder
 * Using UCSD's Datahub server, this trained for up to 6 hours, several times for different configurations of parameters.
 
-[See our report!](/images/images_cse151b_pa3/cse151b_report.pdf)
+[See our report!](/images/images_cse151b/cse151b_report.pdf)
