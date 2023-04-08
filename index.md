@@ -33,7 +33,7 @@ Hello, I am **Benson Duong**. I am a Data Science student at the University of C
 ---
 ### Image Auto-Captioner PyTorch Project
 [Image Auto-Captioner PyTorch Project](cse151b.md)
-<img src="images/images_cse151b_pa3/image_autocaptioner.png?raw=true"/>
+<img src="images/images_cse151b/image_autocaptioner.png?raw=true"/>
 ---
 
 ---
