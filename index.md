@@ -30,6 +30,11 @@ Hello, I am **Benson Duong**. I am a Data Science student at the University of C
 <img src="images/images_airbnb_sd/sd_airbnb_cover_img.png?raw=true"/>
 ---
 
+---
+### Image Auto-Captioner PyTorch Project
+[San Diego Airbnb Listings Project](cse151b.md)
+<img src="images/images_cse151b_pa3/image_autocaptioner.png?raw=true"/>
+---
 
 ---
 ### Font Style Image Project
