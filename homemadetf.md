@@ -23,4 +23,4 @@
 ![](images/images_HomemadeTF/bootlegCNN_demo_gif.gif)
 
 ### What did I gain from this?
-* Even though this project, in hindsight was a reinvention of the wheel -with no business usefulness, it was a highly foundational introduction that pushed me into the cold swimming pool of machine learning. 
+* Even though this project, in hindsight was a reinvention of the wheel -with no business usefulness, it was a highly foundational introduction that definitely -and forcefully- drilled into my head about some of the math used in neural networks. 
