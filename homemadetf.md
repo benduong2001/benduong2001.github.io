@@ -10,7 +10,7 @@
 
 * With a graphic drawing-canvas interface done with Python Tkinter, I trained and tested the final project's iteration with the basic task of differentiating 1's and 0's, and showed the python implementation worked as intended
 
-![](/images/images_HomeMadeTF/bootlegCNN_demo_gif.gif)
+![](/images/images_HomemadeTF/bootlegCNN_demo_gif.gif)
 
 ### What did I gain from this?
 * Even though this project, in hindsight was an unncessary reinvention of the wheel -with no business usefulness, it was a highly foundational introduction that pushed me into the cold swimming pool of the math of machine learning. 
