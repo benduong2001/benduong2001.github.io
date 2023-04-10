@@ -1,5 +1,7 @@
 # Re-inventing Convolutional Neural Networks on Python From Scratch Without Packages.
 
+[Link to the Github Repo](https://github.com/benduong2001/BootlegTensorFlow)
+
 * During my first year of college as a data science major, I was very intrigued about how neural networks worked, particularly convolutional neural networks - which could algorithmically tell you if a picture is a cat or a dog for example. 
 * There were many youtube tutorial and Medium articles that covered it. But I felt very unsatisfied by them, and didn't want to mindlessly copy and paste Tensorflow code, without seeing how or why the math worked under the hood.
 * I had just finished my multi-variable vector calculus and linear algebra classes, which gave me foundation in finally understanding the underlying math of these models
