@@ -9,11 +9,11 @@
     * Having concluded my matrix math classes, I wanted to test-apply what I just learned, meaning I also coded the Matrix operations in this project from scratch too. ... No NumPy at all!
     * Thus, the classes that I've implemented in this project would be:
          * Different Neural Network Layers:
-               * The "Dense" Layer for Matrix Multiplication with a Bias Addition (MX+b)
-               * The Activation Layer for Non-linearities- namely Sigmoid and ReLU
-               * The final Loss Function Layer
-               * The "convolutional filter" layer that behaves like Conv2D.
-               * The MaxPooling Layer.
+            * The "Dense" Layer for Matrix Multiplication with a Bias Addition (MX+b)
+            * The Activation Layer for Non-linearities- namely Sigmoid and ReLU
+            * The final Loss Function Layer
+            * The "convolutional filter" layer that behaves like Conv2D.
+            * The MaxPooling Layer.
          * Matrices, with Matrix math operations. Having concluded my matrix math classes, I wanted to test-apply what I just learned, meaning I also coded the Matrix operations in this project from scratch too. ... **No NumPy at all**!
 
 * With a graphic drawing-canvas interface done with Python Tkinter, I trained and tested the final project's iteration with the basic task of differentiating 1's and 0's, and showed the python implementation worked as intended.
