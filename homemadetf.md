@@ -8,7 +8,7 @@
     * This project was also practice to apply principals of data structure design and more computer science -related topics, such as Objected Oriented Programming, Class Inheritance, and the recursion needed for the neural network's backpropagation.
     * Having concluded my matrix math classes, I wanted to test-apply what I just learned, meaning I also coded the Matrix operations in this project from scratch too. ... No NumPy at all!
 
-* With a graphic drawing-canvas interface done with Python Tkinter, I trained and tested the final project's iteration with the basic task of differentiating 1's and 0's, and showed the python implementation worked as intended
+* With a graphic drawing-canvas interface done with Python Tkinter, I trained and tested the final project's iteration with the basic task of differentiating 1's and 0's, and showed the python implementation worked as intended.
 
 ![](images/images_HomemadeTF/bootlegCNN_demo_gif.gif)
 
