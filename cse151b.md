@@ -10,4 +10,6 @@
     * The Convolutional Neural Network serves as the Encoder, and the LSTM serves as the Decoder
 * Using UCSD's Datahub server, this trained for up to 6 hours, several times for different configurations of parameters.
 
+* For this class specifically, we are unfortunately prohibited from publicly sharing our project's github repo to dispel cheating. However, we did write a report.
+
 [See our report!](/images/images_cse151b/cse151b_report.pdf)
