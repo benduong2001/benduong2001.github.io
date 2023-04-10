@@ -42,3 +42,10 @@ Hello, I am **Benson Duong**. I am a Data Science student at the University of C
 <img src="images/fonts.png?raw=true"/>
 <img src="images/convfont.png?raw=true"/>
 ---
+
+
+---
+### Remaking Image Recognition AI from Scratch
+[Remaking Image Recognition AI from Scratch](homemadetf.md)
+<img src="images/images_HomemadeTF/bootlegCNN_demo_gif.gif"/>
+---
