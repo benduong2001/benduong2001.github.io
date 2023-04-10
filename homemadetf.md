@@ -3,7 +3,7 @@
 [Link to the Github Repo](https://github.com/benduong2001/BootlegTensorFlow)
 
 * During my first year of college as a data science major, I was very intrigued about how neural networks worked, particularly convolutional neural networks - which could algorithmically tell you if a picture is a cat or a dog for example. 
-* There were many youtube tutorial and Medium articles that covered it. But I felt very unsatisfied by them, and didn't want to mindlessly copy and paste Tensorflow code, without seeing how or why the math worked under the hood.
+* There were many Youtube tutorials and Medium articles that covered it. But I felt very unsatisfied by them, and didn't want to mindlessly copy and paste Tensorflow code, without seeing how or why the math worked under the hood.
 * I had just finished my multi-variable vector calculus and linear algebra classes, which gave me foundation in finally understanding the underlying math of these models
 * And so, I felt that seeing was believing, and spent time deciding to recreate neural networks on Python from scratch without packages. 
     * Not only did I implement Neural networks by its own on this project, but I also integrated the support for convolutional ones too. Meaning this project was capable of being trained to do basic image recognition.
