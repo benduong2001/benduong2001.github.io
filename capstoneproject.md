@@ -22,8 +22,8 @@ My contributions to the project:
   * A prediction model for the standard deviation of the offer rates for a given order. This extends the last model, labelling any incoming offer as "really cheap" if below-average for that order by a large difference (of the standard deviation). With random forest classification, the accuracy was 67%.
 * I was the person who managed to integrate external, geographic data sources into our project. 
   * The original data already provided by Flock Freight only had zipcode columns as the geographic data.
-  * I wrote ETL scripts to extract GIS data from online government census data sources, and integrated them into the pre-existing dataset through geographic data preprocessing with Geopandas. 
-  * These supplementary geographic features turned out to be very helpful for the feature engineering, and even strongly influential for the in improving the prediction models' accuracies, compared to if we only limited ourselves to the pre-existing, non-geographic feature.
+  * I wrote ETL python scripts to extract GIS data from online government census data sources, and integrated them into the pre-existing dataset through geographic data preprocessing with Geopandas. 
+  * These supplementary geographic features turned out to be very helpful for the feature engineering, and even strongly influential for improving the prediction models' accuracies, compared to if we only limited ourselves to the pre-existing, non-geographic feature.
   * By including this newfound geo-data, I was also able to let our team incorporate maps into our data visualizations.
 
 ## Challenges Faced & Overcoming Them.
