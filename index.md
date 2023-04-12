@@ -40,4 +40,4 @@ These are some of my projects. Some are school assignments. Others are independe
 <img src="images/images_cse151b/image_autocaptioner.png">
 ---
 
-## **1**   [**2**](index_pg2.md)
+## Pages: **1**,   [**2**](index_pg2.md)
