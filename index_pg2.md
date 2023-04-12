@@ -9,8 +9,8 @@
 ---
 
 ---
-### [School] DSC80 Power Outage Geospatial Data Science Project *(Spring 2021)*
-[DSC80 Power Outage Geospatial Data Science Project](dsc80.md)
+### [School] DSC80 Power Outage Data Science Project *(Spring 2021)*
+[DSC80 Power Outage Data Science Project](dsc80.md)
 <img src="images/images_dsc80/mean_outage_duration_folium.png?raw=true"/>
 ---
 
