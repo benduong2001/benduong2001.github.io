@@ -9,4 +9,4 @@
     * San Francisco Landmarks in steep areas, in terms of walkable accessibility for tourist
 
 
-![See my Project Slides](images/images_usp/Wheelchair_Accessibility_San_Francisco.pdf)
+[See my Project Slides](images/images_usp/Wheelchair_Accessibility_San_Francisco.pdf)
