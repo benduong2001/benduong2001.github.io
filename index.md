@@ -57,4 +57,4 @@ These are some of my projects. Some are school assignments. Others are independe
 --->
 
 
-**1** [**2**](index_pg2.md)
+## **1** [**2**](index_pg2.md)
