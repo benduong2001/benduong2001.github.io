@@ -5,6 +5,7 @@ Hello, I am **Benson Duong**. I am a Data Science student at the University of C
 [Resume](BensonDuongLtxResumeV13.pdf)
 
 These are some of my projects. Some are school assignments. Others are independent.
+Because of academic policy, some of my school projects do not link their code and have privated github repo's, and I can only provide surface-level descriptions of what I had done, within permitted limits.
 
 # Data Science Project Portfolio
 
@@ -26,7 +27,6 @@ These are some of my projects. Some are school assignments. Others are independe
 <img src="images/leaflet_gif.gif?raw=true"/>
 <img src="images/traffic_data.png?raw=true"/>
 ---
-
 
 ---
 ### [School] San Diego Airbnb Listings Project *(Winter 2023)*
