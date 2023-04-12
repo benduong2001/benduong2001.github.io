@@ -40,4 +40,4 @@ Because of academic policy, some of my school projects do not link their code an
 <img src="images/images_cse151b/image_autocaptioner.png">
 ---
 
-Pages: **1**,   [**2**](index_pg2.md)
+Pages: 1,   [2](index_pg2.md)
