@@ -1,6 +1,6 @@
 # About Me
 
-Hello, I am **Benson Duong**. I am a Data Science student at the University of California, San Diego, learning about the fields of data science, analysis, statistics, and machine learning. I have a recurring interest in social data, and several projects of mines look into the social aspects of business data or map data.
+Hello, I am **Benson Duong**. I am a Data Science student at the University of California, San Diego, learning about the fields of data science, analysis, statistics, and machine learning. My projects and work have a recurring interest in social data, looking into business data or map data.
 
 [Resume](BensonDuongLtxResumeV13.pdf)
 
