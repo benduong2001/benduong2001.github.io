@@ -9,13 +9,13 @@ These are some of my projects. Some are school assignments. Others are independe
 # Data Science Project Portfolio
 
 ---
-### [School] Offer Acceptance Capstone Project *(Fall 2022 - Winter 2023)*
+### [School] Offer Acceptance Capstone *(Fall 2022 - Winter 2023)*
 [Offer Acceptance Capstone Project](capstoneproject.md)
 <img src="images/images_dsc180/image4.png?raw=true"/>
 ---
 
 ---
-### Restaurant User Recommendation Project. *(Fall 2022)*
+### Restaurant User Recommendation Project *(Fall 2022)*
 [Food Recommendation Data Science Project](food_recommendation.md)
 <img src="images/images_food_recommendation/keywords_business.png?raw=true"/>
 ---
