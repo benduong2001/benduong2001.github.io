@@ -1,4 +1,4 @@
-# DSC80 Power Outage GeoSpatial Data Science Project
+# DSC80 Power Outage Data Science Project
 
 ![](images/images_dsc80/mean_outage_duration_folium.png) 
 
