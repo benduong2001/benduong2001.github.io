@@ -17,8 +17,8 @@
 ---
 ### [School] ArcGIS San Francisco Steepness & Wheelchair Accessibility Project *(Winter 2021)*
 [ArcGIS San Francisco Steepness & Wheelchair Accessibility Project](usp4.md)
-<img src="images/images_usp4/sf3Dstreethill.png.png?raw=true"/>
-<img src="images/images_usp4/base_map.png?raw=true"/>
+<img src="images/images_usp/sf3Dstreethill.png.png?raw=true"/>
+<img src="images/images_usp/base_map.png?raw=true"/>
 ---
 
 ---
@@ -29,4 +29,4 @@
 
 
 
-## Page [**1**](index.md),   **2**
+## Pages: [**1**](index.md),   **2**
