@@ -40,21 +40,4 @@ These are some of my projects. Some are school assignments. Others are independe
 <img src="images/images_cse151b/image_autocaptioner.png">
 ---
 
-<!---
----
-### Font Style Image Project
-[Font Style Image Data Science Project](typography.md)
-<img src="images/fonts.png?raw=true"/>
-<img src="images/convfont.png?raw=true"/>
----
-
-
----
-### Remaking Image Recognition AI from Scratch
-[Remaking Image Recognition AI from Scratch](homemadetf.md)
-<img src="images/images_HomemadeTF/bootlegCNN_demo_gif.gif"/>
----
---->
-
-
 ## **1**   [**2**](index_pg2.md)
