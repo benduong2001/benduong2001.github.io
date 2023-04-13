@@ -17,14 +17,17 @@
 
 ## What I did
 My contributions to the project:
-* Our team's final prediction model was a conglomerate of 3 prediction sub-models, and I was responsible for building and training 2 of them.
-  * A prediction model for the average of the offer rates for a given order. This would be used as a threshold to label any incoming offer as "cheap" if it is below-average for that order. With linear regression, the accuracy was 87%.
-  * A prediction model for the standard deviation of the offer rates for a given order. This extends the last model, labelling any incoming offer as "really cheap" if below-average for that order by a large difference (of the standard deviation). With random forest classification, the accuracy was 67%.
-* I was the person who managed to integrate external, geographic data sources into our project. 
-  * The original data already provided by Flock Freight only had zipcode columns as the geographic data.
-  * I wrote ETL python scripts to extract GIS data from online government census data sources, and integrated them into the pre-existing dataset through geographic data preprocessing with Geopandas. 
-  * These supplementary geographic features turned out to be very helpful for the feature engineering, and even strongly influential for improving the prediction models' accuracies, compared to if we only limited ourselves to the pre-existing, non-geographic feature.
-  * By including this newfound geo-data, I was also able to let our team incorporate maps into our data visualizations.
+  * **Predictive Modelling**
+    * Our team's final prediction model was a conglomerate of 3 prediction sub-models, and I was responsible for building and training 2 of them.
+      * A prediction model for the average of the offer rates for a given order. This would be used as a threshold to label any incoming offer as "cheap" if it is below-average for that order. With linear regression, the accuracy was 87%.
+      * A prediction model for the standard deviation of the offer rates for a given order. This extends the last model, labelling any incoming offer as "really cheap" if below-average for that order by a large difference (of the standard deviation). With random forest classification, the accuracy was 67%.
+  * **Feature Engineering with Geo-data, Unsupervised ML**
+    * I was the person who managed to integrate external, geographic data sources into our project. 
+    * The original data already provided by Flock Freight only had zipcode columns as the geographic data.
+    * I wrote ETL python scripts to extract GIS data from online government census data sources, and integrated them into the pre-existing dataset through geographic data preprocessing with Geopandas. 
+    * These supplementary geographic features turned out to be very helpful for the feature engineering, and even strongly influential for improving the prediction models' accuracies, compared to if we only limited ourselves to the pre-existing, non-geographic feature.
+    * These included employing K-means clustering unsupervised ML for segmenting the clients into metropolitan US regionsin terms of order data
+    * By including this newfound geo-data, I was also able to let our team incorporate maps into our data visualizations.
 
 ## Challenges Faced & Overcoming Them.
 
