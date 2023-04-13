@@ -40,4 +40,9 @@ Because of academic policy, some of my school projects do not link their code an
 <img src="images/images_cse151b/image_autocaptioner.png">
 ---
 
+---
+### [School] Pyspark Text-based Customer Satisfaction Data Engineering Project *(Winter 2022)*
+[Pyspark Text-based Customer Satisfaction Data Engineering Project](dsc102.md)
+---
+
 Pages: 1,   [2](index_pg2.md)
