@@ -22,15 +22,15 @@ Because of academic policy, some of my school projects do not link their code an
 ---
 
 ---
-### NYC Traffic Project *(Fall 2021 - Summer 2022)*
+### NYC Traffic Geospatial Project *(Fall 2021 - Summer 2022)*
 [NYC Traffic Data Science Project](nyc_traffic_project.md)
 <img src="images/leaflet_gif.gif?raw=true"/>
 <img src="images/traffic_data.png?raw=true"/>
 ---
 
 ---
-### [School] San Diego Airbnb Listings Project *(Winter 2023)*
-[San Diego Airbnb Listings Project](airbnb_sd.md)
+### [School] ArcGIS Airbnb Listings Project *(Winter 2023)*
+[ArcGIS Airbnb Listings Project](airbnb_sd.md)
 <img src="images/images_airbnb_sd/sd_airbnb_cover_img.png?raw=true"/>
 ---
 
