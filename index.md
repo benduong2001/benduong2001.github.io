@@ -2,8 +2,9 @@
 
 Hello, I am **Benson Duong**. I am a Data Science student at the University of California, San Diego, learning about the fields of data science, analysis, statistics, and machine learning. My projects and work have a recurring interest in social data, looking into business data or map data.
 
-<!--[Resume](BensonDuongLtxResumeV13.pdf)
--->
+
+[Resume](BensonDuongLtxResumeV13.pdf)
+
 
 These are some of my projects. Some are school assignments. Others are independent.
 Because of academic policy, some of my school projects do not link their code and have privated github repo's, and I can only provide surface-level descriptions of what I had done, within permitted limits.
@@ -46,4 +47,4 @@ Because of academic policy, some of my school projects do not link their code an
 [Pyspark Text-based Customer Satisfaction Data Engineering Project](dsc102.md)
 ---
 
-Pages: 1,   [2](index_pg2.md)
+Pages: **1**,   [2](index_pg2.md)
