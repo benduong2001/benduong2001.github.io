@@ -6,11 +6,16 @@
 
 * The main idea of the data preparation is that it finds a set of keywords whose presence (or absence) in a given user's review for a restaurant will determine how the user rates it. For this prediction model, the plan is to look for the keywords that are "bad", and their presence indicates a negative rating, while their absense might indicate a positive rating. 
 
-* But Python has no clue which keywords are "bad" or however deemed by humans. To find said "negative" keywords, I took a large set of reviews, and grouped them apart in terms of having high or low ratings. The ratings are from 1 (bad) to 5 (good). I decided that anything below 5 was "bad". The reason being was noticing that restaurant-goers tend to over-give 5-star ratings leniently.
+* But Python has no clue which keywords are "bad" or however deemed by humans. To find said "negative" keywords, I took a large set of reviews, and separated them into 2 groups in terms of having high vs low ratings. The ratings are from 1 (bad) to 5 (good). I decided that anything below 5 was "bad". The reason being was noticing that restaurant-goers tend to over-give 5-star ratings leniently.
 
 * Then I employed TF-IDF, a data mining method for words that is supposed to find the most "distinctive" group-wise keywords of either of these 2 groups (keywords that show up more often within a group, compared to outside that group). This is resting on the expectation the most "distinctive keywords" of the bad-ratings group is mostly going to be "emotionally negative" words.
 
-### **Results and Evaluation**
+### **Model**
+
+* For machine learning, scikit-learn was used, and the technique used would be logistic regression
+* 
+
+### **Evaluation**
 
 * The results on the test data showed that this prediction had a remarkable accuracy in determining if a user would rate a restaurant as good or bad based on their text review; 
 * This metrics table means that out of the times where a user rates the restaurant positively, it is able to correctly predict that the rating was positive 86% of the time, based on the user's review; out of the times where a user rates the restaurant negatively, it is able to correctly predict that the rating was negative 86% of the time, based on the user's review; 
