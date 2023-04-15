@@ -4,9 +4,6 @@
 * This 2nd task on user-restaurant determines how likely a given user would dine at a given restaurant, based on the user's history of previosuly chosen restaurants (if available) and the restaurant's history of customers. In other words, this uses a methodology in recommendation machine learning called [*collaborative filtering*](https://en.wikipedia.org/wiki/Collaborative_filtering), which predicts how a customer will rate a product based on how that product was rated by similar customers. 
 * Unlike the previous task, this one will employ more advanced deep learning and pre-trained ML tools. 
 
-### **Table of Contents**
-[Overview](#  Overview)
-
 ### **Overview**
 
 * The model should take a given user and a given restaurant as input, and output a value between 1 and 0 if the user will visit and eat at that restaurant (or not).
