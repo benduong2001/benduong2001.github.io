@@ -71,7 +71,7 @@
 
 ![](images/images_food_recommendation/colored_embeddings_scatterplot_.png) 
 
-* While this is not necessary, it would be insightful to see if there's any actual meaningfulness in the sub-groups that was automatically created by that statistical clustering method, for restaurants and users. To do so, I extracted the "most distinctive" keywords" of each sub-group. Again, this uses the TF-IDF method in the ratings prediction section.
+* While this is not necessary, it would be insightful to see if there's any actual meaningfulness in the sub-groups that was automatically created by that statistical clustering method, for restaurants and users. To do so, I extracted the "most distinctive" keywords" of each sub-group.
 
 ![](images/images_food_recommendation/keywords_business.png) 
 
