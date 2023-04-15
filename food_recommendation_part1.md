@@ -13,7 +13,7 @@
 ### **Model**
 
 * For machine learning, scikit-learn was used, and the technique used would be logistic regression
-* 
+* The prepared data however, faced the issue of class imbalance; This was resolved with undersampling.
 
 ### **Evaluation**
 
