@@ -12,6 +12,7 @@
 - [Evaluation](https://benduong2001.github.io/food_recommendation.html#Evaluation)
 - [Conclusion](https://benduong2001.github.io/food_recommendation.html#Conclusion)
 
+---
 
 ### **Overview**
 
@@ -23,6 +24,7 @@
 
 * This graph visually summarizes the model architecture. As one can see, 80% of my time is actually for the data preparation and cleaning, while the prediction model itself is merely a 20% part at the end.
 
+---
 ### Text-Data-Processing
 
 **Word2Vec**
@@ -45,6 +47,8 @@
 
 ![](images/images_food_recommendation/restaurant_embedding_gyro.png) 
 
+---
+
 ### Image-Data-Processing
 
 **Image-Recognition**
@@ -52,6 +56,8 @@
 * Some of the reviews comes with images of the food submitted by the users; this could be fed through a "convolutional neural network", an image recognition model which is a tool that can label the objects seen in a given picture. These labels are then filtered to only get food-related words using the food vocabulary as made by the recipe dataset. These words are attached to the text review as though it was part of the review.
    * For example, if an image in a review is a picture of a cupcake on a plate on a table by a window, the VGGNET16 model might output the top predictions as "cupcake", "window", "table", "plate". Assuming that the food vocabulary I created is large enough to include the word "cupcake", then that would be the only word that will be used from the image.
 * The python code accomodates this procedure, but I switched off for the baseline model since it's computationally costly.
+
+---
 
 ### **Segmentation**
 
@@ -75,6 +81,8 @@
 * **In other words, I am grouping up restaurants by the food they serve, and grouping up the restaurant-goers by the food they review, and hoping that a one-to-one correspondence (if it even exists) becomes visible between restaurant-types and customer-types in terms of food.** This would allow me to recommend the dessert-lovers (as seen above in user-group 0) to the dessert restaurants (as seen above in restaurant-group 4) ...and recommend Italian food lovers to Italian restaurants, seafood-lovers to seafood restaurants, and so on.
 * To see more examples of these restaurant/user "sub-groups" and their "most distinctive keywords", scroll to the [bottom half of the visualization notebook in the github repo](https://github.com/benduong2001/Food-Recommendation/blob/main/src/visualizations/visualization_notebook.ipynb)
 
+---
+
 ### **Evaluation**
 
 * Finally, the last part is to create a prediction model that answers whether or not a given user is likely to interact with a given restaurant... with the underlying data being based on the types of food that the given restaurant serves and the types of food the user has eaten at other restaurants.
@@ -86,6 +94,8 @@
    * Specifically, it is able to correctly label 73% of actually existing user-restaurant pairs as real, and 68% of invented pairs as fake.
 
 ![](images/images_food_recommendation/NN_Confusion_matrix.png) 
+
+---
 
 **Conclusion**
 
