@@ -4,30 +4,28 @@
 * This 2nd task on users and restaurants determines how likely a given user would dine at a given restaurant, based on the user's history of previosuly chosen restaurants (if available) and the restaurant's history of customers. In other words, this uses a methodology in recommendation machine learning called [*collaborative filtering*](https://en.wikipedia.org/wiki/Collaborative_filtering), which predicts how a customer will rate a product based on how that product was rated by similar customers. 
 * Unlike the previous task, this one will employ more advanced deep learning and pre-trained ML tools. 
 
+### Table of Contents
+- [Overview](https://benduong2001.github.io/food_recommendation.html#overview)
+- [Text-Data-Processing](https://benduong2001.github.io/food_recommendation.html#Text-data-processing)
+- [Image-Data-Processing](https://benduong2001.github.io/food_recommendation.html#Image-data-processing)
+- [Segmentation](https://benduong2001.github.io/food_recommendation.html#Segmentation)
+- [Evaluation](https://benduong2001.github.io/food_recommendation.html#Evaluation)
+- [Conclusion](https://benduong2001.github.io/food_recommendation.html#Conclusion)
 
-
-https://benduong2001.github.io/food_recommendation.html#overview
-https://benduong2001.github.io/food_recommendation.html#Word2vec
-https://benduong2001.github.io/food_recommendation.html#Image-Recognition
-https://benduong2001.github.io/food_recommendation.html#Segmentation
-https://benduong2001.github.io/food_recommendation.html#Evaluation
-https://benduong2001.github.io/food_recommendation.html#Conclusion
 
 ### **Overview**
 
 * The model neural network will take a given user and a given restaurant as an input pair, and output a value between 100% and 0% confidence on if the user will visit and eat at that restaurant. 
 * Each user is represented by the set of all foods (or rather, food-related words) that appear in the reviews they've written for different restauarants. 
 * Likewise, each restaurant is represented by the set of all foods (or rather, food-related words) that appear in the reviews written about them.
-* 
-
-
-
 
 ![](images/images_food_recommendation/model_architecture.png) 
 
 * This graph visually summarizes the model architecture. As one can see, 80% of my time is actually for the data preparation and cleaning, while the prediction model itself is merely a 20% part at the end.
 
-### **Word2Vec**
+### Text-Data-Processing
+
+**Word2Vec**
 
 * In order to approximately select only the food-related words, I used a completely separate dataset: a recipe dataset where one of the columns was a list of ingredients for each recipe; while it's impossible to get a universal list of every food-related word that exists, this is sufficient enough to build a vocabulary of just food words.
 * A reason behind my choice to use Word2Vec is its ability to connect relationships between words that usually appear close to one another. This is useful because it allows **indirect associations** between 2 given words.
@@ -47,7 +45,9 @@ https://benduong2001.github.io/food_recommendation.html#Conclusion
 
 ![](images/images_food_recommendation/restaurant_embedding_gyro.png) 
 
-### **Image-Recognition**
+### Image-Data-Processing
+
+**Image-Recognition**
 
 * Some of the reviews comes with images of the food submitted by the users; this could be fed through a "convolutional neural network", an image recognition model which is a tool that can label the objects seen in a given picture. These labels are then filtered to only get food-related words using the food vocabulary as made by the recipe dataset. These words are attached to the text review as though it was part of the review.
    * For example, if an image in a review is a picture of a cupcake on a plate on a table by a window, the VGGNET16 model might output the top predictions as "cupcake", "window", "table", "plate". Assuming that the food vocabulary I created is large enough to include the word "cupcake", then that would be the only word that will be used from the image.
