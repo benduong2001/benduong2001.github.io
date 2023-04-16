@@ -8,6 +8,8 @@
 - [Challenges](https://benduong2001.github.io/capstoneproject.html#Challenges)
 
 ## Background
+* In my university, all data science majors have to complete a 20 week capstone project before getting their degrees in Data Science B.S.
+* You will get placed in small, close-knit teams with 4-6 people for industry projects with company mentors, or research projects with professors, on various topics from Biomedicine to Sports.
 * I was part of a 6-month capstone project with 3 other students, under the mentorship of Flock Freight, a delivery logistics company.
 * The background to Flock Freight's mission is as follows:
   * A company needs to deliver an **order**  from Point A to Point B, but lack their own trucking or delivery services to do so.
@@ -18,29 +20,38 @@
     * Knowing just Order X alone, predict N - the number of carriers that will make an offer.
     * Knowing just Order X alone, predict the cheapest offer rate the order might get.
 * Flock Freight gave our team data about the orders themselves, which were just: the origin and destination zipcodes of the shipment order,the date of deadline, and physical characteristics about it (i.e. whether it's hazardous, or needs refridgeration).
-* After 20 weeks of intense collaboration and learning from Flock-Freight, my team and I constructed a final prediction model for determining if a given offer was worthy of selection. The new model was able to reduce Flock Freight's costs by 9.8%. We also authored a research paper documenting our findings, and attended a project showcase where we presented our work to peers, college faculty, and industry professionals.
+* After 20 weeks of intense collaboration and learning from Flock-Freight, my team and I constructed a final prediction model for determining if a given offer was worthy of selection. The new model was able to reduce Flock Freight's costs by 9.8%. 
+* We also authored a research paper documenting our findings, and attended a project showcase where we presented our work to peers, college faculty, and industry professionals.
 
 ## Personal-Contribution
 
 **So what did I do?**
 
   * **Predictive Modelling**
-    * Our team's final prediction model was actually a conglomerate of 3 prediction sub-models, and I was responsible for **two** of them. I had to work with building hem, selecting the best data for it, feature engineering said data, training it, and improving the test accuracy with even more feature engineering like a cycle.  
+    * Our team's final prediction model was actually a "conglomerate" of 3 prediction sub-models, and I was responsible for **two** of them. 
+    * I had to work with building the models, finding more data for it, cleaning the data, feature engineering the data, training the model with it, and improving the model's test accuracy by either feature engineering the data even more or finding even newer data. Like a cycle.
     * These 2 models were:
       * A prediction model for the average of the offer rates for a given order. This would be used as a threshold to label any incoming offer as "cheap" if it is below-average for that order.
           - The final model used Linear Regression. 
           - It's final test accuracy or correlation coefficient was 87%.
       * A prediction model for the standard deviation of the offer rates for a given order. This extends the last average model, labelling any incoming offer as "REALLY cheap" if below-average for that order by a large difference (namely that of the standard deviation). 
-          - The initial baseline model had a poor test set accuracy of 57%. A big portion of my time went to **improving** this model's accuracy. Several weeks would be spent (see the next "Challenges" section) in a cycle of **data-cleaning**, **feature engineering**, **modeling**, **hyperparameter fine-tuning**, **peeking at EDA visuals (such as correlation matrix heatmaps to pinpoint correlated features)**.
+          - The initial baseline model had a poor test set accuracy of 57%. A big portion of my time went to **improving** this model's accuracy. Several weeks would be spent (see the next ["Challenges"](https://benduong2001.github.io/capstoneproject.html#Challenges) section) in a cycle of **data-cleaning**, **feature engineering**, **modeling**, **hyperparameter fine-tuning**, **peeking at EDA visuals (such as correlation matrix heatmaps to pinpoint correlated features)**.
           - The final model used random forest, and its final (and **improved**) test accuracy was 67%. 
-  * **Geo-data**
-    * I was the person who managed to integrate external, geographic data sources into our project. 
-    * The original data already provided by Flock Freight only had zipcode columns as the geographic data.
-    * I wrote ETL python scripts to extract GIS data from online government census data sources, and integrated them into the pre-existing dataset through geographic data preprocessing with Geopandas. 
-    * These supplementary geographic features turned out to be very helpful for the feature engineering, and even strongly influential for improving the prediction models' accuracies, compared to if we only limited ourselves to the pre-existing, non-geographic feature.
-    * These included employing K-means clustering unsupervised ML for segmenting the clients into metropolitan US regionsin terms of order data
-    * By including this newfound geo-data, I was also able to let our team incorporate maps into our data visualizations.
-
+  * **Geo-Data Enrichment**
+    * A lot of this project was geographical in nature, since this company dealt with transportation shipping.
+     * The original data already provided by Flock Freight only had **one** geographic feature - the zipcodes of the order's origins and destinations. This column would be the main foreign key to the dimension tables
+    * Since I worked with geo-data in my internship and past projects, I was the person in our 4-person team put in charge with 2 roles:
+        1. Integrating external, geographic data sources into our project. 
+        2. Transforming it to be "usable" or "pandas-dataframe friendly" for my non-geospatial teammates 
+    * How I did these 2 role were:
+        1. I wrote **ETL** python scripts to extract this geo-data from online government census data sources.
+            * Retrival is done by **Socrata API** by Tyler Insights, OR **webscraping** with **BeautifulSoup**, as a sequence of **"ETL Failsafes"** with Python's **Try / Except**.
+            * The aforementioned zipcode column would be the **"foreign key"** to these new **"dimension tables"**
+        2. Geographic data preprocessing with Geopandas.
+    * **Benefits**: 
+        * These supplementary geographic features turned out to be very helpful for the feature engineering, and even influential for improving the prediction models' accuracies, compared to if we only limited ourselves to the pre-existing, non-geographic feature.
+            * T-Tests coded in python showed that these features indeed had a statistical significance with respect to the offer rate standard deviation per order.  
+        * By including this newfound geo-data, I was also able to let our team incorporate **geographic maps** into our data visualizations.
 ## Challenges
 
 **Challenges Faced & Overcoming Them**
@@ -57,4 +68,3 @@ I employed various actions and improved the baseline model's accuracy from being
       * These included: 
           * The metropolitan region that the origin and destination zipcodes of the order resided in
           * The population density and weather conditions on the route between the 2 locations 
-      * I would perform T-Tests in python, which showed that these features indeed had a statistical significance with respect to the offer rate standard deviation per order.  
