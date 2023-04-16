@@ -32,11 +32,12 @@
     * I had to work with building the models, finding more data for it, cleaning the data, feature engineering the data, training the model with it, and improving the model's test accuracy by either feature engineering the data even more or finding even newer data. Like a cycle.
     * These 2 models were:
       * A prediction model for the average of the offer rates for a given order. This would be used as a threshold to label any incoming offer as "cheap" if it is below-average for that order.
-          - The final model used Linear Regression. 
-          - It's final test accuracy or correlation coefficient was 87%.
+          - Final model: Linear Regression. 
+          - Final test accuracy: 87%.
       * A prediction model for the standard deviation of the offer rates for a given order. This extends the last average model, labelling any incoming offer as "REALLY cheap" if below-average for that order by a large difference (namely that of the standard deviation). 
           - The initial baseline model had a poor test set accuracy of 57%. A big portion of my time went to **improving** this model's accuracy. Several weeks would be spent (see the next ["Challenges"](https://benduong2001.github.io/capstoneproject.html#Challenges) section) in a cycle of **data-cleaning**, **feature engineering**, **modeling**, **hyperparameter fine-tuning**, **peeking at EDA visuals (such as correlation matrix heatmaps to pinpoint correlated features)**.
-          - The final model used random forest, and its final (and **improved**) test accuracy was 67%. 
+          - Final model: Random Forest
+          - Final (and **improved**) test accuracy: 67%. 
   * **Geo-Data Enrichment**
     * A lot of this project was geographical in nature, since this company dealt with transportation shipping.
      * The original data already provided by Flock Freight only had **one** geographic feature - the zipcodes of the order's origins and destinations. This column would be the main foreign key to the dimension tables
@@ -54,7 +55,19 @@
     * **Benefits**: 
         * These supplementary geographic features turned out to be very helpful for the feature engineering, and even influential for improving the prediction models' accuracies, compared to if we only limited ourselves to the pre-existing, non-geographic feature.
             * T-Tests coded in python showed that these features indeed had a statistical significance with respect to the offer rate standard deviation per order.  
-        * By including this newfound geo-data, I was also able to let our team incorporate **geographic maps** into our data visualizations.
+        * By including this newfound geo-data, I was also able to let our team incorporate **geographic maps** into our data visualizations
+![](images/images_dsc180/maps.png)
+    * Automating Tasks:
+    *  I developed Python scripts to automate nearly all stages of my tasks into an end-to-end pipeline, that could be done in at least **6** commands on the terminal. The pipeline
+        * data retrieval from a Socrata API and webscraping from an online data source using BeautifulSoup.
+        * Implemented data transformations using geopandas, feature engineering with pandas, and machine learning with sklearn pipelines to train and test multiple ML models.
+        * Conducted data integrity tests using custom Python functions to ensure data quality and accuracy.
+        * Recorded EDA and model metrics using Python logging and generated visualizations with matplotlib.
+        * Automated updating the visuals on own project's website with said generated visualizations and model metrics, while pickling the model
+        * Ensured reproducibility and portability of the project by running everything inside a Docker container.
+  
+![](images/images_dsc180/flowchart.png)
+
 ## Challenges
 
 **Challenges Faced & Overcoming Them**
