@@ -69,7 +69,4 @@ This real-world project came with real-world **messy data** -full of nuances and
 I employed various actions and improved the baseline model's accuracy from being 58% to 67%. These included adding further features, or doing further data-cleaning.
   * Geographic Features: as mentioned previously, adding geographic features helped the accuracy.
   * Time-based Features. 
-      * These included: 
-          * The metropolitan region that the origin and destination zipcodes of the order resided in
-          * The population density and weather conditions on the route between the 2 locations
      
