@@ -3,9 +3,9 @@
 [(Click here for the actual website used for the project)](https://radumanea23.github.io/UCSDFlockFreightCapstone/)
 
 **Table of Contents**
--[Background](https://benduong2001.github.io/capstoneproject.html#Background)
--[Personal-Contribution](https://benduong2001.github.io/capstoneproject.html#Personal-Contribution)
--[Challenges](https://benduong2001.github.io/capstoneproject.html#Challenges)
+- [Background](https://benduong2001.github.io/capstoneproject.html#Background)
+- [Personal-Contribution](https://benduong2001.github.io/capstoneproject.html#Personal-Contribution)
+- [Challenges](https://benduong2001.github.io/capstoneproject.html#Challenges)
 
 ## Background
 * I was part of a 6-month capstone project with 3 other students, under the mentorship of Flock Freight, a delivery logistics company.
