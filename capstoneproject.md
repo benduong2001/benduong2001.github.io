@@ -2,7 +2,7 @@
 
 [(Click here for the actual website used for the project)](https://radumanea23.github.io/UCSDFlockFreightCapstone/)
 
-**Table of Contents**
+## Table of Contents
 - [Background](https://benduong2001.github.io/capstoneproject.html#Background)
 - [Personal-Contribution](https://benduong2001.github.io/capstoneproject.html#Personal-Contribution)
 - [Challenges](https://benduong2001.github.io/capstoneproject.html#Challenges)
