@@ -25,13 +25,14 @@
 **So what did I do?**
 
   * **Predictive Modelling**
-    * Our team's final prediction model was actually a conglomerate of 3 prediction sub-models, and I was responsible for 2 of them. I had to work with building hem, selecting the best data for it, feature engineering said data, training it, and improving the test accuracy with even more feature engineering like a cycle. These 2 models were:
+    * Our team's final prediction model was actually a conglomerate of 3 prediction sub-models, and I was responsible for **two** of them. I had to work with building hem, selecting the best data for it, feature engineering said data, training it, and improving the test accuracy with even more feature engineering like a cycle.  
+    * These 2 models were:
       * A prediction model for the average of the offer rates for a given order. This would be used as a threshold to label any incoming offer as "cheap" if it is below-average for that order.
           - The final model used Linear Regression. 
           - It's final test accuracy or correlation coefficient was 87%.
       * A prediction model for the standard deviation of the offer rates for a given order. This extends the last average model, labelling any incoming offer as "REALLY cheap" if below-average for that order by a large difference (namely that of the standard deviation). 
-          - The initial baseline model had a poor test set accuracy of 57%. A big portion of my time went to improving this model's accuracy. Several weeks would be spent (see the next "Challenges" section) in a cycle of data-cleaning, feature engineering, modeling, hyperparameter fine-tuning, peeking at EDA visuals (such as correlation matrix heatmaps to pinpoint correlated features).
-          - The final model used random forest, and its final (and improved) test accuracy was 67%. 
+          - The initial baseline model had a poor test set accuracy of 57%. A big portion of my time went to **improving** this model's accuracy. Several weeks would be spent (see the next "Challenges" section) in a cycle of **data-cleaning**, **feature engineering**, **modeling**, **hyperparameter fine-tuning**, **peeking at EDA visuals (such as correlation matrix heatmaps to pinpoint correlated features)**.
+          - The final model used random forest, and its final (and **improved**) test accuracy was 67%. 
   * **Geo-data**
     * I was the person who managed to integrate external, geographic data sources into our project. 
     * The original data already provided by Flock Freight only had zipcode columns as the geographic data.
