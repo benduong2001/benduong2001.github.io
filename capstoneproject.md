@@ -47,7 +47,10 @@
         1. I wrote **ETL** python scripts to extract this geo-data from online government census data sources.
             * Retrival is done by **Socrata API** by Tyler Insights, OR **webscraping** with **BeautifulSoup**, as a sequence of **"ETL Failsafes"** with Python's **Try / Except**.
             * The aforementioned zipcode column would be the **"foreign key"** to these new **"dimension tables"**
-        2. Geographic data preprocessing with Geopandas.
+        2. Geographic data preprocessing / Feature Engineering.
+            * **GeoPandas** is used for geo-data pre-processing. To make the geodata usable as structured data, the zipcodes are mapped to X/Y coordinate columns, with a left-outer-join.
+            * But X/Y coordinates weren't enough, so I applied **K-means Clustering** to these zipcode nodes, subdividing into "Regions" suitable for **One-hot-encoding**.
+            * Also, I decided to symbolize the order's **"Delivery Route"** by connecting each order's origin / destination zipcode nodes. Further geodata sources and use of GeoPandas's Intersection and Buffer methods, can provide aggregated information about the average population density, rainfall, etc. encountered during the shipping route for that order.
     * **Benefits**: 
         * These supplementary geographic features turned out to be very helpful for the feature engineering, and even influential for improving the prediction models' accuracies, compared to if we only limited ourselves to the pre-existing, non-geographic feature.
             * T-Tests coded in python showed that these features indeed had a statistical significance with respect to the offer rate standard deviation per order.  
@@ -64,7 +67,9 @@ This real-world project came with real-world **messy data** -full of nuances and
   * **Sample weighting**: a reason as to why the target column was distributed like so, was because in many cases, Flock Freight closed many orders by picking offers too early; this meant the target column couldn't truly be representative of real-life data, and that for the observations that were "low" (i.e. on the left side of the distribution close to 0), it was impossible to tell if the value was truly low in real life... or if it could have been a potentially high value that was cut off too prematurely. For that reason, orders that were closed very early were given less trust or weight during the training and error.
 * **Improving model accuracy**:
 I employed various actions and improved the baseline model's accuracy from being 58% to 67%. These included adding further features, or doing further data-cleaning.
-  * **Geographic Feature Engineering**: as mentioned previously, adding geographic features helped the accuracy. 
+  * Geographic Features: as mentioned previously, adding geographic features helped the accuracy.
+  * Time-based Features. 
       * These included: 
           * The metropolitan region that the origin and destination zipcodes of the order resided in
-          * The population density and weather conditions on the route between the 2 locations 
+          * The population density and weather conditions on the route between the 2 locations
+     
