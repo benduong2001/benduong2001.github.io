@@ -4,8 +4,8 @@
 
 ## Table of Contents
 - [Background](https://benduong2001.github.io/capstoneproject.html#Background)
-- [Personal-Contribution](https://benduong2001.github.io/capstoneproject.html#Personal-Contribution)
-- [Challenges](https://benduong2001.github.io/capstoneproject.html#Challenges)
+- [What I did](https://benduong2001.github.io/capstoneproject.html#Personal-Contribution)
+- [Challenges Faced](https://benduong2001.github.io/capstoneproject.html#Challenges)
 
 ## Background
 * In my university, all data science majors have to complete a 20 week capstone project before getting their degrees in Data Science B.S.
