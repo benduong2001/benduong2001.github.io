@@ -5,9 +5,9 @@
 * Unlike the previous task, this one will employ more advanced deep learning and pre-trained ML tools. 
 
 ### Table of Contents
-- [Overview](https://benduong2001.github.io/food_recommendation_part2.html###overview)
-- [Text-Data-Processing](https://benduong2001.github.io/food_recommendation_part2.html###Text-data-processing)
-- [Image-Data-Processing](https://benduong2001.github.io/food_recommendation_part2.html###Image-data-processing)
+- [Overview](https://benduong2001.github.io/food_recommendation_part2.html###Overview)
+- [Text-Data-Processing](https://benduong2001.github.io/food_recommendation_part2.html###Text-Data-Processing)
+- [Image-Data-Processing](https://benduong2001.github.io/food_recommendation_part2.html###Image-Data-Processing)
 - [Segmentation](https://benduong2001.github.io/food_recommendation_part2.html###Segmentation)
 - [Evaluation](https://benduong2001.github.io/food_recommendation_part2.html###Evaluation)
 - [Conclusion](https://benduong2001.github.io/food_recommendation_part2.html###Conclusion)
