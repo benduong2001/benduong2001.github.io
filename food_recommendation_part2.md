@@ -5,16 +5,16 @@
 * Unlike the previous task, this one will employ more advanced deep learning and pre-trained ML tools. 
 
 ### Table of Contents
-- [Overview](https://benduong2001.github.io/food_recommendation_part2.html###Overview)
-- [Text-Data-Processing](https://benduong2001.github.io/food_recommendation_part2.html###Text-Data-Processing)
-- [Image-Data-Processing](https://benduong2001.github.io/food_recommendation_part2.html###Image-Data-Processing)
-- [Segmentation](https://benduong2001.github.io/food_recommendation_part2.html###Segmentation)
-- [Evaluation](https://benduong2001.github.io/food_recommendation_part2.html###Evaluation)
-- [Conclusion](https://benduong2001.github.io/food_recommendation_part2.html###Conclusion)
+- [Overview](https://benduong2001.github.io/food_recommendation_part2.html#Overview)
+- [Text-Data-Processing](https://benduong2001.github.io/food_recommendation_part2.html#Text-Data-Processing)
+- [Image-Data-Processing](https://benduong2001.github.io/food_recommendation_part2.html#Image-Data-Processing)
+- [Segmentation](https://benduong2001.github.io/food_recommendation_part2.html#Segmentation)
+- [Evaluation](https://benduong2001.github.io/food_recommendation_part2.html#Evaluation)
+- [Conclusion](https://benduong2001.github.io/food_recommendation_part2.html#Conclusion)
 
 ---
 
-### **Overview**
+### **Overview** {#Overview}
 
 * The model neural network will take a given user and a given restaurant as an input pair, and output a value between 100% and 0% confidence on if the user will visit and eat at that restaurant. 
 * Each user is represented by the set of all foods (or rather, food-related words) that appear in the reviews they've written for different restauarants. 
@@ -25,9 +25,9 @@
 * This graph visually summarizes the model architecture. As one can see, 80% of my time is actually for the data preparation and cleaning, while the prediction model itself is merely a 20% part at the end.
 
 ---
-### Text-Data-Processing
+### Text-Data-Processing {#Text-Data-Processing}
 
-**Word2Vec**
+**Word2Vec** 
 
 * In order to approximately select only the food-related words, I used a completely separate dataset: a recipe dataset where one of the columns was a list of ingredients for each recipe; while it's impossible to get a universal list of every food-related word that exists, this is sufficient enough to build a vocabulary of just food words.
 * A reason behind my choice to use Word2Vec is its ability to connect relationships between words that usually appear close to one another. This is useful because it allows **indirect associations** between 2 given words.
@@ -49,7 +49,7 @@
 
 ---
 
-### Image-Data-Processing
+### Image-Data-Processing {#Image-Data-Processing}
 
 **Image-Recognition**
 
@@ -59,9 +59,11 @@
 
 ---
 
-### **Segmentation**
+### **Segmentation of Restaurants and Users** {#Segmentation}
 
-**Dividing the Restaurants and Users into Distinct Sub-groups**
+**Using Unsupervised Machine Learning to automate the segmentation of Restaurants and Users into Distinct Sub-groups**
+
+* It is possible to use Unsupervised Machine learning to **automate segmentation** of Restaurants and Users into distinct sub-groups; it does so by finding patterns in terms of commonalities between food vocabularies of different reviews. Python may not intrinsically understand what the human idea of "seafood" is, it always sees that words like "tuna", or "crab", tend to associate more by being seen in reviews of the same restaurants. 
 
 * With further processing of the Word2Vec tool, each restaurant and each user is representable by a point in 2D space. Each point in space on the left scatterplot is a restaurant, while on the right are users. 
 
@@ -83,7 +85,7 @@
 
 ---
 
-### **Evaluation**
+### **Evaluation** {#Evaluation}
 
 * Finally, the last part is to create a prediction model that answers whether or not a given user is likely to interact with a given restaurant... with the underlying data being based on the types of food that the given restaurant serves and the types of food the user has eaten at other restaurants.
 * For this interaction problem, it is necessary to manually create "artificial, unseen" pairs; since every user-restaurant pair in the dataset is real and observed, there is no "nonexistent pair" samples to compare the observed pairs against. A sampling procedure was developed that tries to find "negative" (a.k.a. never-before-seen) combinations of users and restaurant. This of course brings into consideration an unspoken assumption that the given dataset is an extremely accurate representation of real life; in other words, I am assuming there are no cases where the artificial pairs that I created actually did exist in real life, but wasn't recorded in the dataset.
