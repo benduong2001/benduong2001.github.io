@@ -14,7 +14,7 @@
 
 ---
 
-### **Overview** {#Overview}
+### Overview {#Overview}
 
 * The model neural network will take a given user and a given restaurant as an input pair, and output a value between 100% and 0% confidence on if the user will visit and eat at that restaurant. 
 * Each user is represented by the set of all foods (or rather, food-related words) that appear in the reviews they've written for different restauarants. 
@@ -59,7 +59,7 @@
 
 ---
 
-### **Segmentation of Restaurants and Users** {#Segmentation}
+### Segmentation of Restaurants and Users {#Segmentation}
 
 **Using Unsupervised Machine Learning to automate the segmentation of Restaurants and Users into Distinct Sub-groups**
 
@@ -85,7 +85,7 @@
 
 ---
 
-### **Evaluation** {#Evaluation}
+### Evaluation {#Evaluation}
 
 * Finally, the last part is to create a prediction model that answers whether or not a given user is likely to interact with a given restaurant... with the underlying data being based on the types of food that the given restaurant serves and the types of food the user has eaten at other restaurants.
 * For this interaction problem, it is necessary to manually create "artificial, unseen" pairs; since every user-restaurant pair in the dataset is real and observed, there is no "nonexistent pair" samples to compare the observed pairs against. A sampling procedure was developed that tries to find "negative" (a.k.a. never-before-seen) combinations of users and restaurant. This of course brings into consideration an unspoken assumption that the given dataset is an extremely accurate representation of real life; in other words, I am assuming there are no cases where the artificial pairs that I created actually did exist in real life, but wasn't recorded in the dataset.
@@ -99,7 +99,7 @@
 
 ---
 
-**Conclusion**
+**Conclusion** {#Conclusion}
 
 * Overall, this model does not yet have a procedure for never-before-seen users and restaurants.
 * This model also must acknowledge several considerations: 
