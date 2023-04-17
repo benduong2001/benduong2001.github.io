@@ -7,7 +7,7 @@
 - [What I did](https://benduong2001.github.io/capstoneproject.html#Personal-Contribution)
 - [Challenges Faced](https://benduong2001.github.io/capstoneproject.html#Challenges)
 
-## Background
+## Background {#Background}
 * In my university, all data science majors have to complete a 20 week capstone project before getting their degrees in Data Science B.S.
 * You will get placed in small, close-knit teams with 4-6 people for industry projects with company mentors, or research projects with professors, on various topics from Biomedicine to Sports.
 * I was part of a 6-month capstone project with 3 other students, under the mentorship of Flock Freight, a delivery logistics company.
@@ -23,7 +23,7 @@
 * After 20 weeks of intense collaboration and learning from Flock-Freight, my team and I constructed a final prediction model for determining if a given offer was worthy of selection. The new model was able to reduce Flock Freight's costs by 9.8%. 
 * We also authored a research paper documenting our findings, and attended a project showcase where we presented our work to peers, college faculty, and industry professionals.
 
-## Personal-Contribution
+## Personal-Contribution {#Personal-Contribution}
 
 **So what did I do?**
 
@@ -68,7 +68,7 @@
   
 ![](images/images_dsc180/flowchart.png)
 
-## Challenges
+## Challenges {#Challenges}
 
 **Challenges Faced & Overcoming Them**
 
