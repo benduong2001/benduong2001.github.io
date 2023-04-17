@@ -80,6 +80,6 @@ This real-world project came with real-world **messy data** -full of nuances and
   * **Sample weighting**: a reason as to why the target column was distributed like so, was because in many cases, Flock Freight closed many orders by picking offers too early; this meant the target column couldn't truly be representative of real-life data, and that for the observations that were "low" (i.e. on the left side of the distribution close to 0), it was impossible to tell if the value was truly low in real life... or if it could have been a potentially high value that was cut off too prematurely. For that reason, orders that were closed very early were given less trust or weight during the training and error.
 * **Improving model accuracy**:
 I employed various actions and improved the baseline model's accuracy from being 58% to 67%. These included adding further features, or doing further data-cleaning.
-  * Geographic Features: as mentioned previously, adding geographic features helped the accuracy.
-  * Time-based Features. 
+  * **Geographic Features**: as mentioned previously, adding geographic features helped the accuracy.
+  * **Time-based Features.** 
      
