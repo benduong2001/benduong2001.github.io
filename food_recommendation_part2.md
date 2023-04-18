@@ -98,8 +98,7 @@
 ![](images/images_food_recommendation/NN_Confusion_matrix.png) 
 
 ---
-
-**Conclusion** {#Conclusion}
+### Conclusion {#Conclusion}
 
 * Overall, this model does not yet have a procedure for never-before-seen users and restaurants.
 * This model also must acknowledge several considerations: 
