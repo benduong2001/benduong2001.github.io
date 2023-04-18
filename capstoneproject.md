@@ -58,12 +58,12 @@
         * By including this newfound geo-data, I was also able to let our team incorporate **geographic maps** into our data visualizations
 ![](images/images_dsc180/maps.png)
 * **Automating Tasks**:
-    *  I developed Python scripts to automate nearly all stages of my tasks into an end-to-end pipeline, that could be done in at least **6** commands on the terminal. The pipeline
-        * data retrieval from a Socrata API and webscraping from an online data source using BeautifulSoup.
+    *  I developed Python scripts to automate nearly all stages of my tasks into an end-to-end pipeline, that could be done in at least **6** commands on the terminal. The pipeline automated the following actions:
+        * Data retrieval from Socrata API and webscraping from online data sources using BeautifulSoup.
         * Implemented data transformations using geopandas, feature engineering with pandas, and machine learning with sklearn pipelines to train and test multiple ML models.
         * Conducted data integrity tests using custom Python functions to ensure data quality and accuracy.
         * Recorded EDA and model metrics using Python logging and generated visualizations with matplotlib.
-        * Automated updating the visuals on own project's website with said generated visualizations and model metrics, while pickling the model
+        * Updating of the visuals on own project's website with those generated visualizations, while pickling the model.
         * Ensured reproducibility and portability of the project by running everything inside a Docker container.
   
 ![](images/images_dsc180/flowchart.png)
