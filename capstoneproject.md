@@ -34,7 +34,7 @@
           * Atlanta was a region of high delivery activity
           * Showing that knowing information about the order's delivery route itself (i.e. the average population density or average weather road conditions (rainfall, temperature) of the counties encountered along the way, did have influence on the volume of delivery offers for that order
 
-  * **Building and Training the Prediction Models**
+  * **Building and Training the Prediction Models and iteratively improving their accuracies**
     * Our team's final prediction model was actually a "conglomerate" of 3 prediction sub-models, and I was responsible for **two** of them. 
     * I had to work with building the models, finding more data for it, cleaning the data, feature engineering the data, training the model with it, and improving the model's test accuracy by either feature engineering the data even more or finding even newer data. Like a cycle.
     * These 2 models were:
@@ -65,7 +65,7 @@
         * By including this newfound geo-data, I was also able to let our team incorporate **geographic maps** into our data visualizations
 ![](images/images_dsc180/maps.png)
 * **Automating the data science tasks of my 2 models with Python**:
-    *  It would be repetitive to re-run the tasks again and again through Jupyter Notebook to find which different configuration of factors boosted the model accuracy. And so I developed Python scripts to automate nearly all stages of my tasks into an end-to-end pipeline, that could be done in at least **6 to 8** commands on the terminal, so that when those 6-8 commands were executed, The pipeline automatically did the following things:
+    *  As I had to improve my model's accuracy by routinely adding and cleaning new data or retransforming old data then re-training it, it was repetitive to re-run the tasks again and again through Jupyter Notebook to find which different configuration of factors boosted the model accuracy. And so I developed Python scripts to automate nearly all stages of my tasks into an end-to-end pipeline, that could be done in at least **6 to 8** commands on the terminal, so that when those 6-8 commands were executed, The pipeline automatically did the following things:
         * Data retrieval from Socrata API and webscraping from online data sources using BeautifulSoup.
         * Data transformations using geopandas, feature engineering with pandas, and machine learning with sklearn pipelines to train and test multiple ML models.
         * Data integrity tests using custom Python functions to ensure data quality and accuracy.
