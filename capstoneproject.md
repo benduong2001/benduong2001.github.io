@@ -65,7 +65,7 @@
         * By including this newfound geo-data, I was also able to let our team incorporate **geographic maps** into our data visualizations
 ![](images/images_dsc180/maps.png)
 * **Automating the data science tasks of my 2 models with Python**:
-    *  It would be repetitive to re-run the tasks again and again through Jupyter Notebook to find which different configuration of factors boosted the model accuracy. And so I developed Python scripts to automate nearly all stages of my tasks into an end-to-end pipeline, that could be done in at least **6 to 8* commands on the terminal. so that when those 6-8 commands were executed, The pipeline automatically did the following things:
+    *  It would be repetitive to re-run the tasks again and again through Jupyter Notebook to find which different configuration of factors boosted the model accuracy. And so I developed Python scripts to automate nearly all stages of my tasks into an end-to-end pipeline, that could be done in at least **6 to 8** commands on the terminal, so that when those 6-8 commands were executed, The pipeline automatically did the following things:
         * Data retrieval from Socrata API and webscraping from online data sources using BeautifulSoup.
         * Data transformations using geopandas, feature engineering with pandas, and machine learning with sklearn pipelines to train and test multiple ML models.
         * Data integrity tests using custom Python functions to ensure data quality and accuracy.
