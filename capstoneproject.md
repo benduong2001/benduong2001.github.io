@@ -25,9 +25,16 @@
 
 ## Personal-Contribution {#Personal-Contribution}
 
-**So what did I do?**
+**So what did I individually do?**
+  * **Impactful Insights**
+    * I managed to personally find several impactful insights useful to Flock Freight's business case. Some of these will be mentioned again in the rest of this page, but several of them ones would be:
+       * Using pandas data analysis and discovering the cheapest delivery offers frequently fell on Thursday, and verifying with statistical hypothesis testing that this pattern is likely existent and not out of random chance
+       * Producing locational data analysis that was able to show that:
+          * Delivery routes with the cheapest shipments tend to be along the west-coast states or from in and out of Florida.
+          * Atlanta was a region of high delivery activity
+          * Showing that knowing information about the order's delivery route itself (i.e. the average population density or average weather road conditions (rainfall, temperature) of the counties encountered along the way, did have influence on the volume of delivery offers for that order
 
-  * **Predictive Modelling**
+  * **Building and Training the Prediction Models**
     * Our team's final prediction model was actually a "conglomerate" of 3 prediction sub-models, and I was responsible for **two** of them. 
     * I had to work with building the models, finding more data for it, cleaning the data, feature engineering the data, training the model with it, and improving the model's test accuracy by either feature engineering the data even more or finding even newer data. Like a cycle.
     * These 2 models were:
@@ -38,7 +45,7 @@
           - The initial baseline model had a poor test set accuracy of 57%. A big portion of my time went to **improving** this model's accuracy. Several weeks would be spent (see the next ["Challenges"](https://benduong2001.github.io/capstoneproject.html#Challenges) section) in a cycle of **data-cleaning**, **feature engineering**, **modeling**, **hyperparameter fine-tuning**, **peeking at EDA visuals (such as correlation matrix heatmaps to pinpoint correlated features)**. All of these eventually improved the model's accuracy and ROC AUC score by 10%.
           - Final model: Random Forest
           - Final (and **improved**) test accuracy: 67%. 
-  * **Geo-Data Enrichment**
+  * **Geo-Data**
     * A lot of this project was geographical in nature, since this company dealt with transportation shipping.
      * The original data already provided by Flock Freight only had **one** geographic feature - the zipcodes of the order's origins and destinations.
     * Since I was the main person in the team with at least prior familiarity with geo-data in my internship and past projects, I had to do 2 tasks:
@@ -57,7 +64,7 @@
             * T-Tests coded in python showed that these features indeed had a statistical significance with respect to the offer rate standard deviation per order.  
         * By including this newfound geo-data, I was also able to let our team incorporate **geographic maps** into our data visualizations
 ![](images/images_dsc180/maps.png)
-* **Automating Tasks**:
+* **Automating the data science tasks of my 2 models with Python**:
     *  It would be repetitive to re-run the tasks again and again through Jupyter Notebook to find which different configuration of factors boosted the model accuracy. And so I developed Python scripts to automate nearly all stages of my tasks into an end-to-end pipeline, that could be done in at least **6 to 8* commands on the terminal. so that when those 6-8 commands were executed, The pipeline automatically did the following things:
         * Data retrieval from Socrata API and webscraping from online data sources using BeautifulSoup.
         * Data transformations using geopandas, feature engineering with pandas, and machine learning with sklearn pipelines to train and test multiple ML models.
