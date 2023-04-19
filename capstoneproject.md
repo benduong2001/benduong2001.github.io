@@ -35,36 +35,36 @@
           - Final model: Linear Regression. 
           - Final test accuracy: 87%.
       * A prediction model for the standard deviation of the offer rates for a given order. This extends the last average model, labelling any incoming offer as "REALLY cheap" if below-average for that order by a large difference (namely that of the standard deviation). 
-          - The initial baseline model had a poor test set accuracy of 57%. A big portion of my time went to **improving** this model's accuracy. Several weeks would be spent (see the next ["Challenges"](https://benduong2001.github.io/capstoneproject.html#Challenges) section) in a cycle of **data-cleaning**, **feature engineering**, **modeling**, **hyperparameter fine-tuning**, **peeking at EDA visuals (such as correlation matrix heatmaps to pinpoint correlated features)**.
+          - The initial baseline model had a poor test set accuracy of 57%. A big portion of my time went to **improving** this model's accuracy. Several weeks would be spent (see the next ["Challenges"](https://benduong2001.github.io/capstoneproject.html#Challenges) section) in a cycle of **data-cleaning**, **feature engineering**, **modeling**, **hyperparameter fine-tuning**, **peeking at EDA visuals (such as correlation matrix heatmaps to pinpoint correlated features)**. All of these eventually improved the model's accuracy and ROC AUC score by 10%.
           - Final model: Random Forest
           - Final (and **improved**) test accuracy: 67%. 
   * **Geo-Data Enrichment**
     * A lot of this project was geographical in nature, since this company dealt with transportation shipping.
-     * The original data already provided by Flock Freight only had **one** geographic feature - the zipcodes of the order's origins and destinations. This column would be the main foreign key to the dimension tables
-    * Since I worked with geo-data in my internship and past projects, I was the person in our 4-person team put in charge with 2 roles:
-        1. Integrating external, geographic data sources into our project. 
-        2. Transforming it to be "usable" or "pandas-dataframe friendly" for my non-geospatial teammates 
-    * How I did these 2 role were:
+     * The original data already provided by Flock Freight only had **one** geographic feature - the zipcodes of the order's origins and destinations.
+    * Since I was the main person in the team with at least prior familiarity with geo-data in my internship and past projects, I had to do 2 tasks:
+        1. Procuring external, geographic data sources for our project. 
+        2. Transforming it to be "usable" or "pandas-dataframe friendly" and thus pass the work to my less geospatially-familiar teammates so they could do more analysis on it.
+    * How I did these 2 tasks were:
         1. I wrote **ETL** python scripts to extract this geo-data from online government census data sources.
             * Retrival is done by **Socrata API** by Tyler Insights, OR **webscraping** with **BeautifulSoup**, as a sequence of **"ETL Failsafes"** with Python's **Try / Except**.
-            * The aforementioned zipcode column would be the **"foreign key"** to these new **"dimension tables"**
+            * The zipcode column  mentioned earlier would be the **"join key"** to these new "dimension tables"
         2. Geographic data preprocessing / Feature Engineering.
-            * **GeoPandas** is used for geo-data pre-processing. To make the geodata usable as structured data, the zipcodes are mapped to X/Y coordinate columns, with a left-outer-join.
-            * But X/Y coordinates weren't enough, so I applied **K-means Clustering** to these zipcode nodes, subdividing into "Regions" suitable for **One-hot-encoding**.
-            * Also, I decided to symbolize the order's **"Delivery Route"** by connecting each order's origin / destination zipcode nodes. Further geodata sources and use of GeoPandas's Intersection and Buffer methods, can provide aggregated information about the average population density, rainfall, etc. encountered during the shipping route for that order.
+            * **GeoPandas** is used for geo-data pre-processing. To make the geodata usable as structured data, the zipcodes are mapped to X/Y coordinate columns.
+            * But X/Y coordinates weren't enough, so I applied **K-means Clustering** to these zipcode nodes, andd thus grouping them into "Regions" suitable for **One-hot-encoding**.
+            * Also, I decided to symbolize the order's **"Delivery Route"** by connecting each order's origin / destination zipcode nodes. I brought in further geodata sources and used GeoPandas's Intersection and Buffer methods to aggregate different information about the counties that the delivery routes crossed through. These included average population density, rainfall, etc. encountered during the shipping route for that order.
     * **Benefits**: 
         * These supplementary geographic features turned out to be very helpful for the feature engineering, and even influential for improving the prediction models' accuracies, compared to if we only limited ourselves to the pre-existing, non-geographic feature.
             * T-Tests coded in python showed that these features indeed had a statistical significance with respect to the offer rate standard deviation per order.  
         * By including this newfound geo-data, I was also able to let our team incorporate **geographic maps** into our data visualizations
 ![](images/images_dsc180/maps.png)
 * **Automating Tasks**:
-    *  I developed Python scripts to automate nearly all stages of my tasks into an end-to-end pipeline, that could be done in at least **6** commands on the terminal. The pipeline automated the following actions:
+    *  It would be repetitive to re-run the tasks again and again through Jupyter Notebook to find which different configuration of factors boosted the model accuracy. And so I developed Python scripts to automate nearly all stages of my tasks into an end-to-end pipeline, that could be done in at least **6 to 8* commands on the terminal. so that when those 6-8 commands were executed, The pipeline automatically did the following things:
         * Data retrieval from Socrata API and webscraping from online data sources using BeautifulSoup.
-        * Implemented data transformations using geopandas, feature engineering with pandas, and machine learning with sklearn pipelines to train and test multiple ML models.
-        * Conducted data integrity tests using custom Python functions to ensure data quality and accuracy.
+        * Data transformations using geopandas, feature engineering with pandas, and machine learning with sklearn pipelines to train and test multiple ML models.
+        * Data integrity tests using custom Python functions to ensure data quality and accuracy.
         * Recorded EDA and model metrics using Python logging and generated visualizations with matplotlib.
         * Updating of the visuals on own project's website with those generated visualizations, while pickling the model.
-        * Ensured reproducibility and portability of the project by running everything inside a Docker container.
+    * I also ensured reproducibility and portability of the project by creating a Docker Image for our project group to run our whole project in.
   
 ![](images/images_dsc180/flowchart.png)
 
