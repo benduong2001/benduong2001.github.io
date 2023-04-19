@@ -27,12 +27,12 @@
 
 **So what did I individually do?**
   * **Impactful Insights**
-    * I managed to personally find several impactful insights useful to Flock Freight's business case. Some of these will be mentioned again in the rest of this page, but several of them would be:
-       * Using pandas data analysis and discovering the cheapest delivery offers frequently fell on Thursday, and verifying with statistical hypothesis testing that this pattern is likely existent and not out of random chance
+    * I managed to personally find several impactful insights that were useful to Flock Freight's business case. Some of these will be mentioned again in the rest of this page, but several are:
+       * Performing data analysis with Pandas, and discovering the cheapest delivery offers frequently fell on Thursday, then verifying with statistical hypothesis testing that this pattern is likely existent and not out of random chance.
        * Producing data analysis on delivery data and finding out that:
           * Delivery routes with the cheapest shipments tend to be along the west-coast states or from in and out of Florida.
           * Atlanta was a region of high delivery activity
-          * Showing that knowing information about the order's delivery route itself (i.e. the average population density or average weather road conditions (rainfall, temperature) of the counties encountered along the way, did have influence on the volume of delivery offers for that order
+          * Information about the order's delivery route itself, i.e. the average population density or average weather road conditions (rainfall, temperature) of the counties encountered along the way, did have influence on the volume of delivery offers for that order
 
   * **Building and Training the Prediction Models and iteratively improving their accuracies**
     * Our team's final prediction model was actually a "conglomerate" of 3 prediction sub-models, and I was responsible for **two** of them. 
