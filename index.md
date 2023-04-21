@@ -37,8 +37,8 @@ Because of academic policy, some of my school projects do not link their code an
 ---
 
 ---
-### [School] Image Auto-Captioner PyTorch Project *(Fall 2022)*
-[Image Auto-Captioner PyTorch Project](cse151b.md)
+### [School] AI Image Auto-Captioner Project with PyTorch *(Fall 2022)*
+[AI Image Auto-Captioner PyTorch Project with PyTorch](cse151b.md)
 <img src="images/images_cse151b/image_autocaptioner.png">
 ---
 
