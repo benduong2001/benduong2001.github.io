@@ -2,7 +2,7 @@
 
 Hello, I am **Benson Duong**. I am a Data Science student at the University of California, San Diego, learning about the fields of data science, programming, analysis, statistics, and machine learning. My projects and work have a recurring interest in social data, looking into business data or map data.
 
-I program with Python, using it to automate tasks and perform my data science work. I also work with SQL and Tableau, and have used Excel. Other none data-science related languages or tools that I work with include JavaScript, Java, Git Bash, Docker.
+I program with Python, using it to automate tasks and perform my data science work. I also work with SQL and Tableau, and have used Excel. Other non data-science related languages or tools that I work with include JavaScript, Java, Git Bash, Docker.
 
 [Resume](BensonDuongLtxResumeV13.pdf)
 
