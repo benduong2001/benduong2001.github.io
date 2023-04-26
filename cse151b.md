@@ -21,11 +21,11 @@
 * Using UCSD's Datahub server, this trained for up to 6 hours, several times for different configurations of parameters.
 
 
-![](/images/images_cse151b/image (3).png)
+![](/images/images_cse151b/image3.png)
 
-![](/images/images_cse151b/image (2).png)
+![](/images/images_cse151b/image2.png)
 
-![](/images/images_cse151b/image (1).png)
+![](/images/images_cse151b/image1.png)
 
 
 
