@@ -6,6 +6,9 @@
 
 ![](/images/images_cse151b/image_autocaptioner.png)
 
+![](/images/images_cse151b/image_autocaptioner.png)
+
+
 * This is a class project for CSE151B at UC San Diego. CSE151B is a class about Deep Learning in PyTorch taught by Professor Garrison Cottrell..
 *  I worked with Takuro Kitasawa, Rye Gleason, and Jeremy Nurding.
 * In this project, we developed and trained an AI generative model that could take in input images, and auto-generate English captions properly describing the image's content with correct grammar.
@@ -16,5 +19,13 @@
     * The Convolutional Neural Network serves as the Encoder, and the LSTM serves as the Decoder
     * The LSTM is originally trained with Teacher-forcing. Each auto-generated sentence is capped at 20 words.
 * Using UCSD's Datahub server, this trained for up to 6 hours, several times for different configurations of parameters.
+
+
+![](/images/images_cse151b/image (3).png)
+
+![](/images/images_cse151b/image (2).png)
+
+![](/images/images_cse151b/image (1).png)
+
 
 
