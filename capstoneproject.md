@@ -36,7 +36,7 @@
           * Information about the order's delivery route itself, i.e. the average population density or average weather road conditions (rainfall, temperature) of the counties encountered along the way, did have influence on the volume of delivery offers for that order
 
   * **Building and Training the Prediction Models and iteratively improving their accuracies**
-    * Our team's final prediction model was actually a "conglomerate" of 3 prediction sub-models. I and Nima were responsible for **two** of them. 
+    * Our team's final prediction model was actually a "conglomerate" of 3 prediction sub-models. Nima and I was responsible for **two** of them. 
     * We had to work with building the models, finding more data for it, cleaning the data, feature engineering the data, training the model with it, and improving the model's test accuracy by either feature engineering the data even more or finding even newer data. Like a cycle.
     * These 2 models were:
       * A prediction model for the average of the offer rates for a given order. This would be used as a threshold to label any incoming offer as "cheap" if it is below-average for that order.
