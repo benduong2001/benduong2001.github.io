@@ -26,7 +26,7 @@
 
 ## Personal-Contribution {#Personal-Contribution}
 
-**So what did I individually do?**
+**So what did I do?**
   * **Impactful Insights**
     * I managed to personally find several impactful insights that were useful to Flock Freight's business case. Some of these will be mentioned again in the rest of this page, but several are:
        * Performing data analysis with Pandas, and discovering the cheapest delivery offers frequently fell on Thursday, then verifying with statistical hypothesis testing that this pattern is likely existent and not out of random chance.
@@ -43,7 +43,7 @@
           - Final model: Linear Regression. 
           - Final test accuracy: 87%.
       * A prediction model for the standard deviation of the offer rates for a given order. This extends the last average model, labelling any incoming offer as "REALLY cheap" if below-average for that order by a large difference (namely that of the standard deviation). 
-          - The initial baseline model had a poor test set accuracy of 57%. A big portion of the time went to **improving** this model's accuracy. Several weeks would be spent (see the next ["Challenges"](https://benduong2001.github.io/capstoneproject.html#Challenges) section) in a cycle of **data-cleaning**, **feature engineering**, **modeling**, **hyperparameter fine-tuning**, **peeking at EDA visuals (such as correlation matrix heatmaps to pinpoint correlated features)**. All of these eventually improved the model's accuracy and ROC AUC score by 10%.
+          - The initial baseline model had a poor test set accuracy of 57%. A big portion of the time went to **improving** this model's accuracy. Several weeks would be spent (see the next ["Challenges"](https://benduong2001.github.io/capstoneproject.html#Challenges) section) in a cycle of **data-cleaning**, **feature engineering**, **modeling**, **hyperparameter fine-tuning**, **peeking at EDA visuals (such as correlation matrix heatmaps to pinpoint correlated features)**. All of these eventually improved the model's accuracy and ROC AUC score by ~10%.
           - Final model: Random Forest
           - Final (and **improved**) test accuracy: 67%. 
   * **Geo-Data**
@@ -51,7 +51,7 @@
      * The original data already provided by Flock Freight only had **one** geographic feature - the zipcodes of the order's origins and destinations.
     * Since I was the main person in the team with at least prior familiarity with geo-data in my internship and past projects, I had to do 2 tasks:
         1. Procuring external, geographic data sources for our project. 
-        2. Transforming it to be "usable" or "pandas-dataframe friendly" and thus pass the work to my less geospatially-familiar teammates so they could do more analysis on it.
+        2. Transforming it to be "usable" or "pandas-dataframe friendly" and then pass the work to my other teammates so they could do more analysis on it.
     * How I did these 2 tasks were:
         1. I wrote **ETL** python scripts to extract this geo-data from online government census data sources.
             * Retrival is done by **Socrata API** by Tyler Insights, OR **webscraping** with **BeautifulSoup**, as a sequence of **"ETL Failsafes"** with Python's **Try / Except**.
