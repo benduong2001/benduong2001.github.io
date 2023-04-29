@@ -59,7 +59,7 @@
             * The zipcode column  mentioned earlier would be the **"join key"** to these new "dimension tables"
         2. Geographic data preprocessing / Feature Engineering.
             * **GeoPandas** is used for geo-data pre-processing. To make the geodata usable as structured data, the zipcodes are mapped to X/Y coordinate columns.
-            * But X/Y coordinates weren't enough, so I applied **K-means Clustering** to these zipcode nodes, andd thus grouping them into "Regions" suitable for **One-hot-encoding**.
+            * But X/Y coordinates weren't enough, so I applied **K-means Clustering** to these zipcode nodes, and thus grouped them into "Regions" down to an amount suitable for **One-hot-encoding**.
             * Also, I decided to symbolize the order's **"Delivery Route"** by connecting each order's origin / destination zipcode nodes. I brought in further geodata sources and used GeoPandas's Intersection and Buffer methods to aggregate different information about the counties that the delivery routes crossed through. These included average population density, rainfall, etc. encountered during the shipping route for that order.
     * **Benefits**: 
         * These supplementary geographic features turned out to be very helpful for the feature engineering, and even influential for improving the prediction models' accuracies, compared to if we only limited ourselves to the pre-existing, non-geographic feature.
