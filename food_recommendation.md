@@ -12,6 +12,12 @@
    * Data Analysis and results applicable to useful business questions on customer recommendation, such as providing insights to user demographic sub-groups.
    * Succinct and Intuitive Data visualizations
 
+    * Used Tools (Everything is done in Python)
+        * Scikit-learn (for TfIdf Vectorizer and Logistic Regression)
+        * Matplotlib for visualizations
+        * NumPy
+        * Tensorflow and Keras
+
 [(Link to Github Repo)](https://github.com/benduong2001/Food-Recommendation)
 
 
