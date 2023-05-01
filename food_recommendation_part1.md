@@ -1,11 +1,7 @@
 ## **Sub-Project 1: Predicting How a User Rates a Restaurant Rating Based on Their Review**
 
 * For this 1st task, I created a machine learning prediction model that determines whether a user's rating for a restaurant is negative or not, given the text of their review.
-    * Used Tools (Everything is done in Python)
-        * Scikit-learn (for TfIdf Vectorizer and Logistic Regression)
-        * Matplotlib for visualizations
-        * NumPy
-        * Tensorflow and Keras
+
 ### **Data Preparation**
 
 * The main idea of the data preparation is that it finds a set of keywords whose presence (or absence) in a given user's review for a restaurant will determine how the user rates it. For this prediction model, the plan is to look for the keywords that are "bad", and their presence indicates a negative rating, while their absense might indicate a positive rating. 
