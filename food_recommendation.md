@@ -38,4 +38,3 @@
 ![](images/images_food_recommendation/keywords_users_business.png) 
 
 * During the data preparation, I was also able to uncover indirectly-associated sub-groups in the restaurants and customer demographics, based on food, which in itself is a useful and applicable byproduct. 
-* 
