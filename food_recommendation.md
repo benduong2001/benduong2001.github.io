@@ -32,11 +32,7 @@
 
 * Gensim's Word2Vec would be used to be provide vector embeddings for the restaurants and reviewers
 
-![](images/images_food_recommendation/colored_embeddings_scatterplot_.png) 
-
-![](images/images_food_recommendation/keywords_business.png) 
-
-![](images/images_food_recommendation/keywords_users.png) 
+![](images/images_food_recommendation/keywords_users_business.png) 
 
 
 * During the data preparation, I was also able to uncover indirectly-associated sub-groups in the restaurants and customer demographics, based on food, which in itself is a useful and applicable byproduct. 
