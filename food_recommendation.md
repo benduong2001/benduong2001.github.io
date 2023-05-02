@@ -28,11 +28,13 @@
 
 ![](images/images_food_recommendation/model_architecture.png) 
 
-![](images/images_food_recommendation/food_word_arithmetic.png) 
-
 * Gensim's Word2Vec would be used to be provide vector embeddings for the restaurants and reviewers
 
+![](images/images_food_recommendation/food_word_arithmetic.png) 
+
+* By doing so, unsupervised ML clustering (namely K-means) via Python's Scikit-Learn can be used to automate customer segmentation. This divides the reviewers into distinguishable ”cuisine” sub-groups based on their reviews’ distinct food-related keywords (the same applies to the businesses)
+* For data visualization purposes, the data undergoes dimensionality reduction as seen below to enable a 2D scatterplot.
 ![](images/images_food_recommendation/keywords_users_business.png) 
 
-
 * During the data preparation, I was also able to uncover indirectly-associated sub-groups in the restaurants and customer demographics, based on food, which in itself is a useful and applicable byproduct. 
+* 
