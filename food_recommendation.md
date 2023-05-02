@@ -15,13 +15,14 @@
        * NumPy
        * Tensorflow and Keras
 
-**Sub-Project 1**
+### Sub-Project 1
 
 * Task 1 is about predicting whether a given user will rate a given restaurant negatively, with their text reviews as input data.
 * [Click here to see the full "sub-project" 1](https://benduong2001.github.io/food_recommendation_part1.html)
-* 
 
-**Sub-Project 2** 
+![](images/images_food_recommendation/food_sentiment_coefficients.png) 
+
+## Sub-Project 2
 
 * Task 2 is about predicting whether a given user likely would visit a given restaurant, using text and images as input data.
 * [Click here to see the full "sub-project" 2](https://benduong2001.github.io/food_recommendation_part2.html)
