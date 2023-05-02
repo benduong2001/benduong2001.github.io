@@ -23,7 +23,8 @@
 ![](images/images_food_recommendation/food_sentiment_confusion_matrix.png) 
 
 * Finally, a peek at the 20 most influential keywords to appear in a google review, in determining if a user will give a restaurant a **bad rating**. 
-  * This is actually 
+* This is actually the absolute values of the model's coefficients, since each word's presense is a feature of the logistic regression.
+
 ![](images/images_food_recommendation/food_sentiment_coefficients.png) 
 
 * This makes sense, as most of these words have negative connotations, and even more impressively, it manages to pick out words that aren't just negative, "emotional" words (like worst, or bland)- it also includes words that are otherwise arguably neutral but deemed negative *in the context of food or a restaurant* (dry, cold). It doesn't even need to be related to food, but the service itself (slow, rude).
