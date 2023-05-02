@@ -6,6 +6,7 @@
 - [Background](https://benduong2001.github.io/capstoneproject.html#Background)
 - [What I did](https://benduong2001.github.io/capstoneproject.html#Personal-Contribution)
 - [Challenges Faced](https://benduong2001.github.io/capstoneproject.html#Challenges)
+- [Visualizations](https://benduong2001.github.io/capstoneproject.html#Visualizations)
 
 ## Background {#Background}
 * In my university, all data science majors have to complete a 20 week capstone project before getting their degrees in Data Science B.S.
@@ -92,3 +93,22 @@ I employed various actions and improved the baseline model's accuracy from being
   * **Geographic Features**: as mentioned previously, adding geographic features helped the accuracy.
   * **Time-based Features.** 
      
+## Visualizations {#Visualizations}
+
+* These were amoung the visualizations made by me.
+
+![](images/images_dsc180/avg_model_r2_scatter.png)
+
+![](images/images_dsc180/avg_model_feature_importances.png)
+
+![](images/images_dsc180/sd_model_confusion_matrix.png)
+
+![](images/images_dsc180/sd_model_feature_importances.png)
+
+![](images/images_dsc180/zipcodes_avg_order_offer_amount_big.png)
+
+![](images/images_dsc180/oper_zips_by_carrier_amount_fit_viridis.png)
+
+![](images/images_dsc180/paths_avg_log_oper_count.png)
+
+![](images/images_dsc180/map_shipping_routes_by_order_amount.png)
