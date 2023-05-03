@@ -114,7 +114,7 @@ I employed various actions and improved the baseline model's accuracy from being
 
 ![](images/images_dsc180/metro_clusters_cropped.png)
 
-* Clustering (K-means) on the zipcode nodes groups them apart into "metropolitan regions", providing a geography-based "segmentation" of the shipping locations to symbolize locality / take advantage of spatial autocorrelation. 
+* Clustering (K-means) on the zipcode nodes allows us to group them apart into "metropolitan regions", providing a geography-based "segmentation" of the shipping locations to symbolize locality / take advantage of spatial autocorrelation. 
 
 ![](images/images_dsc180/map_shipping_routes_by_order_amount.png)
 
