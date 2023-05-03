@@ -115,6 +115,8 @@ Name the resulting layer as StreetSegment_LandUse_Subsets, and export the datafr
 
 ![](images/images_nyc_traffic/lubor.png) 
 
+* Unsurprisingly, Manhattan has the most Business landuses and least Residential landuses. Brooklyn, Staten Island, and Queens are the more residential and "suburban" boroughs of NYC, and so it has a higher percentage of residential landuses.
+
 **Lineplots showing Traffic Volume over Weekday-types, Boroughs, and Landuses**
 
 ![](images/images_nyc_traffic/trafhrday.png) 
