@@ -1,5 +1,13 @@
 # Geospatial Data Science Project: New York City Traffic
 
+
+## Table of Contents
+- [Background](https://benduong2001.github.io/nyc_traffic_project.html#Background)
+- [Esri ArcMaps Geodata Preprocessing](https://benduong2001.github.io/nyc_traffic_project.html#ArcGIS-Data-Preprocessing)
+- [Data Analysis and Visualizations](https://benduong2001.github.io/nyc_traffic_project.html#Data-Analysis)
+
+## Background {#Background}
+
 ![](images/images_nyc_traffic/leaflet_gif.gif) 
 * Demonstration of Traffic Prediction App made with Flask and Leaflet.js
 
@@ -14,7 +22,12 @@ It contains 2 parts:
 ### **Kaggle Article that I wrote**: 
 [(Click to view article)](https://www.kaggle.com/code/bensonduong/geospatial-nyc-traffic-project)
 
-### Part 1A: *Getting the Street Segment Traffic Data into a GIS-friendly Format* {part1a}
+## ArcGIS-Data-Preprocessing {#ArcGIS-Data-Preprocessing}
+
+Preprocessing
+
+
+### Part 1A: *Getting the Street Segment Traffic Data into a GIS-friendly Format*
 
 Opening the traffic CSV file (made from the code before) on ArcMap, you'll come across the first problem. **It's an ordinary CSV file, with no usable geospatial data formatting**. The closest column we have are the street names, which we don't really want to resort to, since string data like this can be wildly inconsistent from one data source to another (East 73rd Street in one data source might be 73 St. E in another).
 
@@ -50,7 +63,7 @@ In summary, for the 1st base dataset listed at the beginning, we had to join it 
 
 ![](images/images_nyc_traffic/ag8.png) 
 
-### Part 1B: *Retrieval of Geospatial Data Surrounding the Street Segments* {part1b}
+### Part 1B: *Retrieval of Geospatial Data Surrounding the Street Segments*
 
 We could move onto data-cleaning and wrap up ArcGIS, but we could also go a bit further. So far, we have data on **time** (hourly traffic data) and **place** (street segment), which are very useful for analyzing traffic. But could **place** be improved? Specifically, could more be done to learn about a street segment's **surroundings** and **local environment**?
 
@@ -96,13 +109,23 @@ Finally, use the Customize > ArcToolbox > Analysis Tools > Overlay > Spatial Joi
 
 Name the resulting layer as StreetSegment_LandUse_Subsets, and export the dataframe of it to a txt file for later use as a CSV.
 
+## Data Analysis and Visualizations {Data-Analysis}
+
+**Stacked Barcharts showing Landuse Compositions across NYC Boroughs**
+
 ![](images/images_nyc_traffic/lubor.png) 
+
+**Lineplots showing Traffic Volume over Weekday-types, Boroughs, and Landuses**
 
 ![](images/images_nyc_traffic/trafhrday.png) 
 
 ![](images/images_nyc_traffic/trafhrbor.png) 
 
 ![](images/images_nyc_traffic/trafhrlu.png) 
+
+
+
+**3D Scatterplot in terms of Traffic Volume (color), Subway Entrance Proximity, and Building Floor Count**
 
 ![](images/images_nyc_traffic/subproxnumfloortraff.png) 
 
@@ -128,8 +151,14 @@ Name the resulting layer as StreetSegment_LandUse_Subsets, and export the datafr
 ![](images/images_nyc_traffic/normstiu.png) 
 -->
 
+**Correlation Heatmap**
+
 ![](images/images_nyc_traffic/nycheatmap.png) 
 
+**Multinomial Logistic Regression Prediction Model's Confusion Matrix**
+
 ![](images/images_nyc_traffic/nycconfmat.png) 
+
+**Feature Importances of the Multinomial Logistic Regression Prediction Model**
 
 ![](images/images_nyc_traffic/nycfeatimp.png) 
