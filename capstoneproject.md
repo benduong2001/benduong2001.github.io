@@ -98,19 +98,7 @@ I employed various actions and improved the baseline model's accuracy from being
      
 ## Visualizations {#Visualizations}
 
-* These were amoung the visualizations made by me.
-
-* This scatterplot compares the first prediction sub-model's true test-set values against its estimated test-values;
-
-![](images/images_dsc180/avg_model_r2_scatter.png)
-
-![](images/images_dsc180/avg_model_feature_importances.png)
-
-![](images/images_dsc180/sd_model_confusion_matrix.png)
-
-![](images/images_dsc180/sd_model_feature_importances.png)
-
-----
+* These are some of the visualizations made by me, using Python's matplotlib.
 
 ![](images/images_dsc180/metro_clusters_cropped.png)
 
@@ -145,3 +133,33 @@ I employed various actions and improved the baseline model's accuracy from being
 
 * This zipcode scatterplot weighs each "operating zipcode" (a.k.a. a carrier's home zipcode) by their average offer rates 
 * It seems like for a given offer, if the carrier proposing it is in the South, their offer rate might be very cheap.
+
+
+### Prediction Model Visuals
+
+![](images/images_dsc180/avg_model_r2_scatter.png)
+
+* This scatterplot gauges the accuracy of the first prediction sub-model that I worked on, which estimates the typical offer rate for a given order.
+* Even with just a Linear Regression (Scikit-learn), I was able to achive 87% test accuracy; In this scatterplot,the true test-set y-values are compared against the predictions made by the linear regression, showing high accuracy because the cloud of dots are almost very straight and linear.
+
+![](images/images_dsc180/avg_model_feature_importances.png)
+
+* This barchart ranks the most influential features in the first prediction sub-model, which I got by getting the absolute values of the linear regression coefficients. In this case, the column name format "ORIG_GROUP=X" means if the order's origin zipcode node is in group "X" (see the metropolitan regions visualization). Likewise, "DEST_GROUP=X" means if the order's destination zipcode node is in group "X".
+
+
+
+![](images/images_dsc180/sd_model_confusion_matrix.png)
+
+* This confusion matrix is for the second prediction sub-model that predicts the standard deviation of the offer rates for a given order (or more specifically, whether it's "high" or "low").
+
+![](images/images_dsc180/sd_model_feature_importances.png)
+
+* This barchart ranks the most influential features in the second prediction sub-model, which uses the ".feature_importances" attribute of the sklearn model.
+* It seems having geographic features is very important to the model's accuracy, as many of these features pertain to information about the order's delivery route.
+    * Several pertain to the delivery route's road or weather conditions:
+        * LOG(POPULATION): the average population of all the counties that the order's delivery route crosses through
+        * LOG(ALAND): the average land-area of all the counties that the order's delivery route crosses through
+        * LOG(PRECIPATION): the average precipitation (rainfall or snowfall) of all the counties that the order's delivery route crosses through
+        * LOG(TEMPERATURE): the average temperature of all the counties that the order's delivery route crosses through
+        * POPULATION_DENSITY: the average population density (or urban-ness) of all the counties that the order's delivery route crosses through
+        * APPROXIMATE_DRIVING_ROUTE_MILEAGE: the length of the order's delivery route (the euclidean distance between the origin and destination zipcode node)
