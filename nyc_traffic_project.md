@@ -123,11 +123,13 @@ Name the resulting layer as StreetSegment_LandUse_Subsets, and export the datafr
 
 ![](images/images_nyc_traffic/trafhrlu.png) 
 
-
+* The traffic volume throughout the day tends to follow a consistent pattern.
 
 **3D Scatterplot in terms of Traffic Volume (color), Subway Entrance Proximity, and Building Floor Count**
 
 ![](images/images_nyc_traffic/subproxnumfloortraff.png) 
+
+* It is insightful to consider how a street segment's traffic volume is correlated with Proximity to Subway Entrances and how "urbanized" the surroundings are (as symbolized by building floor count for skyscrapers).
 
 <!--
 ![](images/images_nyc_traffic/normbronxunl.png) 
