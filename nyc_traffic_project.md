@@ -109,7 +109,7 @@ Finally, use the Customize > ArcToolbox > Analysis Tools > Overlay > Spatial Joi
 
 Name the resulting layer as StreetSegment_LandUse_Subsets, and export the dataframe of it to a txt file for later use as a CSV.
 
-## Data Analysis and Visualizations {Data-Analysis}
+## Data Analysis and Visualizations {#Data-Analysis}
 
 **Stacked Barcharts showing Landuse Compositions across NYC Boroughs**
 
