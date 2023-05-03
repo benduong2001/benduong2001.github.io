@@ -100,6 +100,8 @@ I employed various actions and improved the baseline model's accuracy from being
 
 * These were amoung the visualizations made by me.
 
+* This scatterplot compares the first prediction sub-model's true test-set values against its estimated test-values;
+
 ![](images/images_dsc180/avg_model_r2_scatter.png)
 
 ![](images/images_dsc180/avg_model_feature_importances.png)
@@ -110,18 +112,36 @@ I employed various actions and improved the baseline model's accuracy from being
 
 ----
 
-![](images/images_dsc180/networks_cheap.png)
-
 ![](images/images_dsc180/metro_clusters_cropped.png)
 
-![](images/images_dsc180/oper_zips_by_avg_rates.png)
-
-![](images/images_dsc180/zipcodes_avg_order_offer_amount_big.png)
-
-![](images/images_dsc180/oper_zips_by_carrier_amount_fit_viridis.png)
-
-![](images/images_dsc180/paths_avg_log_oper_count.png)
+* Clustering (K-means) on the zipcode nodes groups them apart into "metropolitan regions", providing a geography-based "segmentation" of the shipping locations to symbolize locality / take advantage of spatial autocorrelation. 
 
 ![](images/images_dsc180/map_shipping_routes_by_order_amount.png)
 
+* This deliveryy route network map between the zipcode nodes gives the traffic or "amount of orders observed" along the delivery route. There is a
+* Southern California, Bay Area, New York, Seattle, Chicago, Florida, Atlanta, Dallas, seem to be very prominent centers.
 
+![](images/images_dsc180/networks_cheap.png)
+
+* This delivery route network map between the zipcode nodes give the average offer rates of orders that occured along the delivery route.
+* It seems that the cheapest average offers rate tending to be along the west-coast states or from in/out of Florida.
+
+![](images/images_dsc180/zipcodes_avg_order_offer_amount_big.png)
+
+* This delivery route network map between the zipcode nodes gives the average offer rates of orders that occured along the delivery route.
+* It seems that the cheapest average offers rate tending to be along the west-coast states or from in/out of Florida.
+
+![](images/images_dsc180/oper_zips_by_carrier_amount_fit_viridis.png)
+
+* This zipcode scatterplot counts how many carriers are based in different zipcode nodes
+* While maps like these tend to show obvious population centers, that might not be fully the case here; for example, regions that should typically be very populated seem to have few or even 0 hubs: The Great Lakes area only has Chicago; meanwhile, NYC + the "BosWash" area (https://en.wikipedia.org/wiki/Northeast_megalopolis) seem to be almost nonexistent in this map!
+
+![](images/images_dsc180/paths_avg_log_oper_count.png)
+
+* This delivery route network map between the zipcode nodes gives the amount of "operating zipcodes" (a.k.a. a carrier's home zipcode) orders that occured along the delivery route.
+* The purpose of such a map is to see if it can symbolize "competitive" a delivery route tends to be; we expected that for delivery routes that go through the "jurisdictions" of many carriers will have a lot of competition for a given order, potentially driving down the offer rates.
+
+![](images/images_dsc180/oper_zips_by_avg_rates.png)
+
+* This zipcode scatterplot weighs each "operating zipcode" (a.k.a. a carrier's home zipcode) by their average offer rates 
+* It seems like for a given offer, if the carrier proposing it is in the South, their offer rate might be very cheap.
