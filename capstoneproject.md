@@ -105,6 +105,13 @@ I employed various actions and improved the baseline model's accuracy from being
 
 ![](images/images_dsc180/sd_model_feature_importances.png)
 
+
+![](images/images_dsc180/networks_cheap.png.png.png)
+
+![](images/images_dsc180/metro_clusters_cropped.png)
+
+![](images/images_dsc180/oper_zips_by_avg_rates.png.png)
+
 ![](images/images_dsc180/zipcodes_avg_order_offer_amount_big.png)
 
 ![](images/images_dsc180/oper_zips_by_carrier_amount_fit_viridis.png)
