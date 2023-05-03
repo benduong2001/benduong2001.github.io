@@ -13,8 +13,8 @@ Because of academic policy, some of my school projects do not link their code an
 # Data Science Project Portfolio
 
 ---
-### [School] Industry Research Capstone Project*(Fall 2022 - Winter 2023)*
-[Industry Research Capstone](capstoneproject.md)
+### [School] Industry Research Project *(Fall 2022 - Winter 2023)*
+[Industry Research Project](capstoneproject.md)
 <img src="images/images_dsc180/image4.png?raw=true"/>
 ---
 
