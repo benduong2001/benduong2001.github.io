@@ -17,8 +17,11 @@
 ![](images/images_airbnb_sd/dsc170img4.png)
 -->
 
-To summarize our results, the biggest factors affecting pricing in a positive or negative trend are location and size.
-In general, location and size are the biggest factors that affect the expenses of an investor because they have to pay more for a better location or a bigger home leading to a bigger mortgage each month or having to put more of their money out of pocket. The goal of an investor is to make a profit, so they would need to charge more if they have more expenses. When we look at the pricing of an Airbnb from tourist attractions, we can see that bigger tourist attractions do have an effect on the Airbnb pricing. If there are two properties of similar features near a large tourist attraction like the San Diego convention center but one is super close and one is further away, we would expect the closer one would be able to charge more. We also saw that homes that are able to accommodate more are able to charge more. Both of these findings are in line with our hypothesis.
+# Prediction Model: Linear Regression in Scikit-Learn
+
+* To summarize our results, the biggest factors affecting pricing in a positive or negative trend are location and size.
+* In general, location and size are the biggest factors that affect the expenses of an investor because they have to pay more for a better location or a bigger home leading to a bigger mortgage each month or having to put more of their money out of pocket. The goal of an investor is to make a profit, so they would need to charge more if they have more expenses. When we look at the pricing of an Airbnb from tourist attractions, we can see that bigger tourist attractions do have an effect on the Airbnb pricing. If there are two properties of similar features near a large tourist attraction like the San Diego convention center but one is super close and one is further away, we would expect the closer one would be able to charge more. We also saw that homes that are able to accommodate more are able to charge more. Both of these findings are in line with our hypothesis.
+* The Test Accuracy has a very promising correlation coefficient of 79%
 
 ![](images/images_airbnb_sd/dsc170img5.png)
 
@@ -32,6 +35,8 @@ In general, location and size are the biggest factors that affect the expenses o
 
 * There seems to be a direct relationship between the amount of accomodation businesses within the zipcodes and high airbnb pricing.
 
+# Tourism Landmarks and Buffers
+
 ![](images/images_airbnb_sd/dsc170img7.png)
 
 * We decided to look at some concentric buffers around 3 specific, famous San Diego landmarks: 
@@ -41,6 +46,8 @@ In general, location and size are the biggest factors that affect the expenses o
 * We have found that the airbnb's with the top 1000 highest prices tend to be within the closer buffer rings of these landmarks
 
 ![](images/images_airbnb_sd/dsc170img8.png)
+
+# Zipcode Choropleths against Airbnb Scatterplot colored by Pricing
 
 ### Movie/Amusement Businesses  vs Airbnb Listing Price
 
