@@ -1,5 +1,8 @@
 # Offer Acceptance Capstone Project
 
+![](images/images_dsc180/maps.png)
+
+
 [(Click here for the actual website used for the project)](https://radumanea23.github.io/UCSDFlockFreightCapstone/)
 
 ## Table of Contents
@@ -66,7 +69,7 @@
         * These supplementary geographic features turned out to be very helpful for the feature engineering, and even influential for improving the prediction models' accuracies, compared to if we only limited ourselves to the pre-existing, non-geographic feature.
             * T-Tests coded in python showed that these features indeed had a statistical significance with respect to the offer rate standard deviation per order.  
         * By including this newfound geo-data, I was also able to let our team incorporate **geographic maps** into our data visualizations
-![](images/images_dsc180/maps.png)
+
 * **Automating the data science tasks of the 2 models with Python**:
     *  As We had to improve the model's accuracy by routinely adding and cleaning new data or retransforming old data then re-training it, it was repetitive to re-run the tasks again and again through Jupyter Notebook to find which different configuration of factors boosted the model accuracy. And so I developed Python scripts to automate nearly all stages of my tasks into an end-to-end pipeline, that could be done in at least **6 to 8** commands on the terminal that can be put into a shell script, so that when those 6-8 commands were executed, the pipeline automatically did the following things:
         * Data retrieval from Socrata API and webscraping from online data sources using BeautifulSoup.
@@ -111,7 +114,7 @@ I employed various actions and improved the baseline model's accuracy from being
 
 ![](images/images_dsc180/metro_clusters_cropped.png)
 
-![](images/images_dsc180/oper_zips_by_avg_rates.png.png)
+![](images/images_dsc180/oper_zips_by_avg_rates.png)
 
 ![](images/images_dsc180/zipcodes_avg_order_offer_amount_big.png)
 
