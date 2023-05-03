@@ -118,7 +118,7 @@ I employed various actions and improved the baseline model's accuracy from being
 
 ![](images/images_dsc180/map_shipping_routes_by_order_amount.png)
 
-* This deliveryy route network map between the zipcode nodes gives the traffic or "amount of orders observed" along the delivery route. There is a
+* This delivery route network map between the zipcode nodes gives the traffic or "amount of orders observed" along the delivery route.
 * Southern California, Bay Area, New York, Seattle, Chicago, Florida, Atlanta, Dallas, seem to be very prominent centers.
 
 ![](images/images_dsc180/networks_cheap.png)
