@@ -1,4 +1,4 @@
-# Offer Acceptance Capstone Project
+# Offer Acceptance Industry Research Project
 
 ![](images/images_dsc180/maps.png)
 
@@ -12,9 +12,7 @@
 - [Visualizations](https://benduong2001.github.io/capstoneproject.html#Visualizations)
 
 ## Background {#Background}
-* In my university, all data science majors have to complete a 20 week capstone project before getting their degrees in Data Science B.S.
-* You will get placed in small, close-knit teams with 4-6 people for industry projects with company mentors, or research projects with professors, on various topics from Biomedicine to Sports.
-* I was part of a 6-month capstone project with 3 other students, under the mentorship of Flock Freight, a delivery logistics company.
+* I was part of a 6-month industry research project with 3 other students, under the mentorship of Flock Freight, a delivery logistics company.
 * I worked with Nima Yazdani, Radu Manea, and Keagan Benson.
 * The background to Flock Freight's mission is as follows:
   * A company needs to deliver an **order**  from Point A to Point B, but lack their own trucking or delivery services to do so.
