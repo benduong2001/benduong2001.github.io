@@ -107,7 +107,7 @@ I employed various actions and improved the baseline model's accuracy from being
 
 ----
 
-![](images/images_dsc180/networks_cheap.png.png.png)
+![](images/images_dsc180/networks_cheap.png)
 
 ![](images/images_dsc180/metro_clusters_cropped.png)
 
@@ -121,5 +121,4 @@ I employed various actions and improved the baseline model's accuracy from being
 
 ![](images/images_dsc180/map_shipping_routes_by_order_amount.png)
 
-![](images/images_dsc180/map_shipping_routes_by_rates.png)
 
