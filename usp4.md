@@ -1,23 +1,24 @@
 # USP4 ArcGIS San Francisco Steepness and Wheelchair Accessibility Project
 
-![](images/images_usp/steepstreet.png)
 [Github Repo](https://github.com/benduong2001/ArcGIS_Project_San_Francisco_Steepness/)
 
 * This was my final project for USP4, a course at UCSD where we learned how to use ArcGIS, an industry-wide software for geospatial data analysis and science.
 * For my proposed subject, I decided to explore the steep topography of San Francisco, and produce maps for the context of its sidewalk pedestrian accessibility for wheelchair users or those that have difficulty walking, such as the elderly.
     * Coverage of vehicular transportation across the city by public transit over steep areas, as an option to bypass physical walking
-    * San Francisco Landmarks in steep areas, in terms of walkable accessibility for tourist
+    * San Francisco Landmarks in steep areas, in terms of walkable accessibility for tourists
 
 # Steepness in San Francisco: Wheelchair Acccessible?
 This project was done using the GIS (Geographic Information Systems) software ArcGIS (USP4)
 
 # Summary
 
+![](images/images_usp/steepstreet.jpg)
+
 San Francisco is well known for its hilly geography and steep inclines. Thus, assessing the city's topography is crucial to understanding the pedestrian wheelchair accessibility in certain parts of the city. This project is intended to provide maps that can be useful for the tourists who have difficulty navigating on steep terrain, such as the elderly, or wheelchair users. 
 
 This project uses several complex methods in terms of spatial joining and conversion of contour line to gradients.
 
-![](images/images/sidewalk_steepness.png)
+![](images/images_usp/sidewalk_steepness.png)
 
 # Introduction
 San Francisco is well-known for its hilly geography and steep streets.
