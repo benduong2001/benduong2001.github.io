@@ -10,11 +10,12 @@
 
 ![](images/images_airbnb_sd/dsc170img1.png)
 
-![](images/images_airbnb_sd/dsc170img2.png)
+<!--![](images/images_airbnb_sd/dsc170img2.png)
 
 ![](images/images_airbnb_sd/dsc170img3.png)
 
 ![](images/images_airbnb_sd/dsc170img4.png)
+-->
 
 ![](images/images_airbnb_sd/dsc170img5.png)
 
