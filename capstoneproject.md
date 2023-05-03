@@ -128,8 +128,8 @@ I employed various actions and improved the baseline model's accuracy from being
 
 ![](images/images_dsc180/zipcodes_avg_order_offer_amount_big.png)
 
-* This delivery route network map between the zipcode nodes gives the average offer rates of orders that occured along the delivery route.
-* It seems that the cheapest average offers rate tending to be along the west-coast states or from in/out of Florida.
+* This zipcode scatterplot gives the average offer amount per orders of given zipcode nodes (whether they were the origin or destination zipcode).
+* It seems that the Great-Lakes Area and the Northeast seems to be a region that shows up a lot as the destination or origin zipcodes in orders with a high number of offers.
 
 ![](images/images_dsc180/oper_zips_by_carrier_amount_fit_viridis.png)
 
