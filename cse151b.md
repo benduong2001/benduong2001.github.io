@@ -2,7 +2,7 @@
 
 * For this class specifically, we are prohibited from publicly sharing our project's github repo and its code. However, we did write a report.
 
-[See our report!](/images/images_cse151b/cse151b_report.pdf)
+[See our report!](/images/images_cse151b/cse151b_repport.pdf)
 
 ![](/images/images_cse151b/image_autocaptioner.png)
 
