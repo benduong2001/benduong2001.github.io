@@ -1,6 +1,6 @@
 # ArcGIS San Diego Airbnb Project
 
-* A DSC170 Class Project with Tyson Tran. It uses ArcGIS's Python API to do data analysis and machine learning on San Diego Airbnb listings. We analyzed the following:
+* A DSC170 Class Project with Tyson Tran. DSC170 is a class that covers spatial data science, and for our final project, we could do any topic of our choosing and do a project on it that uses ArcGIS's Python API. We decided to data analysis and machine learning on San Diego Airbnb listings. We analyzed the following:
     * Complex Geo-enrichment of zipcode census data including household income, and amount of leisuire businesses established, were all used to develop choropleth maps showing the geospatial relationships it had with the nearby AirBnb Locations by their price (overlaid as a scatterplot), highlighting that those closer to the beach were pricier.
     * Non-Spatial factors in the context of airbnb pricing.
     * Buffering of well-known city landmarks in proximity to these AirBnb's.
