@@ -9,13 +9,13 @@
 ---
 
 ---
-### [School] DSC80 Power Outage Data Science Project *(Spring 2021)*
+### - DSC80 Power Outage Data Science Project *(Spring 2021)*
 [DSC80 Power Outage Data Science Project](dsc80.md)
 <img src="images/images_dsc80/mean_outage_duration_folium.png?raw=true"/>
 ---
 
 ---
-### [School] ArcGIS San Francisco Steepness & Wheelchair Accessibility Project *(Winter 2021)*
+### - ArcGIS San Francisco Steepness & Wheelchair Accessibility Project *(Winter 2021)*
 [ArcGIS San Francisco Steepness & Wheelchair Accessibility Project](usp4.md)
 <img src="images/images_usp/sf3Dstreethill.png?raw=true"/>
 <img src="images/images_usp/base_map.png?raw=true"/>
