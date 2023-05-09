@@ -13,7 +13,7 @@ Because of academic policy, some of my school projects do not link their code an
 # Data Science Project Portfolio
 
 ---
-### - Industry Research Project *(Fall 2022 - Winter 2023)*
+### Industry Research Project *(Fall 2022 - Winter 2023)*
 [Industry Research Project](capstoneproject.md)
 <img src="images/images_dsc180/image4.png?raw=true"/>
 ---
@@ -32,7 +32,7 @@ Because of academic policy, some of my school projects do not link their code an
 ---
 
 ---
-### - ArcGIS Airbnb Listings Project *(Winter 2023)*
+### ArcGIS Airbnb Listings Project *(Winter 2023)*
 [ArcGIS Airbnb Listings Project](airbnb_sd.md)
 <img src="images/images_airbnb_sd/sd_airbnb_cover_img.png?raw=true"/>
 ---
@@ -44,7 +44,7 @@ Because of academic policy, some of my school projects do not link their code an
 ---
 
 ---
-### - Pyspark Text-based Customer Satisfaction Data Engineering Project *(Winter 2022)*
+### Pyspark Text-based Customer Satisfaction Data Engineering Project *(Winter 2022)*
 [Pyspark Text-based Customer Satisfaction Data Engineering Project](dsc102.md)
 ---
 
