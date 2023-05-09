@@ -2,8 +2,7 @@
 
 ![](images/images_dsc180/maps.png)
 
-![](images/images_dsc180/pbi_sample.png)
-* PowerBI dashboard hooked to DuckDB
+
 
 
 [(Click here for the actual website used for the project)](https://radumanea23.github.io/UCSDFlockFreightCapstone/)
@@ -99,6 +98,8 @@ I employed various actions and improved the baseline model's accuracy from being
      
 ## Visualizations {#Visualizations}
 
+
+
 * These are some of the visualizations made by me, using Python's matplotlib.
 
 ![](images/images_dsc180/metro_clusters_cropped.png)
@@ -164,3 +165,6 @@ I employed various actions and improved the baseline model's accuracy from being
         * LOG(TEMPERATURE): the average temperature of all the counties that the order's delivery route crosses through
         * POPULATION_DENSITY: the average population density (or urban-ness) of all the counties that the order's delivery route crosses through
         * APPROXIMATE_DRIVING_ROUTE_MILEAGE: the length of the order's delivery route (the euclidean distance between the origin and destination zipcode node)
+
+![](images/images_dsc180/pbi_sample.png)
+* PowerBI dashboard hooked to DuckDB
