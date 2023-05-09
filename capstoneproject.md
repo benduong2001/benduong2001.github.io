@@ -2,6 +2,9 @@
 
 ![](images/images_dsc180/maps.png)
 
+![](images/images_dsc180/pbi_sample.png)
+* PowerBI dashboard hooked to DuckDB
+
 
 [(Click here for the actual website used for the project)](https://radumanea23.github.io/UCSDFlockFreightCapstone/)
 
