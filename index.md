@@ -12,7 +12,7 @@ Hello, I am **Benson Duong**. I am a Data Science student at the University of C
 * Skills and Tools:
   * I work with **Python** with 5 years of fluency, for my data science projects and to automate/streamline my day-to-day tasks for efficiency. 
     * My frequent python packages include **Pandas** and **NumPy** for data transformation/analysis, **GeoPandas**, **Scikit-Learn** for machine learning, and **Tensorflow** for Deep Learning.
-  * I also work with SQL, Tableau, and Excel. I've also worked with **PySpark** (where you can use SQL within Python).
+  * I also work with **SQL**, **Tableau**, and **Excel**. I've also worked with **PySpark** (where you can use SQL within Python!).
   * Other non data-science related languages or tools that I work with include JavaScript, Java, Git. Bash, Docker. 
   * But I still learn, and for these past several weeks, I have been self-learning dbt (data build tool, which modularizes SQL querying) and DuckDB (an SQL DBMS for analytics), and for the past several months, PowerBI.
 
