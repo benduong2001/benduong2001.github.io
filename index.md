@@ -4,9 +4,9 @@ Hello, I am **Benson Duong**. I am a Data Science student at the University of C
 
 * I fluently work with Python for 5 years, using it to perform my data science projects and automate/streamline my day-to-day tasks for efficiency. 
 * My frequent python packages include Pandas and NumPy for data transformation/analysis, GeoPandas, Scikit-Learn for machine learning, and Tensorflow for Deep Learning- all with 3 year fluency. 
-* I also work with SQL, Tableau, and Excel. 
-* Other non data-science related languages or tools that I work with include JavaScript, Java, Git Bash, Docker. 
-* But I don't stop learning, and for these past several weeks, have been self-learning dbt (data build tool), DuckDB (a DBMS for analytics), and PowerBI. 
+* I also work with SQL, Tableau, and Excel - frequently during my internship.
+* Other non data-science related languages or tools that I work with include JavaScript, Java, Git. Bash, Docker. 
+* But I don't stop learning, and for these past several weeks, have been self-learning dbt (data build tool), DuckDB (an SQL DBMS for analytics), and PowerBI. 
 
 [Resume](BensonDuongLtxResumeV13.pdf)
 
