@@ -1,5 +1,13 @@
 # ArcGIS San Diego Airbnb Project
 
+* In this project, data analysis was done on Airbnb listings alongside geographic data using the GIS software ArcGIS.
+* I contributed by:
+   * Creating a predictive model that was able to estimate an Airbnb's listing price with 80% accuracy, based on the geographic data of the Airbnb's surroundings
+      * In doing so, I was also able to extract the most influential geographic business factors in determining an Airbnb's Listing price, and found out that it included aspects like the prevalence of nearby recreational businesses (fine dining, movie theaters, shopping), and prevalance of nearby hotels.
+   * Creating map data visualizations that spatially assessed the Airbnb's listing price against various aspects of the zipcode area that it was in (crime rate, number of nearby tourist landmarks, median household income).
+
+# Background
+
 * A DSC170 Class Project with Tyson Tran. DSC170 is a class that covers spatial data science, and for our final project, we could do any topic of our choosing and do a project on it that uses ArcGIS's Python API. We decided to data analysis and machine learning on San Diego Airbnb listings. We analyzed the following:
     * Complex Geo-enrichment of zipcode census data including household income, and amount of leisuire businesses established, were all used to develop choropleth maps showing the geospatial relationships it had with the nearby AirBnb Locations by their price (overlaid as a scatterplot), highlighting that those closer to the beach were pricier.
     * Non-Spatial factors in the context of airbnb pricing.
@@ -32,7 +40,7 @@
 
 ![](images/images_airbnb_sd/dsc170img14.png)
 
-* There seems to be a direct relationship between the amount of accomodation businesses within the zipcodes and high airbnb pricing.
+* There seems to be a direct relationship between the amount of accomodation businesses (Hotels, Motels, Inns, Hostels, etc). within the zipcodes and high airbnb pricing.
 
 # Tourism Landmarks and Buffers
 
