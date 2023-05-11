@@ -2,11 +2,17 @@
 
 * In this project, data analysis was done on Airbnb listings alongside geographic data using the GIS software ArcGIS.
 * I contributed by:
-   * Creating a predictive model that was able to estimate an Airbnb's listing price with 80% accuracy, based on the geographic data of the Airbnb's surroundings
+   * Creating a predictive model (Linear Regression with Python Scikit-Learn) that was able to estimate an Airbnb's listing price with a successful 80% accuracy, based on the geographic data of the Airbnb's surroundings
       * In doing so, I was also able to extract the most influential geographic business factors in determining an Airbnb's Listing price, and found out that it included aspects like the prevalence of nearby recreational businesses (fine dining, movie theaters, shopping), and prevalance of nearby hotels.
    * Creating map data visualizations that spatially assessed the Airbnb's listing price against various aspects of the zipcode area that it was in (crime rate, number of nearby tourist landmarks, median household income).
 
-# Background
+# Table of Contents
+- [Background](https://benduong2001.github.io/airbnb_sd.html#Background)
+- [Airbnb Price Prediction](https://benduong2001.github.io/airbnb_sd.html#Airbnb-Price-Prediction)
+- [Analyzing Airbnb Prices based on Distance from Landmarks](https://benduong2001.github.io/airbnb_sd.html#Landmark-Radius)
+- [Map Visualizations](https://benduong2001.github.io/airbnb_sd.html#Map-Visualizations)
+
+# Background {#Background}
 
 * A DSC170 Class Project with Tyson Tran. DSC170 is a class that covers spatial data science, and for our final project, we could do any topic of our choosing and do a project on it that uses ArcGIS's Python API. We decided to data analysis and machine learning on San Diego Airbnb listings. We analyzed the following:
     * Complex Geo-enrichment of zipcode census data including household income, and amount of leisuire businesses established, were all used to develop choropleth maps showing the geospatial relationships it had with the nearby AirBnb Locations by their price (overlaid as a scatterplot), highlighting that those closer to the beach were pricier.
@@ -24,7 +30,7 @@
 ![](images/images_airbnb_sd/dsc170img4.png)
 -->
 
-# Prediction Model: Linear Regression in Scikit-Learn
+# Prediction Model: Linear Regression in Scikit-Learn {#Airbnb-Price-Prediction}
 
 * To summarize our results, the biggest factors affecting pricing in a positive or negative trend are location and size.
 * In general, location and size are the biggest factors that affect the expenses of an investor because they have to pay more for a better location or a bigger home leading to a bigger mortgage each month or having to put more of their money out of pocket. The goal of an investor is to make a profit, so they would need to charge more if they have more expenses. When we look at the pricing of an Airbnb from tourist attractions, we can see that bigger tourist attractions do have an effect on the Airbnb pricing. If there are two properties of similar features near a large tourist attraction like the San Diego convention center but one is super close and one is further away, we would expect the closer one would be able to charge more. We also saw that homes that are able to accommodate more are able to charge more. Both of these findings are in line with our hypothesis.
@@ -42,7 +48,7 @@
 
 * There seems to be a direct relationship between the amount of accomodation businesses (Hotels, Motels, Inns, Hostels, etc). within the zipcodes and high airbnb pricing.
 
-# Tourism Landmarks and Buffers
+# Tourism Landmarks and Buffers {#Landmark-Radius}
 
 ![](images/images_airbnb_sd/dsc170img7.png)
 
@@ -54,7 +60,7 @@
 
 ![](images/images_airbnb_sd/dsc170img8.png)
 
-# Zipcode Choropleths against Airbnb Scatterplot colored by Pricing
+# Zipcode Choropleths against Airbnb Scatterplot colored by Pricing {#Map-Visualizations}
 
 ### Movie/Amusement Businesses  vs Airbnb Listing Price
 
