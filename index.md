@@ -2,11 +2,18 @@
 
 Hello, I am **Benson Duong**. I am a Data Science student at the University of California, San Diego, learning about the fields of data science, programming, analysis, statistics, and machine learning. My projects and work have a recurring interest in social data, looking into business data or map data.
 
-* I fluently work with Python for 5 years, using it to perform my data science projects and automate/streamline my day-to-day tasks for efficiency. 
-* My frequent python packages include Pandas and NumPy for data transformation/analysis, GeoPandas, Scikit-Learn for machine learning, and Tensorflow for Deep Learning- all with 3 year fluency. 
+* I work with all aspects of the data science project, to result in actionable, business impact:
+  * Using ETL techniques to retrieve online raw data and transform them to be usable for analysis and modelling
+  * Accounting for pit-falls and mistakes in data such as bias or imbalanced data
+  * Insightful data analysis with plots and/or dashboards that can visually communicate business-minded story-telling
+  * Developing & training ML model and iteratively improving its accuracy and metrics
+  * Using Python and programming principles to automate and workflow these steps, making said business impacts easier to find
+
+* I fluently work with **Python** for 5 years, using it to perform my data science projects and automate/streamline my day-to-day tasks for efficiency. 
+* My frequent python packages include **Pandas** and **NumPy** for data transformation/analysis, **GeoPandas**, **Scikit-Learn** for machine learning, and **Tensorflow** for Deep Learning- all with 3 year fluency. 
 * I also work with SQL, Tableau, and Excel - frequently during my internship.
 * Other non data-science related languages or tools that I work with include JavaScript, Java, Git. Bash, Docker. 
-* But I don't stop learning, and for these past several weeks, have been self-learning dbt (data build tool), DuckDB (an SQL DBMS for analytics), and PowerBI. 
+* But there's no such thing as toomuch learning, and for these past several weeks, I have been self-learning dbt (data build tool), DuckDB (an SQL DBMS for analytics), and PowerBI. 
 
 [Resume](BensonDuongLtxResumeV13.pdf)
 
