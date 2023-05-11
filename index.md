@@ -2,7 +2,7 @@
 
 Hello, I am **Benson Duong**. I am a Data Science student at the University of California, San Diego, learning about the fields of data science, programming, analysis, statistics, and machine learning. My projects and work have a recurring interest in social data, looking into business data or map data.
 
-* In my work and projects, I work with all aspects of the data science project, to result in actionable, business impact:
+* In my work and projects, I've handled with all aspects of the data science project to result in actionable, business impact:
   * Using ETL techniques to retrieve online raw data and transform them to be usable for analysis and modeling
   * Accounting for pit-falls in analysis such as bias or imbalanced data
   * Data analysis with plots and/or dashboards that can visually communicate business-minded story-telling
@@ -10,7 +10,7 @@ Hello, I am **Benson Duong**. I am a Data Science student at the University of C
   * Using Python and programming principles to automate these steps, making said business impacts easier to find, and more tidy for teammates
 
 * Skills and Tools:
-  * I work with **Python** with 5 years of fluency, using it for my data science projects and to automate/streamline my day-to-day tasks for efficiency. 
+  * I work with **Python** with 5 years of fluency, for my data science projects and to automate/streamline my day-to-day tasks for efficiency. 
   * My frequent python packages include **Pandas** and **NumPy** for data transformation/analysis, **GeoPandas**, **Scikit-Learn** for machine learning, and **Tensorflow** for Deep Learning- all with 3 year fluency. 
   * I also work with SQL, Tableau, and Excel - frequently during my internship.
   * Other non data-science related languages or tools that I work with include JavaScript, Java, Git. Bash, Docker. 
