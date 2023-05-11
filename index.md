@@ -2,13 +2,12 @@
 
 Hello, I am **Benson Duong**. I am a Data Science student at the University of California, San Diego, learning about the fields of data science, programming, analysis, statistics, and machine learning. My projects and work have a recurring interest in social data, looking into business data or map data.
 
-I program with Python, using it to automate tasks and perform my data science work. I also work with SQL and Tableau, and have used Excel. Other non data-science related languages or tools that I work with include JavaScript, Java, Git Bash, Docker.
+I program with Python, using it to perform my data science work and automate and streamline tasks for efficiency. I also work with SQL, Tableau, and Excel. Other non data-science related languages or tools that I work with include JavaScript, Java, Git Bash, Docker. But I don't stop learning, and for these past 2 weeks, have been self-learning dbt (data build tool), DuckDB (a DBMS for analytics), and PowerBI. 
 
 [Resume](BensonDuongLtxResumeV13.pdf)
 
 
-These are some of my projects. Some are school assignments. Others are independent.
-Because of academic policy, some of my school projects do not link their code and have privated github repo's, and I can only provide surface-level descriptions of what I had done, within permitted limits.
+These are some of my projects. Some are school projects, and due to policy, might sometimes have privated github repo's, but nonetheless I can still provide descriptions of the techniques used.
 
 # Data Science Project Portfolio
 
