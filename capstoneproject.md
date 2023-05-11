@@ -6,6 +6,7 @@
 
 
 [(Click here for the actual website used for the project)](https://radumanea23.github.io/UCSDFlockFreightCapstone/)
+[(Github Repo)](https://github.com/benduong2001/DSC180Flock) 
 
 ## Table of Contents
 - [Background](https://benduong2001.github.io/capstoneproject.html#Background)
