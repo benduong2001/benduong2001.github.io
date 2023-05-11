@@ -43,8 +43,8 @@ These are some of my projects. Some are school projects, and due to policy, migh
 ---
 
 ---
-### - ArcGIS Airbnb Listings Project *(Winter 2023)*
-[ArcGIS Airbnb Listings Project](airbnb_sd.md)
+### - Airbnb Price Prediction with ArcGIS *(Winter 2023)*
+[Airbnb Price Prediction with ArcGIS](airbnb_sd.md)
 <img src="images/images_airbnb_sd/sd_airbnb_cover_img.png?raw=true"/>
 ---
 
