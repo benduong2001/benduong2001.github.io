@@ -7,14 +7,14 @@ Hello, I am **Benson Duong**. I am a Data Science student at the University of C
   * Accounting for pit-falls in analysis such as bias or imbalanced data
   * Data analysis with plots and/or dashboards that can visually communicate business-minded story-telling
   * Developing predictive ML model and iteratively improving its accuracy metrics
-  * Using Python and programming principles to automate these steps, making said business impacts easier to find, and more tidy for teammates
+  * Using Python and programming principles to streamline these steps, making said business impacts easier to find, and more tidy for teammates
 
 * Skills and Tools:
   * I work with **Python** with 5 years of fluency, for my data science projects and to automate/streamline my day-to-day tasks for efficiency. 
   * My frequent python packages include **Pandas** and **NumPy** for data transformation/analysis, **GeoPandas**, **Scikit-Learn** for machine learning, and **Tensorflow** for Deep Learning- all with 3 year fluency. 
   * I also work with SQL, Tableau, and Excel - frequently during my internship.
   * Other non data-science related languages or tools that I work with include JavaScript, Java, Git. Bash, Docker. 
-  * But there's no such thing as too much learning, and for these past several weeks, I have been self-learning dbt (data build tool), DuckDB (an SQL DBMS for analytics), and PowerBI. 
+  * But I still learn, and for these past several weeks, I have been self-learning dbt (data build tool), DuckDB (an SQL DBMS for analytics), and PowerBI. 
 
 [Resume](BensonDuongLtxResumeV13.pdf)
 
