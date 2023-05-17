@@ -4,7 +4,7 @@ Hello, I am **Benson Duong**. I am a Data Science student at the University of C
 
 * In my work and projects, I've handled with all aspects of the data science project to result in actionable, business impact:
   * Using ETL techniques to retrieve online raw data and transform them to be usable for analysis and modeling
-  * Accounting for pit-falls in business analysis such as bias or imbalanced data
+  * Accounting for pit-falls in data such as population bias or imbalanced data
   * Data analysis with plots and/or dashboards that can visually communicate business-minded story-telling
   * Developing predictive ML model and iteratively improving its accuracy metrics
   * Using Python and programming principles to streamline these steps, making said business impacts easier to find, and more tidy for teammates
@@ -12,9 +12,8 @@ Hello, I am **Benson Duong**. I am a Data Science student at the University of C
 * Skills and Tools:
   * I work with **Python** with 5 years of fluency, for my data science projects and to automate/streamline my day-to-day tasks for efficiency. 
     * My frequent python packages include **Pandas** and **NumPy** for data transformation/analysis, **GeoPandas**, **Scikit-Learn** for machine learning, and **Tensorflow** for Deep Learning.
-  * I also work with **SQL**, **Tableau**, and **Excel**. I've also worked with **PySpark** (where you can use SQL within Python!).
+  * I also work with **SQL**, **Tableau**, and **Excel**. I've also worked with **PySpark** (where you can use SQL within Python).
   * Other non data-science related languages or tools that I work with include JavaScript, Java, Git. Bash, Docker. 
-  * But I still learn, and for these past several weeks, I have been self-learning dbt (data build tool, which modularizes SQL querying) and DuckDB (an SQL DBMS for analytics), and for the past several months, PowerBI.
 
 [Resume](BensonDuongLtxResumeV13.pdf)
 
