@@ -11,14 +11,18 @@ Hello, I am **Benson Duong**. I am a Data Science student at the University of C
 
 * Skills and Tools:
   * I work with **Python** with 5 years of fluency, for my data science projects and to automate/streamline my day-to-day tasks for efficiency. 
-    * My frequent python packages include **Pandas** and **NumPy** for data transformation/analysis, **GeoPandas**, **Scikit-Learn** for machine learning, and **Tensorflow** for Deep Learning.
+    * My frequent python packages include 
+        * **Pandas** and **NumPy** for data transformation/analysis
+        * **GeoPandas**
+        * **Scikit-Learn** for machine learning
+        * **Tensorflow** for deep learning.
   * I also work with **SQL**, **Tableau**, and **Excel**. I've also worked with **PySpark** (where you can use SQL within Python).
   * Other non data-science related languages or tools that I work with include JavaScript, Java, Git. Bash, Docker. 
 
 [Resume](BensonDuongLtxResumeV13.pdf)
 
 
-These are some of my projects. Some are school projects, and due to policy, might sometimes have privated github repo's, but nonetheless I can still provide descriptions of the techniques used.
+These are some of the projects I've worked on indepedently or collaborated in. Some are school projects, and due to policy, might sometimes have privated github repo's, but nonetheless I can still provide descriptions of the techniques used.
 
 # Data Science Project Portfolio
 
