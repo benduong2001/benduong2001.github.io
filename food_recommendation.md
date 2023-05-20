@@ -4,7 +4,9 @@
 
 [(Link to Github Repo)](https://github.com/benduong2001/Food-Recommendation)
 
-* This independent data science project of mines, explores food related datasets (unstructured text data) for prediction data analysis tasks involving customer recommendation. Two tasks or "sub-projects" were done
+* This independent data science project of mines, explores food related datasets (unstructured text data) for prediction data analysis tasks involving customer recommendation. Two tasks or "sub-projects" were done.
+    * The 1st project is building a classification model that can distinguish whether a restaurant review is positive or negative emotion
+    * The 2nd project is building an auto-recommender model that can decide if a customer and a restaurant are compatible.
 * This project will show:
    * Data Analysis and results applicable to useful business questions on customer recommendation, such as providing insights to user demographic sub-groups.
    * Succinct and Intuitive Data visualizations
@@ -12,6 +14,7 @@
    * Used Tools (Everything is done in Python)
        * Scikit-learn (for TfIdf Vectorizer and Logistic Regression)
        * Matplotlib for visualizations
+       * Pandas
        * NumPy
        * Tensorflow and Keras
 
