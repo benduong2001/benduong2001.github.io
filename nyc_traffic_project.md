@@ -1,5 +1,12 @@
 # Geospatial Data Science Project: New York City Traffic
 
+![](images/images_nyc_traffic/leaflet_gif.gif) 
+* Demonstration of Traffic Prediction App made with Flask and Leaflet.js
+
+* [(Click to view App Repo as seen in gif above)](https://github.com/benduong2001/nyc_traffic_flask)
+
+* [(Click to view the article/tutorial I wrote on Kaggle)](https://www.kaggle.com/code/bensonduong/geospatial-nyc-traffic-project)
+
 
 ## Table of Contents
 - [Background](https://benduong2001.github.io/nyc_traffic_project.html#Background)
@@ -8,21 +15,13 @@
 
 ## Background {#Background}
 
-![](images/images_nyc_traffic/leaflet_gif.gif) 
-* Demonstration of Traffic Prediction App made with Flask and Leaflet.js
-
 This GIS data science project is an exploration of traffic volume statistics in New York City. It is an independent project that I've worked since Fall 2021.
 It contains 2 parts:
 * A Python App that can predict traffic volume level in NYC given the street and time of day, with a clickable roadmap and clock input (shown above); it uses geopandas for GIS data preprocessing, Flask for the web framework, and Leaflet.js for the front-end geography interactiveness. Various models can be employed, with accuracies between 75 % to 90 %
-    * [(Click to view App Repo as seen in gif above)](https://github.com/benduong2001/nyc_traffic_flask)
 
-* A Kaggle article that I wrote, giving a tutorial on how to replicate the project (without cosmetics) using ArcGIS (the industry standard software for GIS data analysis). In addition, it provides various exploratory data analysis, including line plots of traffic volume across time of day according to various factors, and hypothesis testing such as ANOVA.
-    * [(Click to view my Kaggle article)](https://www.kaggle.com/code/bensonduong/geospatial-nyc-traffic-project)
+* A Kaggle article that I wrote, giving a tutorial on how to replicate my project (without cosmetics) using ArcGIS (an industry standard software for GIS data analysis). In addition, it provides various exploratory data analysis, including line plots of traffic volume across time of day according to various factors, and hypothesis testing such as ANOVA.
 
 ## ArcGIS-Data-Preprocessing {#ArcGIS-Data-Preprocessing}
-
-Preprocessing
-
 
 ### Part 1A: *Getting the Street Segment Traffic Data into a GIS-friendly Format*
 
