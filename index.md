@@ -48,6 +48,7 @@ These are some of the projects I've worked on indepedently or collaborated in. S
 ---
 ### - Airbnb Price Prediction with ArcGIS *(Winter 2023)*
 [Airbnb Price Prediction with ArcGIS](airbnb_sd.md)
+<img src="images/images_airbnb_sd/servicearea.png?raw=true"/>
 <img src="images/images_airbnb_sd/sd_airbnb_cover_img.png?raw=true"/>
 ---
 
