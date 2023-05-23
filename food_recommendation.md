@@ -1,5 +1,7 @@
 # Food Recommendation Data Science Project
 
+![](images/images_food_recommendation/foodcluster.png) 
+
 [(Click here for a more in-depth and ML-technical description of this project!)](/food_recommendation_technical.md)
 
 [(Link to Github Repo)](https://github.com/benduong2001/Food-Recommendation)
