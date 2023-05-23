@@ -1,5 +1,9 @@
 # ArcGIS San Diego Airbnb Project
 
+![](images/images_airbnb_sd/servicearea.png)
+
+* [Pictured above: Areas with driving distances of 5, 10, 15, 20 minutes away from SeaWorld, along with locations of 1000 most expensive AirBnb listings]
+
 * In this project, data analysis was done on Airbnb listings alongside geographic data using the GIS software ArcGIS.
 * I contributed by:
    * Creating a predictive model (Linear Regression with Python Scikit-Learn) that was able to estimate an Airbnb's listing price with a successful 80% accuracy, based on the geographic data of the Airbnb's surroundings
