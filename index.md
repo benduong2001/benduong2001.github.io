@@ -39,7 +39,7 @@ These are some of the projects I've worked on indepedently or collaborated in. S
 ---
 
 ---
-### NYC Traffic Geospatial Project *(Fall 2021 - Summer 2022)*
+### NYC Traffic Prediction Project *(Fall 2021 - Summer 2022)*
 [NYC Traffic Data Science Project](nyc_traffic_project.md)
 <img src="images/leaflet_gif.gif?raw=true"/>
 <img src="images/traffic_data.png?raw=true"/>
