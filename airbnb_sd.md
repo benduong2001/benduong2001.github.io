@@ -9,10 +9,6 @@
 ---
 
 * In this project, data analysis was done on Airbnb listings alongside geographic data using the GIS software ArcGIS.
-* I contributed by:
-   * Creating a predictive model (Linear Regression with Python Scikit-Learn) that was able to estimate an Airbnb's listing price with a successful 80% accuracy, based on the geographic data of the Airbnb's surroundings
-      * In doing so, I was also able to extract the most influential geographic business factors in determining an Airbnb's Listing price, and found out that it included aspects like the prevalence of nearby recreational businesses (fine dining, movie theaters, shopping), and prevalance of nearby hotels.
-   * Creating map data visualizations that spatially assessed the Airbnb's listing price against distances from specific tourist attractions.
 
 # Table of Contents
 - [Background](https://benduong2001.github.io/airbnb_sd.html#Background)
@@ -31,6 +27,12 @@
     * Non-Spatial factors in the context of airbnb pricing.
     * Buffering of well-known city landmarks in proximity to these AirBnb's.
     * A linear regression model to predict Airbnb Listing Prices based on the surrounding geodata was trained, and achieved a near accuracy of 80%. Feature Importance bar-plots showed that Accomodation and various geo-enriched factors (such as amount of recreational and leisure businesses within the zipcode) were the most influential.
+
+
+* **I contributed by**:
+   * Creating and training the predictive model (Linear Regression with Python Scikit-Learn) that was able to estimate an Airbnb's listing price with a successful 80% accuracy, based on the geographic data of the Airbnb's surroundings
+      * In doing so, I was also able to extract the most influential geographic business factors in determining an Airbnb's Listing price, and found out that it included aspects like the prevalence of nearby recreational businesses (fine dining, movie theaters, shopping), and prevalance of nearby hotels.
+   * Creating map data visualizations that spatially assessed the Airbnb's listing price against buffered distances from specific tourist attractions.
 
 ![](images/images_airbnb_sd/dsc170img1.png)
 
