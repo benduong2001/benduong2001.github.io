@@ -12,7 +12,7 @@
 * I contributed by:
    * Creating a predictive model (Linear Regression with Python Scikit-Learn) that was able to estimate an Airbnb's listing price with a successful 80% accuracy, based on the geographic data of the Airbnb's surroundings
       * In doing so, I was also able to extract the most influential geographic business factors in determining an Airbnb's Listing price, and found out that it included aspects like the prevalence of nearby recreational businesses (fine dining, movie theaters, shopping), and prevalance of nearby hotels.
-   * Creating map data visualizations that spatially assessed the Airbnb's listing price against various aspects of the zipcode area that it was in (crime rate, number of nearby tourist landmarks, median household income).
+   * Creating map data visualizations that spatially assessed the Airbnb's listing price against distances from specific tourist attractions.
 
 # Table of Contents
 - [Background](https://benduong2001.github.io/airbnb_sd.html#Background)
