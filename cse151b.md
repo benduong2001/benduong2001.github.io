@@ -1,13 +1,9 @@
 # Deep Learning Image Auto-Captioner with PyTorch
 
-* For this class specifically, we are prohibited from publicly sharing our project's github repo and its code. However, we can show our report.
-
 [See our report!](/images/images_cse151b/cse151b_report.pdf)
 
 ![](/images/images_cse151b/image_autocaptioner.png)
 
-* This is a class project for CSE151B at UC San Diego. CSE151B is a class about Deep Learning in PyTorch taught by Professor Garrison Cottrell
-(see https://jacobsschool.ucsd.edu/node/3288).
 
 *  Our team included Takuro Kitasawa, Rye Gleason, Jeremy Nurding, and myself.
 * In this project, we developed and trained an AI generative model that could take in input images, and auto-generate English captions properly describing the image's content with correct grammar.
