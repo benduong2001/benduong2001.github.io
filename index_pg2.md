@@ -27,6 +27,11 @@
 <img src="images/images_HomemadeTF/bootlegCNN_demo_gif.gif"/>
 ---
 
+---
+### Python 3D Grapher Tool for Vector Calculus in Blender 3D *(Spring 2020)*
+[Python 3D Grapher Tool for Vector Calculus in Blender 3D](blector.md)
+<img src="images/images_blector/Blector_example_image_01.png"/>
+---
 
 
 Pages: [1](index.md),   **2**
