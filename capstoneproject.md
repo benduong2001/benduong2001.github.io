@@ -22,14 +22,13 @@
   * A company needs to deliver an **order**  from Point A to Point B, but lack their own trucking or delivery services to do so.
   * Trucking Service companies, or "**Carriers**", are willing to give **offers** to deliver any shipments at a given cost
   * Flock Freight is the intermediary, or "Freight Broker", between both parties. 
-    * For a given **Company X** in need to deliver **Order X**, a number of **N** carriers - ("**Carrier i**") will give offers ("**Offer i**") to deliver it for a certain cost a.k.a. shipping rate ("**rate i**"), so "i" is 1,2, 3....N.
-  * And Flock Freight's questions are: 
-    * Knowing just Order X alone, predict N - the number of carriers that will make an offer.
+    * For a given **Company X** in need to deliver **Order X**, a number of **N** carriers - ("**Carrier i**") will give offers ("**Offer i**") to deliver it for a certain cost a.k.a. shipping offer rate ("**rate i**"), where "i" is 1,2, 3....N.
+  * And Flock Freight's questions are:
     * Knowing just Order X alone, predict the cheapest offer rate the order might get.
+    * Knowing just Order X alone, predict N (the number of carriers that will make an offer).
 * Flock Freight gave our team anonymized data that included those about the orders themselves, which were just: the origin and destination zipcodes (the zip3) of the shipment order,the date of deadline, and physical characteristics about it (i.e. whether it's hazardous, or needs refridgeration).
 * After 20 weeks of intense collaboration and learning from Flock-Freight, my team and I constructed a final prediction model for determining if a given offer was worthy of selection. The new model was able to reduce Flock Freight's costs by 9.8%. 
-* We also authored a research paper documenting our findings, and attended a project showcase where we presented our work to peers, college faculty, and industry professionals.
-
+* We also authored a project paper, and showcased our work to peers, college faculty, and industry professionals.
 
 
 
