@@ -51,14 +51,13 @@
       * A prediction model for the average of the offer rates for a given order. This would be used as a threshold to label any incoming offer as "cheap" if it is below-average for that order.
           - Final model: Linear Regression. 
           - Final test accuracy: 87%.
-          ![](images/images_dsc180/avg_model_r2_scatter.png)
+          <!--![](images/images_dsc180/avg_model_r2_scatter.png)-->
 
       * A prediction model for the standard deviation of the offer rates for a given order. This extends the last average model, labelling any incoming offer as "REALLY cheap" if below-average for that order by a large difference (namely that of the standard deviation). 
           - The initial baseline model had a poor test set accuracy of 57%. A big portion of the time went to **improving** this model's accuracy. Several weeks would be spent (see the next ["Challenges"](https://benduong2001.github.io/capstoneproject.html#Challenges) section) in a cycle of **asking questions to our industry mentor**, **data-cleaning**, **feature engineering**, **modeling**, **hyperparameter fine-tuning**, **peeking at EDA visuals (such as correlation matrix heatmaps to pinpoint correlated features)**. All of these eventually improved the model's accuracy and ROC AUC score by ~10%.
           - Final model: Random Forest
           - Final (and **improved**) test accuracy: 67%.
-          ![](images/images_dsc180/sd_model_confusion_matrix.png)
-
+          <!--[](images/images_dsc180/sd_model_confusion_matrix.png)-->
   * **Geo-Data**
     * A lot of this project was geographical in nature, since this company dealt with transportation shipping.
      * The original data already provided by Flock Freight only had **one** geographic feature - the zipcodes of the order's origins and destinations.
