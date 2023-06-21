@@ -79,7 +79,7 @@
             * T-Tests coded in python showed that these features indeed had a statistical significance with respect to the offer rate standard deviation per order.  
         * By including this newfound geo-data, I was also able to let our team incorporate **geographic maps** into our data visualizations
 
-* **Automating the data science tasks of the 2 models with Python**:
+* **Productionizing the tasks for the 2 models with Python**:
     *  As We had to improve the model's accuracy by routinely adding and cleaning new data or retransforming old data then re-training it, it was repetitive to re-run the tasks again and again through Jupyter Notebook to find which different configuration of factors boosted the model accuracy. And so I developed Python scripts to automate nearly all stages of my tasks into an end-to-end pipeline, that could be done in at least **6 to 8** commands on the terminal that can be put into a shell script, so that when those 6-8 commands were executed, the pipeline automatically did the following things:
         * Data retrieval from Socrata API and webscraping from online data sources using BeautifulSoup.
         * Data transformations using geopandas, feature engineering with pandas, and machine learning with sklearn pipelines to train and test multiple ML models.
