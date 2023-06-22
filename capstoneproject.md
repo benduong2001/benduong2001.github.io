@@ -39,16 +39,14 @@
     * Our team's final prediction model was actually a "conglomerate" of 3 prediction sub-models. Nima and I was responsible for **two** of them. They were incremental (the 1st was a baseline model that the 2nd built off of), and it was finding the cheapest rate.
     ![](images/images_dsc180/notation_avg.png)
     <!--![](images/images_dsc180/avg_model_r2_scatter.png)-->
-    * So f_µ is a linear regression model for estimating the mean offer rates of orders, so its predictions are used as the thresholds on if an offer-rate was below-average (cheap). With an accuracy of 87%, this is good enough as a bare minimum model.
+    * So f_µ is a linear regression model for estimating the mean offer rates of orders, so its predictions are used as the thresholds on if an offer-rate is below-average (cheap). With an accuracy of 87%, this is good enough as a baseline model.
     ![](images/images_dsc180/notation_stdev.png)
     * The threshold for the conglomerate model F is expanded further with a predictive model f_σ for each order's offer rate standard deviation. If an offer-rate is lower than the expected average by a whole standard deviation, it is **very** cheap.
     ![](images/images_dsc180/bellcurve.png)
     * But this tactic has flaws: any order's offer amount N could vary as low as 3; in a ~16%-sized blue-shaded region in the bell-curve above, that is small enough to get cut off and leave us nothing.
     * To be less strict, the standard deviation can be scaled by a "dampener" constant lambda between 0 to 1. 0 would mean F is now no different than just using f_µ. 
     ![](images/images_dsc180/notation_stdev_lambda.png)
-
-    * We had to work with building the models, finding more data for it, cleaning the data, feature engineering the data, training the model with it, and improving the model's test accuracy by either feature engineering the data even more or finding even newer data. Like a cycle.
-      - The initial baseline model had a poor test set accuracy of 57%. Many weeks went into improving this score. A big portion of the time went to **improving** this model's accuracy. Several weeks would be spent (see the next ["Challenges"](https://benduong2001.github.io/capstoneproject.html#Challenges) section) in a cycle of **asking questions to our industry mentor**, **data-cleaning**, **feature engineering**, **modeling**, **hyperparameter fine-tuning**, **peeking at EDA visuals (such as correlation matrix heatmaps to pinpoint correlated features)**. All of these eventually improved the model's accuracy by ~17%.
+      - The new score with f_σ was not good and lower than the f_µ. Many weeks went into improving the score at 57%-60%, until it reached 67% (see the next ["Challenges"](https://benduong2001.github.io/capstoneproject.html#Challenges) section). This meant a cycle of  **consulting with our industry mentor as the subject-matter-expert**, **sourcing new potentially useful data**, **data-cleaning**, **feature engineering**, **model-retraining**, **hyperparameter fine-tuning**, **peeking at EDA visuals (such as correlation matrix heatmaps to pinpoint correlated features)**. I took note of any "dead-ends" in terms of exploratory data analysis, to prevent accidental repeat. All of these eventually improved the model's accuracy by ~17%. Since EDA like this is a rabbithole, this is the AGILE reason behind the incremental models, because the first model with just f_µ could be good enough on its own. 
       - Final model: Random Forest
       - Final (and **improved**) test accuracy: 67%.
         <!--[](images/images_dsc180/sd_model_confusion_matrix.png)-->
