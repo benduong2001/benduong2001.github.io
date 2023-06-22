@@ -36,28 +36,19 @@
 
 **So what did I do?**
   * **Prediction Modelling and iteratively improving their accuracies**
-    * Our team's final prediction model was actually a "conglomerate" of 3 prediction sub-models. Nima and I was responsible for **two** of them.
-    * -
-    * 
-    * -
-    * 
-    * -
-    * ![](https://builtin.com/sites/www.builtin.com/files/styles/ckeditor_optimize/public/inline-images/1_empirical-rule.jpg)
-    * 
-    * -
-    * 
-
-
+    * Our team's final prediction model was actually a "conglomerate" of 3 prediction sub-models. Nima and I was responsible for **two** of them. They were incremental (the 1st was a baseline model that the 2nd built off of), and it was finding the cheapest rate.
+    * ![](images/images_dsc180/notation_avg.png)
+    * <!--![](images/images_dsc180/avg_model_r2_scatter.png)-->
+    * So f_µ is a linear regression model for estimating the mean offer rates of orders, so its predictions are used as the thresholds on if an offer-rate was below-average (cheap). With an accuracy of 87%, this is good enough as a bare minimum model.
+    * ![](images/images_dsc180/notation_stdev.png)
+    * The threshold for the conglomerate model F is expanded further with a predictive model f_σ for each order's offer rate standard deviation. If an offer-rate is lower than the expected average by a whole standard deviation, it is **very** cheap.
+    * ![](images/images_dsc180/bellcurve.png)
+    * But this tactic has flaws: since any order could vary by offer amount and be as low as 3; in a ~16%-sized blue-shaded region in the bell-curve above, that could get cut off.
+    * To be less strict, we made the standard deviation get scaled by a "dampener" constant lambda between 0 to 1. 0 would mean F is now no different than just using f_µ. 
+    * ![](images/images_dsc180/notation_stdev_lambda.png)
 
     * We had to work with building the models, finding more data for it, cleaning the data, feature engineering the data, training the model with it, and improving the model's test accuracy by either feature engineering the data even more or finding even newer data. Like a cycle.
-    * These 2 models were:
-      * A prediction model for the average of the offer rates for a given order. This would be used as a threshold to label any incoming offer as "cheap" if it is below-average for that order.
-          - Final model: Linear Regression. 
-          - Final test accuracy: 87%.
-          <!--![](images/images_dsc180/avg_model_r2_scatter.png)-->
-
-      * A prediction model for the standard deviation of the offer rates for a given order. This extends the last average model, labelling any incoming offer as "REALLY cheap" if below-average for that order by a large difference (namely that of the standard deviation). 
-          - The initial baseline model had a poor test set accuracy of 57%. A big portion of the time went to **improving** this model's accuracy. Several weeks would be spent (see the next ["Challenges"](https://benduong2001.github.io/capstoneproject.html#Challenges) section) in a cycle of **asking questions to our industry mentor**, **data-cleaning**, **feature engineering**, **modeling**, **hyperparameter fine-tuning**, **peeking at EDA visuals (such as correlation matrix heatmaps to pinpoint correlated features)**. All of these eventually improved the model's accuracy and ROC AUC score by ~10%.
+          - The initial baseline model had a poor test set accuracy of 57%. A big portion of the time went to **improving** this model's accuracy. Several weeks would be spent (see the next ["Challenges"](https://benduong2001.github.io/capstoneproject.html#Challenges) section) in a cycle of **asking questions to our industry mentor**, **data-cleaning**, **feature engineering**, **modeling**, **hyperparameter fine-tuning**, **peeking at EDA visuals (such as correlation matrix heatmaps to pinpoint correlated features)**. All of these eventually improved the model's accuracy by ~17%.
           - Final model: Random Forest
           - Final (and **improved**) test accuracy: 67%.
           <!--[](images/images_dsc180/sd_model_confusion_matrix.png)-->
