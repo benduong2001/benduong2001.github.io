@@ -18,14 +18,14 @@
 ## Background {#Background}
 * I was part of a 6-month industry research project with 3 other students, under the mentorship of Flock Freight, a delivery logistics company.
 * I worked with Nima Yazdani, Radu Manea, and Keagan Benson.
-* The background to Flock Freight's mission is as follows:
+* The background to Flock Freight's mission is:
   * A company needs to deliver an **order**  from Point A to Point B, but lack their own trucking or delivery services to do so.
   * Trucking Service companies, or "**Carriers**", are willing to give **offers** to deliver any shipments at a given cost
   * Flock Freight is the intermediary, or "Freight Broker", between both parties. 
     * For a given **Company X** in need to deliver **Order X**, a number of **N** carriers - ("**Carrier i**") will give offers ("**Offer i**") to deliver it for a certain cost a.k.a. shipping offer rate ("**rate i**"), where "i" is 1,2, 3....N.
   * And Flock Freight's questions are:
-    * Knowing just Order X alone, predict the cheapest offer rate the order might get.
     * Knowing just Order X alone, predict N (the number of carriers that will make an offer).
+    * Knowing just Order X alone, predict the cheapest offer rate the order might get.
 * Flock Freight gave our team anonymized data that included those about the orders themselves, which were just: the origin and destination zipcodes (the zip3) of the shipment order,the date of deadline, and physical characteristics about it (i.e. whether it's hazardous, or needs refridgeration).
 * After 20 weeks of intense collaboration and learning from Flock-Freight, my team and I constructed a final prediction model for determining if a given offer was worthy of selection. The new model was able to reduce Flock Freight's costs by 9.8%. 
 * We also authored a project paper, and showcased our work to peers, college faculty, and industry professionals.
@@ -35,17 +35,14 @@
 ## Personal-Contribution {#Personal-Contribution}
 
 **So what did I do?**
-  * **Impactful Insights**
-    * I managed to personally find several impactful insights that were useful to Flock Freight's business case. Some of these will be mentioned again in the rest of this page, but several are:
-       * Performing data analysis with Pandas, and discovering the cheapest delivery offers frequently fell on Thursday, then verifying with statistical hypothesis testing that this pattern is likely existent and not out of random chance.
-       * Providing a geography-based "segmentation" of the shipping locations by applying unsupervised ML (K-means clustering) to their zipcode nodes's X/Y coordinates, thereby grouping them apart into 20 "metropolitan regions".
-       * Producing data analysis on delivery data and finding out that:
-          * Delivery routes with the cheapest shipments tend to be along the west-coast states or from in and out of Florida.
-          * Atlanta was a region of high delivery activity
-          * Information about the order's delivery route itself, i.e. the average population density or average weather road conditions (rainfall, temperature) of the counties encountered along the way, did have influence on the volume of delivery offers for that order
+  * **Prediction Modelling and iteratively improving their accuracies**
+    * Our team's final prediction model was actually a "conglomerate" of 3 prediction sub-models. Nima and I was responsible for **two** of them.
+    * Let θ = details about a given delivery order X.
+    * As many trucking services (carriers) trickle in to offer delivering order X, the goal is:
+Given θ, find the cheapest offer rate r* among the n carriers. 
 
-  * **Building and Training the Prediction Models and iteratively improving their accuracies**
-    * Our team's final prediction model was actually a "conglomerate" of 3 prediction sub-models. Nima and I was responsible for **two** of them. 
+
+
     * We had to work with building the models, finding more data for it, cleaning the data, feature engineering the data, training the model with it, and improving the model's test accuracy by either feature engineering the data even more or finding even newer data. Like a cycle.
     * These 2 models were:
       * A prediction model for the average of the offer rates for a given order. This would be used as a threshold to label any incoming offer as "cheap" if it is below-average for that order.
@@ -59,8 +56,8 @@
           - Final (and **improved**) test accuracy: 67%.
           <!--[](images/images_dsc180/sd_model_confusion_matrix.png)-->
   * **Geo-Data**
-    * A lot of this project was geographical in nature, since this company dealt with transportation shipping.
-     * The original data already provided by Flock Freight only had **one** geographic feature - the zipcodes of the order's origins and destinations.
+    * Since this company dealt with transportation shipping, a lot of this project was geographical in nature.
+     * The original Flock Freight data only had **one** geographic feature - the orders' origin and destination zipcodes.
     * Since I was the main person in the team with at least prior familiarity with geo-data in my internship and past projects, I had to do 2 tasks:
         1. Procuring external, geographic data sources for our project. 
         2. Transforming it to be "usable" or "pandas-dataframe friendly" and then pass the work to my other teammates so they could do more analysis on it.
@@ -77,7 +74,16 @@
             * T-Tests coded in python showed that these features indeed had a statistical significance with respect to the offer rate standard deviation per order.  
         * By including this newfound geo-data, I was also able to let our team incorporate **geographic maps** into our data visualizations
 
-* **Productionizing the tasks for the 2 models with Python**:
+  * **Impactful Insights**
+    * I managed to uncover insights useful to Flock Freight's business case. Some will be mentioned again in the rest of this page, but several are:
+       * With pandas data analysis, discovering the cheapest delivery offers frequently fell on Thursday, then checking its statistical significance with ANOVA testing.
+       * Providing a geographic "segmentation" of the delivery hubs by applying unsupervised ML (K-means clustering) to the zipcode nodes's X/Y coordinates, thereby grouping them apart into 20 "metropolitan regions".
+       * Producing data analysis on delivery data and uncovering:
+          * Delivery routes with the cheapest shipments tend to be along the west-coast or in Florida.
+          * Atlanta was a region of high delivery activity
+          * Information about the order's delivery route itself, i.e. the average population density or weather road conditions (avg rainfall, temperature) of the counties encountered along the way, influenced on the demand of delivery offers for that order
+
+* **Productionizing Data Pipeline**:
     *  As We had to improve the model's accuracy by routinely adding and cleaning new data or retransforming old data then re-training it, it was repetitive to re-run the tasks again and again through Jupyter Notebook to find which different configuration of factors boosted the model accuracy. And so I developed Python scripts to automate nearly all stages of my tasks into an end-to-end pipeline, that could be done in at least **6 to 8** commands on the terminal that can be put into a shell script, so that when those 6-8 commands were executed, the pipeline automatically did the following things:
         * Data retrieval from Socrata API and webscraping from online data sources using BeautifulSoup.
         * Data transformations using geopandas, feature engineering with pandas, and machine learning with sklearn pipelines to train and test multiple ML models.
@@ -172,6 +178,8 @@ I employed various actions and improved the baseline model's accuracy from being
         * LOG(TEMPERATURE): the average temperature of all the counties that the order's delivery route crosses through
         * POPULATION_DENSITY: the average population density (or urban-ness) of all the counties that the order's delivery route crosses through
         * APPROXIMATE_DRIVING_ROUTE_MILEAGE: the length of the order's delivery route (the euclidean distance between the origin and destination zipcode node)
+
+### PowerBI Visuals {#PowerBI-Visuals}
 
 ![](images/images_dsc180/pbi_sample.png)
 * PowerBI dashboard hooked to DuckDB
