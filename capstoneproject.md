@@ -37,9 +37,15 @@
 **So what did I do?**
   * **Prediction Modelling and iteratively improving their accuracies**
     * Our team's final prediction model was actually a "conglomerate" of 3 prediction sub-models. Nima and I was responsible for **two** of them.
-    * Let θ = details about a given delivery order X.
-    * As many trucking services (carriers) trickle in to offer delivering order X, the goal is:
-Given θ, find the cheapest offer rate r* among the n carriers. 
+    * -
+    * 
+    * -
+    * 
+    * -
+    * ![](https://builtin.com/sites/www.builtin.com/files/styles/ckeditor_optimize/public/inline-images/1_empirical-rule.jpg)
+    * 
+    * -
+    * 
 
 
 
