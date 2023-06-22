@@ -38,38 +38,30 @@
   * **Prediction Modelling and iteratively improving their accuracies**
     * Our team's final prediction model was actually a "conglomerate" of 3 prediction sub-models. Nima and I was responsible for **two** of them. They were incremental (the 1st was a baseline model that the 2nd built off of), and it was finding the cheapest rate.
     ![](images/images_dsc180/notation_avg.png)
-    * <!--![](images/images_dsc180/avg_model_r2_scatter.png)-->
+    <!--![](images/images_dsc180/avg_model_r2_scatter.png)-->
     * So f_µ is a linear regression model for estimating the mean offer rates of orders, so its predictions are used as the thresholds on if an offer-rate was below-average (cheap). With an accuracy of 87%, this is good enough as a bare minimum model.
     ![](images/images_dsc180/notation_stdev.png)
     * The threshold for the conglomerate model F is expanded further with a predictive model f_σ for each order's offer rate standard deviation. If an offer-rate is lower than the expected average by a whole standard deviation, it is **very** cheap.
     ![](images/images_dsc180/bellcurve.png)
-    * But this tactic has flaws: since any order could vary by offer amount and be as low as 3; in a ~16%-sized blue-shaded region in the bell-curve above, that could get cut off.
-    * To be less strict, we made the standard deviation get scaled by a "dampener" constant lambda between 0 to 1. 0 would mean F is now no different than just using f_µ. 
+    * But this tactic has flaws: any order's offer amount N could vary as low as 3; in a ~16%-sized blue-shaded region in the bell-curve above, that is small enough to get cut off and leave us nothing.
+    * To be less strict, the standard deviation can be scaled by a "dampener" constant lambda between 0 to 1. 0 would mean F is now no different than just using f_µ. 
     ![](images/images_dsc180/notation_stdev_lambda.png)
 
     * We had to work with building the models, finding more data for it, cleaning the data, feature engineering the data, training the model with it, and improving the model's test accuracy by either feature engineering the data even more or finding even newer data. Like a cycle.
-      - The initial baseline model had a poor test set accuracy of 57%. A big portion of the time went to **improving** this model's accuracy. Several weeks would be spent (see the next ["Challenges"](https://benduong2001.github.io/capstoneproject.html#Challenges) section) in a cycle of **asking questions to our industry mentor**, **data-cleaning**, **feature engineering**, **modeling**, **hyperparameter fine-tuning**, **peeking at EDA visuals (such as correlation matrix heatmaps to pinpoint correlated features)**. All of these eventually improved the model's accuracy by ~17%.
+      - The initial baseline model had a poor test set accuracy of 57%. Many weeks went into improving this score. A big portion of the time went to **improving** this model's accuracy. Several weeks would be spent (see the next ["Challenges"](https://benduong2001.github.io/capstoneproject.html#Challenges) section) in a cycle of **asking questions to our industry mentor**, **data-cleaning**, **feature engineering**, **modeling**, **hyperparameter fine-tuning**, **peeking at EDA visuals (such as correlation matrix heatmaps to pinpoint correlated features)**. All of these eventually improved the model's accuracy by ~17%.
       - Final model: Random Forest
       - Final (and **improved**) test accuracy: 67%.
         <!--[](images/images_dsc180/sd_model_confusion_matrix.png)-->
   * **Geo-Data**
     * Since this company dealt with transportation shipping, a lot of this project was geographical in nature.
      * The original Flock Freight data only had **one** geographic feature - the orders' origin and destination zipcodes.
-    * Since I was the main person in the team with at least prior familiarity with geo-data in my internship and past projects, I had to do 2 tasks:
-        1. Procuring external, geographic data sources for our project. 
-        2. Transforming it to be "usable" or "pandas-dataframe friendly" and then pass the work to my other teammates so they could do more analysis on it.
-    * How I did these 2 tasks were:
-        1. I wrote **ETL** python scripts to extract this geo-data from online government census data sources.
-            * Retrival is done by **Socrata API** by Tyler Insights, OR **webscraping** with **BeautifulSoup**, as a sequence of **"ETL Failsafes"** with Python's **Try / Except**.
-            * The zipcode column  mentioned earlier would be the **"join key"** to these new "dimension tables"
-        2. Geographic data preprocessing / Feature Engineering.
-            * **GeoPandas** is used for geo-data pre-processing. To make the geodata usable as structured data, the zipcodes are mapped to X/Y coordinate columns.
-            * But X/Y coordinates weren't enough, so I applied **K-means Clustering** to these zipcode nodes, and thus grouped them into "Regions" down to an amount suitable for **One-hot-encoding**.
-            * Also, I decided to symbolize the order's **"Delivery Route"** by connecting each order's origin / destination zipcode nodes. I brought in further geodata sources and used GeoPandas's Intersection and Buffer methods to aggregate different information about the counties that the delivery routes crossed through. These included average population density, rainfall, etc. encountered during the shipping route for that order.
-    * **Benefits**: 
-        * These supplementary geographic features turned out to be very helpful for the feature engineering, and even influential for improving the prediction models' accuracies, compared to if we only limited ourselves to the pre-existing, non-geographic feature.
-            * T-Tests coded in python showed that these features indeed had a statistical significance with respect to the offer rate standard deviation per order.  
-        * By including this newfound geo-data, I was also able to let our team incorporate **geographic maps** into our data visualizations
+    * I had some familiarity with geo-data in the past, so I leveraged this asset for the team:
+        1. Procuring external, geographic data sources for our project. This meant **ETL** python scripts that retrieved shapefiles using SodaPy Socrata API, or BeautifulSoup, then geopandas for transformation.
+        2. Feature-engineering the geo-data to be in a usable and numerically understandable format to my other, less geodata-familiar teammates so they can continue the work from there.
+            - With **GeoPandas**, I made the geodata usable as structured data, by mapping the origin/destination string zipcodes to numerical X/Y coordinate columns (the centroids of their zipcode regions).
+            - But X/Y coordinates still aren't really useful enough even as numerical information to the zipcode string. I applied **K-means Clustering** to the zipcode nodes, and thus grouped them into 20 "Regions". The centroids of these regions would be used to actually encode the zipcodes (like zip2vec) by being like **radial basis kernels** in terms of softmaxed inverse euclidean distances.
+            - I represented the order's **"Delivery Route"** by connecting each order's origin / destination zipcode nodes. I brought in further geodata sources and used GeoPandas's Intersection and Buffer methods to aggregate different information about the counties that the delivery routes crossed through. These included average population density, rainfall, etc. encountered during the shipping route for that order. Doing so could approximate the road-conditions of the delivery route, and potentially the demand for an order.
+        3. Our team's project showcase was able to uniquely showcase maps for data visualization.
 
   * **Impactful Insights**
     * I managed to uncover insights useful to Flock Freight's business case. Some will be mentioned again in the rest of this page, but several are:
@@ -81,13 +73,13 @@
           * Information about the order's delivery route itself, i.e. the average population density or weather road conditions (avg rainfall, temperature) of the counties encountered along the way, influenced on the demand of delivery offers for that order
 
 * **Productionizing Data Pipeline**:
-    *  As We had to improve the model's accuracy by routinely adding and cleaning new data or retransforming old data then re-training it, it was repetitive to re-run the tasks again and again through Jupyter Notebook to find which different configuration of factors boosted the model accuracy. And so I developed Python scripts to automate nearly all stages of my tasks into an end-to-end pipeline, that could be done in at least **6 to 8** commands on the terminal that can be put into a shell script, so that when those 6-8 commands were executed, the pipeline automatically did the following things:
-        * Data retrieval from Socrata API and webscraping from online data sources using BeautifulSoup.
-        * Data transformations using geopandas, feature engineering with pandas, and machine learning with sklearn pipelines to train and test multiple ML models.
+    * As We had to improve the model's accuracy by routinely adding and cleaning new data or retransforming old data then re-training it, it was repetitive to re-run the tasks again and again through Jupyter Notebook to find which different configuration of factors boosted the model accuracy. And so I developed Python scripts to automate nearly all stages of my tasks into an end-to-end pipeline, that could be done in at least **6 to 8** commands on the terminal that can be put into a shell script, so that when those 6-8 commands were executed, the pipeline automatically did the following things:
+        * Data retrieval with Socrata API or BeautifulSoup.
+        * Data transformations using geopandas, dbt, feature engineering with pandas, and machine learning with sklearn pipelines to train and test multiple ML models.
         * Data cleaning tests using custom Python functions to ensure data quality and accuracy.
         * Recorded EDA and model metrics using Python logging and generated visualizations with matplotlib.
         * Updating of the image assets on own project's website with those generated visualizations.
-        * Reproducibility of the project was ensured by creating a Docker Image, and containerizing our group's work.
+        * Ensuring Reproducibility of the project by creating a Docker Image, and containerizing our group's work.
   
 ![](images/images_dsc180/flowchart.png)
 
