@@ -48,10 +48,10 @@
     * ![](images/images_dsc180/notation_stdev_lambda.png)
 
     * We had to work with building the models, finding more data for it, cleaning the data, feature engineering the data, training the model with it, and improving the model's test accuracy by either feature engineering the data even more or finding even newer data. Like a cycle.
-          - The initial baseline model had a poor test set accuracy of 57%. A big portion of the time went to **improving** this model's accuracy. Several weeks would be spent (see the next ["Challenges"](https://benduong2001.github.io/capstoneproject.html#Challenges) section) in a cycle of **asking questions to our industry mentor**, **data-cleaning**, **feature engineering**, **modeling**, **hyperparameter fine-tuning**, **peeking at EDA visuals (such as correlation matrix heatmaps to pinpoint correlated features)**. All of these eventually improved the model's accuracy by ~17%.
-          - Final model: Random Forest
-          - Final (and **improved**) test accuracy: 67%.
-          <!--[](images/images_dsc180/sd_model_confusion_matrix.png)-->
+      - The initial baseline model had a poor test set accuracy of 57%. A big portion of the time went to **improving** this model's accuracy. Several weeks would be spent (see the next ["Challenges"](https://benduong2001.github.io/capstoneproject.html#Challenges) section) in a cycle of **asking questions to our industry mentor**, **data-cleaning**, **feature engineering**, **modeling**, **hyperparameter fine-tuning**, **peeking at EDA visuals (such as correlation matrix heatmaps to pinpoint correlated features)**. All of these eventually improved the model's accuracy by ~17%.
+      - Final model: Random Forest
+      - Final (and **improved**) test accuracy: 67%.
+        <!--[](images/images_dsc180/sd_model_confusion_matrix.png)-->
   * **Geo-Data**
     * Since this company dealt with transportation shipping, a lot of this project was geographical in nature.
      * The original Flock Freight data only had **one** geographic feature - the orders' origin and destination zipcodes.
