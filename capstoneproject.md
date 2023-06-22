@@ -58,6 +58,7 @@
         2. Feature-engineering the geo-data to be in a usable and numerically understandable format to my other, less geodata-familiar teammates so they can continue the work from there.
             - With **GeoPandas**, I made the geodata usable as structured data, by mapping the origin/destination string zipcodes to numerical X/Y coordinate columns (the centroids of their zipcode regions).
             - But X/Y coordinates still aren't really useful enough even as numerical information to the zipcode string. I applied **K-means Clustering** to the zipcode nodes, and thus grouped them into 20 "Regions". The centroids of these regions would be used to actually encode the zipcodes (like zip2vec) by being like **radial basis kernels** in terms of softmaxed inverse euclidean distances.
+             ![](images/images_dsc180/metro_clusters_cropped.png)
             - I represented the order's **"Delivery Route"** by connecting each order's origin / destination zipcode nodes. I brought in further geodata sources and used GeoPandas's Intersection and Buffer methods to aggregate different information about the counties that the delivery routes crossed through. These included average population density, rainfall, etc. encountered during the shipping route for that order. Doing so could approximate the road-conditions of the delivery route, and potentially the demand for an order.
         3. Our team's project showcase was able to uniquely showcase maps for data visualization.
 
