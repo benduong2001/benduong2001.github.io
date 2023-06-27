@@ -2,17 +2,16 @@
 
 Hello, I am **Benson Duong**. I am a Data Science student at the University of California, San Diego, learning about the fields of data science, programming, analysis, statistics, and machine learning. My projects and work have a recurring interest in social data, looking into business data or map data.
 
-* In my work and projects, I've handled with all aspects of the data science project to result in actionable, business impact:
-  * Using ETL techniques to retrieve online raw data and transform them to be usable for analysis and modeling
+* In my work and projects, I've handled with all aspects of the data science project process for actionable, business impact:
+  * Using ETL to retrieve online raw data and transform them to be usable for analysis and modeling
   * Accounting for pit-falls in data such as population bias or imbalanced data
   * Data analysis with plots and/or dashboards that can visually communicate business-minded story-telling
   * Developing predictive ML model and iteratively improving its accuracy metrics
-  * Using Python and programming principles to streamline these steps, making said business impacts easier to find, and more tidy for teammates
+  * Using Python programming to streamline and productionize these steps, making said business impacts easier to find, and more tidy for teammates
 
 * Skills and Tools:
   * I work with the following data tools:
-    * **Python** with 5 years of fluency, for my data science projects and to automate/streamline my day-to-day tasks for efficiency. 
-      * My frequent python packages include Pandas, NumPy, GeoPandas, Scikit-Learn, Matplotlib, TensorFlow
+    * **Python** with 5 years of fluency with packages like pandas, NumPy, GeoPandas, Scikit-Learn, Matplotlib, TensorFlow, and more.
     * **SQL**
     * **Tableau**
     * **PowerBI**
@@ -23,7 +22,7 @@ Hello, I am **Benson Duong**. I am a Data Science student at the University of C
 [Resume](BensonDuongLtxResumeV13tqh.pdf)
 
 
-These are some of the projects I've worked on indepedently or collaborated in. Some are school projects, and due to policy, might sometimes have privated github repo's, but nonetheless I can still provide descriptions of the techniques used.
+These are some of the projects I've worked on independently or collaborated in. Some are school projects, and due to policy, might sometimes have privated github repo's, but nonetheless I can still provide descriptions of the techniques used.
 
 # Data Science Project Portfolio
 
