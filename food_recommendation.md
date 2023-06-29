@@ -1,6 +1,7 @@
 # Food Recommendation Data Science Project
 
 ![](images/images_food_recommendation/foodcluster.png) 
+* **We can recommend a user of user-group 7 (pizza-lovers), to a restaurant of restaurant-group 9 (pizzarias)**
 
 [(Click here for a more in-depth and ML-technical description of this project!)](/food_recommendation_technical.md)
 
@@ -42,4 +43,4 @@
 * For data visualization purposes, the data undergoes dimensionality reduction as seen below to enable a 2D scatterplot.
 ![](images/images_food_recommendation/keywords_users_business.png) 
 
-* During the data preparation, I was also able to uncover indirectly-associated sub-groups in the restaurants and customer demographics, based on food, which in itself is a useful and applicable byproduct. 
+* During the data preparation, I was also able to uncover indirectly-associated sub-groups in the restaurants and customer demographics, based on food, which in itself is a useful and applicable byproduct. **Because with this, we can recommend a user of user-group 0 (dessert-lovers), to a restaurant of restaurant-group 7 (dessert restaurants)**
