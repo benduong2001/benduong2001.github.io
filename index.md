@@ -2,13 +2,13 @@
 
 Hello, I am **Benson Duong**. I am a Data Science student at the University of California, San Diego, learning about the fields of data science, programming, analysis, statistics, and machine learning. My projects and work have a recurring interest in social data, looking into business data or map data.
 
-* In my work and projects, I've handled with all aspects of the data science project process for actionable, business impact:
+<!--* In my work and projects, I've handled with all aspects of the data science project process for actionable, business impact:
   * Using ETL to retrieve online raw data and transform them to be usable for analysis and modeling
   * Accounting for pit-falls in data such as population bias or imbalanced data
   * Data analysis with plots and/or dashboards that can visually communicate business-minded story-telling
   * Developing predictive ML model and iteratively improving its accuracy metrics
   * Using Python programming to streamline and productionize these steps, making said business impacts easier to find, and more tidy for teammates
-
+-->
 * Skills and Tools:
   * I work with the following data tools:
     * **Python** with 5 years of fluency with packages like pandas, NumPy, GeoPandas, Scikit-Learn, Matplotlib, TensorFlow, and more.
