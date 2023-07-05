@@ -16,7 +16,7 @@ Hello, I am **Benson Duong**. I am a Data Science student at the University of C
     * **Tableau**
     * **PowerBI**
     * **Microsoft Excel**
-    * **Spark**
+    * **PySpark**
   * Other non data-science related languages or tools that I work with include JavaScript, Java, Git, Docker. 
 
 [Resume](BensonDuongLtxResumeV13tqh.pdf)
