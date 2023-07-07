@@ -1,9 +1,12 @@
 # Geospatial Data Science Project: New York City Traffic
 
-![](images/images_nyc_traffic/leaflet_gif.gif) 
+![](images/images_nyc_traffic/nyc_traffic.mp4)
+
+<!--![](images/images_nyc_traffic/leaflet_gif.gif) -->
+
 * Demonstration of Traffic Prediction App made with Flask and Leaflet.js
 
-* [(Click to view App Repo as seen in gif above)](https://github.com/benduong2001/nyc_traffic_flask)
+* [(Click to view App Repo as seen in video above)](https://github.com/benduong2001/nyc_traffic_flask)
 
 * [(Click to view the article/tutorial I wrote on Kaggle)](https://www.kaggle.com/code/bensonduong/geospatial-nyc-traffic-project)
 
@@ -17,7 +20,7 @@
 
 This GIS data science project is an exploration of traffic volume statistics in New York City. It is an independent project that I've worked since Fall 2021.
 It contains 2 parts:
-* A Python App that can predict traffic volume level in NYC given the street and time of day, with a clickable roadmap and clock input (shown above); it uses geopandas for GIS data preprocessing, Flask for the web framework, and Leaflet.js for the front-end geography interactiveness. Various models can be employed, with accuracies between 75 % to 90 %
+* A Python App that can predict traffic volume level in NYC given the street and time of day, with a clickable roadmap and clock input (shown above); it uses geopandas for GIS data preprocessing, Flask for the web framework, and Leaflet.js, Turf.js for the front-end geography interactiveness, and D3.js for the data visuals. Various models can be employed, with accuracies between 75 % to 90 %
 
 * A Kaggle article that I wrote, giving a tutorial on how to replicate my project (without cosmetics) using ArcGIS (an industry standard software for GIS data analysis). In addition, it provides various exploratory data analysis, including line plots of traffic volume across time of day according to various factors, and hypothesis testing such as ANOVA.
 
@@ -25,6 +28,7 @@ It contains 2 parts:
 
 ### Part 1A: *Getting the Street Segment Traffic Data into a GIS-friendly Format*
 
+The traffic file is 27 million rows, so saving it as a parquet and using polars rather than pandas is advisable.
 Opening the traffic CSV file (made from the code before) on ArcMap, you'll come across the first problem. **It's an ordinary CSV file, with no usable geospatial data formatting**. The closest column we have are the street names, which we don't really want to resort to, since string data like this can be wildly inconsistent from one data source to another (East 73rd Street in one data source might be 73 St. E in another).
 
 But there's no reason to panic. Luckily, the metadata for that traffic CSV file shows that the column "Segment ID" is an identifier for each street segment. After some internet sleuthing, you will eventually find an online data source with a name like "nyc_lion" (the second base dataset), which has extensive data on NYC street segments, including a column with the exact same identifier. Most importantly, it includes shapefiles that will allow us to use geospatial data.
