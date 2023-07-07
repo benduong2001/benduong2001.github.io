@@ -1,6 +1,5 @@
 # Geospatial Data Science Project: New York City Traffic
 
-![](images/images_nyc_traffic/nyc_traffic.mp4)
 
 
 
