@@ -12,7 +12,7 @@ https://github.com/benduong2001/benduong2001.github.io/assets/62922098/666902f0-
 
 <!--![](images/images_nyc_traffic/leaflet_gif.gif) -->
 
-* Demonstration of Traffic Prediction App made with Flask and Leaflet.js
+* Demonstration of Traffic Prediction App made with Python Flask, JavaScript (Leaflet.js, Turf.js, D3.js)
 
 * [(Click to view App Repo as seen in video above)](https://github.com/benduong2001/nyc_traffic_flask)
 
