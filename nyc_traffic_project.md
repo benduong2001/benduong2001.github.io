@@ -15,7 +15,7 @@
 
 * Demonstration of Traffic Prediction App made with Python Flask, JavaScript (Leaflet.js, Turf.js, D3.js)
 
-* [(Click to view App Repo as seen in video above)](https://github.com/benduong2001/nyc_traffic_flask)
+* [(Click to view App Repo as seen in video above + setup instruction)](https://github.com/benduong2001/nyc_traffic_flask)
 
 * [(Click to view the article/tutorial I wrote on Kaggle)](https://www.kaggle.com/code/bensonduong/geospatial-nyc-traffic-project)
 
