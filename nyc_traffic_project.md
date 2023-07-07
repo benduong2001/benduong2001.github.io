@@ -4,9 +4,10 @@
 
 
 
-https://github.com/benduong2001/benduong2001.github.io/assets/62922098/666902f0-fc1c-4dd4-9040-19d65f6250fd
+<!--https://github.com/benduong2001/benduong2001.github.io/assets/62922098/666902f0-fc1c-4dd4-9040-19d65f6250fd-->
 
 
+![](images/images_nyc_traffic/nyc_traffic_optimized4.gif)
 
 
 
