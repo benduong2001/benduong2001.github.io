@@ -1,6 +1,16 @@
 # Geospatial Data Science Project: New York City Traffic
 
 ![](images/images_nyc_traffic/nyc_traffic.mp4)
+
+
+
+
+https://github.com/benduong2001/benduong2001.github.io/assets/62922098/666902f0-fc1c-4dd4-9040-19d65f6250fd
+
+
+
+
+
 <!--![](images/images_nyc_traffic/leaflet_gif.gif) -->
 
 * Demonstration of Traffic Prediction App made with Flask and Leaflet.js
