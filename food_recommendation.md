@@ -7,9 +7,9 @@
 
 [(Link to Github Repo)](https://github.com/benduong2001/Food-Recommendation)
 
-* This independent data science project of mines, explores food related datasets (unstructured text data) for prediction data analysis tasks involving customer recommendation. Two tasks or "sub-projects" were done.
-    * The 1st project is building a classification model that can distinguish whether a restaurant review is positive or negative emotion
-    * The 2nd project is building an auto-recommender model that can decide if a customer and a restaurant are compatible.
+* This independent data science project of mines, explores food related datasets (unstructured text data) for prediction data analysis tasks involving customer recommendation. Two sub-projects were done.
+    * The 1st sub-project is building a classification model that uses the textual contents of a customer's review to predict if they rate the restaurant favorably or not. 
+    * The 2nd sub-project is building an auto-recommender model that can decide if a customer and a restaurant are compatible. The findings also help create segmentations of the customers and restaurants based on food vocabulary.
 * This project will show:
    * Data Analysis and results applicable to useful business questions on customer recommendation, such as providing insights to user demographic sub-groups.
    * Succinct and Intuitive Data visualizations
@@ -23,7 +23,7 @@
 
 ### Sub-Project 1
 
-* Task 1 is where I build a textual classification machine learning model on predicting whether a given user will rate a given restaurant negatively, with their text reviews as input data.
+* With Python, I program a textual classification machine learning model on predicting whether a given user will rate a given restaurant negatively, with their text reviews as input data.
 * [Click here to see the full "sub-project" 1](https://benduong2001.github.io/food_recommendation_part1.html)
 * After dataset training, the model was able to determine whether a customer review was positive or negative with a 80% accuracy, and even reveals the 20 most influential words that would appear in a review for anticipating the customer satisfaction, shown above. As seen, it sensibly finds emotional words. But it also picks up words that are otherwise neutral but could be negative in the context of food (like "burnt") or even restaurant service itself (like "slow").
 
