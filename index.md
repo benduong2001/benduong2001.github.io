@@ -10,12 +10,12 @@ Hello, I am **Benson Duong**. I am a Data Science student at the University of C
   * Using Python programming to streamline and productionize these steps, making said business impacts easier to find, and more tidy for teammates
 -->
 * Skills and Tools:
-  * I work with the following data tools:
+  * I work with the following data tools and more:
     * **Python**- 5 years of fluency (Pandas, NumPy, GeoPandas, Scikit-Learn, Matplotlib, TensorFlow, PyTorch, PySpark, etc.) 
     * **SQL** (PostGreSQL, DuckDB Microsoft SQL Server, Snowflake)
     * **Tableau**, **PowerBI**
     * **Microsoft Excel**
-  * Other non data-science related languages or tools that I work with include
+  * Other non data-science related languages or tools:
     * JavaScript, Java, Git, Docker. 
 
 <!--[Resume](BensonDuongLtxResumeV13tqh.pdf)-->
