@@ -11,12 +11,10 @@ Hello, I am **Benson Duong**. I am a Data Science student at the University of C
 -->
 * Skills and Tools:
   * I work with the following data tools:
-    * **Python** with 5 years of fluency with packages like pandas, NumPy, GeoPandas, Scikit-Learn, Matplotlib, TensorFlow, and more.
-    * **SQL**
-    * **Tableau**
-    * **PowerBI**
+    * **Python**- 5 years of fluency (Pandas, NumPy, GeoPandas, Scikit-Learn, Matplotlib, TensorFlow, PyTorch, PySpark, etc.) 
+    * **SQL** (PostGreSQL, DuckDB Microsoft SQL Server, Snowflake)
+    * **Tableau**, **PowerBI**
     * **Microsoft Excel**
-    * **PySpark**
   * Other non data-science related languages or tools that I work with include JavaScript, Java, Git, Docker. 
 
 <!--[Resume](BensonDuongLtxResumeV13tqh.pdf)-->
