@@ -19,10 +19,10 @@ Hello, I am **Benson Duong**. I am a Data Science student at the University of C
     * **PySpark**
   * Other non data-science related languages or tools that I work with include JavaScript, Java, Git, Docker. 
 
-[Resume](BensonDuongLtxResumeV13tqh.pdf)
+<!--[Resume](BensonDuongLtxResumeV13tqh.pdf)-->
 
 
-These are some of the projects I've worked on independently or collaborated in. Some are school projects, and due to policy, might sometimes have privated github repo's, but nonetheless I can still provide descriptions of the techniques used.
+<!--These are some of the projects I've worked on independently or collaborated in. Some are school projects, and due to policy, might sometimes have privated github repo's, but nonetheless I can still provide descriptions of the techniques used.-->
 
 # Data Science Project Portfolio
 
