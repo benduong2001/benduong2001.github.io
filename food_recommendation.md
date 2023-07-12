@@ -1,7 +1,7 @@
 # Food Recommendation Data Science Project
 
 ![](images/images_food_recommendation/foodcluster.png) 
-* **We can recommend a user of user-group 7 (pizza-lovers), to a restaurant of restaurant-group 9 (pizzarias)**
+* **We can recommend a user of user-group 7 (pizza-lovers), to a restaurant of restaurant-group 9 (pizzarias). Or dessert lovers (user groups 2, 5, 19) to dessert restaurants (restaurant-group 7). Or seafood-lovers (user-groups 1, 16) to seafood restaurants (restaurant-group 8).**
 
 [(Click here for a more in-depth and ML-technical description of this project!)](/food_recommendation_technical.md)
 
@@ -14,17 +14,18 @@
    * Data Analysis and results applicable to useful business questions on customer recommendation, such as providing insights to user demographic sub-groups.
    * Succinct and Intuitive Data visualizations
 
-   * Used Tools (Everything is done in Python)
-       * Scikit-learn (for TfIdf Vectorizer and Logistic Regression)
-       * Matplotlib for visualizations
-       * Pandas
-       * NumPy
-       * Tensorflow and Keras
+* Used Tools (Everything is done in Python)
+  * Scikit-learn (for TfIdf Vectorizer and Logistic Regression)
+  * Matplotlib for visualizations
+  * Pandas
+  * NumPy
+  * Tensorflow and Keras
 
 ### Sub-Project 1
 
-* Task 1 is about predicting whether a given user will rate a given restaurant negatively, with their text reviews as input data.
+* Task 1 is where I build a textual classification machine learning model on predicting whether a given user will rate a given restaurant negatively, with their text reviews as input data.
 * [Click here to see the full "sub-project" 1](https://benduong2001.github.io/food_recommendation_part1.html)
+* After dataset training, the model was able to determine whether a customer review was positive or negative with a 80% accuracy, and even reveals the 20 most influential words that would appear in a review for anticipating the customer satisfaction, shown above. As seen, it sensibly finds emotional words. But it also picks up words that are otherwise neutral but could be negative in the context of food (like "burnt") or even restaurant service itself (like "slow").
 
 ![](images/images_food_recommendation/food_sentiment_coefficients.png) 
 
