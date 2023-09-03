@@ -11,7 +11,7 @@ Hello, I am **Benson Duong**, a Data Science student at the University of Califo
 -->
 * I work with the following data tools and more:
   * **Python**- 5 years of fluency (Pandas, NumPy, GeoPandas, Scikit-Learn, Matplotlib, TensorFlow, PyTorch, PySpark)
-  * **SQL** (PostGreSQL, Microsoft SQL Server SSMS), Snowflake
+  * **SQL** (PostGreSQL, DuckDB, SQLite, Microsoft SQL Server SSMS), Snowflake
   * **Tableau**, **PowerBI**
   * **Microsoft Excel**
   * **R**
@@ -32,13 +32,13 @@ Hello, I am **Benson Duong**, a Data Science student at the University of Califo
 ---
 
 ---
-### Restaurant User Recommendation Project *(Fall 2022)*
+### Restaurant ML Recommender *(Fall 2022 - Winter 2023)*
 [Food Recommendation Data Science Project](food_recommendation.md)
 <img src="images/images_food_recommendation/keywords_business.png?raw=true"/>
 ---
 
 ---
-### NYC Traffic Prediction Project *(Fall 2021 - Summer 2022)*
+### NYC Traffic Prediction App *(Fall 2021 - Fall 2022)*
 [NYC Traffic Data Science Project](nyc_traffic_project.md)
 <img src="images/images_nyc_traffic/nyc_traffic_optimized4.gif?raw=true"/>
 <img src="images/traffic_data.png?raw=true"/>
@@ -52,7 +52,7 @@ Hello, I am **Benson Duong**, a Data Science student at the University of Califo
 ---
 
 ---
-### - AI Image Auto-Captioner Project with PyTorch *(Fall 2022)*
+### - AI Image Auto-Captioner *(Fall 2022)*
 [AI Image Auto-Captioner PyTorch Project with PyTorch](cse151b.md)
 <img src="images/images_cse151b/image_autocaptioner.png">
 ---
