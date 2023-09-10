@@ -22,8 +22,8 @@
 ---
 
 ---
-### Remaking Image Recognition AI from Scratch *(Spring 2020)*
-[Remaking Image Recognition AI from Scratch](homemadetf.md)
+### Remaking Image Recognition ML from Scratch *(Spring 2020)*
+[Remaking Image Recognition ML from Scratch](homemadetf.md)
 <img src="images/images_HomemadeTF/bootlegCNN_demo_gif.gif"/>
 ---
 
