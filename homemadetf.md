@@ -20,7 +20,7 @@
 
 * With a graphic drawing-canvas interface done with Python Tkinter, I trained and tested the final project's iteration with the basic task of differentiating 1's and 0's, and showed the python implementation worked as intended.
 
-![](images/images_HomemadeTF/bootlegCNN_demo_gif.gif)
+![](images/images_HomemadeTF/bootlegCNN_demo_gif.gif?raw=true)
 
 ### What did I gain from this?
 * Even though this project, in hindsight was a reinvention of the wheel -with no business usefulness, it was a highly foundational introduction that definitely -and forcefully- drilled into my head about some of the math used in neural networks. 
