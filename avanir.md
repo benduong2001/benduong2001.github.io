@@ -6,7 +6,7 @@
 - [Accomplishments](https://benduong2001.github.io/avanir.html#Accomplishments)
 
 ## Background {#Background}
-* I was part of a summer-long internship program for Avanir Pharmaceuticals (Otsuka America) as a Business Analytic and Insights Intern, where I mostly did data analytic work with Python, SQL, and Tableau
+* I was part of a summer-long internship program for Avanir Pharmaceuticals (Otsuka America) as a Business Analytic and Insights Intern, where I mostly did data analysis science with Python programming.
 
 ## Tools I Used: {#Tools}
 * Python: Pandas, NumPy, GeoPandas, Matplotlib, Scikit-Learn, Statsmodel, Shap
