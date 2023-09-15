@@ -5,10 +5,8 @@
 - [What I did](https://benduong2001.github.io/avanir.html#Contribution)
 
 ## Tools used:
-* Python
-    * Packages: Pandas, NumPy, GeoPandas, Matplotlib, Scikit-Learn, Statsmodel, Shap
-* SQL
-    * Snowflake, Microsoft SQL Server
+* Python: Pandas, NumPy, GeoPandas, Matplotlib, Scikit-Learn, Statsmodel, Shap
+* SQL: Microsoft SQL Server, Snowflake
 * Tableau
 * Microsoft Excel
 
