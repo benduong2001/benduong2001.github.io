@@ -13,5 +13,18 @@
 * Tableau
 
 ## What I did {#Contribution}
-* 
+* I accomplished 3 big tasks:
+* One task was creating a consulting map visualization for the parent company of a 10-yr change in sales rep territories across the US, with 3 Layers of reps for HCP, LTC, and Hybrid.
+* I completed the task by compiling the yearly sales rep and zipcode data from historical excel files, 
+* Python, Pivot and Melt, pd.concat.
+* GeoPandas, Dissolve ZCTA by sales rep ID
+* Coordinate strategic-compact questions windows of time, data validation, Null Regions
+* Persevere
+
+* SQL: snowflake, and SSMS
+* Modularity CTE
+* 4 most populous US States
+
+
+* I showcased my findings and Tableau Map into a final Presentation to a non-technical audience of executive stakeholders,  communicating insights and suggestions with business storytelling.
 
