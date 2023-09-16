@@ -11,7 +11,7 @@ Hello, I am **Benson Duong**, a Data Science student at the University of Califo
 -->
 * I work with the following data tools and more:
   * **Python**- 5 years of fluency (Pandas, NumPy, GeoPandas, Scikit-Learn, Matplotlib, TensorFlow, PyTorch, PySpark)
-  * **SQL** (PostGreSQL, DuckDB, SQLite, Microsoft SQL Server SSMS), Snowflake
+  * **SQL** (PostGreSQL, DuckDB, SQLite, Microsoft SQL Server), Snowflake
   * **Tableau**, **PowerBI**
   * **Microsoft Excel**
   * **R**
