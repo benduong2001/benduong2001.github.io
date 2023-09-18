@@ -29,7 +29,14 @@
 
 This GIS data science project is an exploration of traffic volume statistics in New York City. It is an independent project that I've worked since Fall 2021.
 It contains 2 parts:
-* A Python App that can predict traffic volume level in NYC given the street and time of day, with a clickable roadmap and clock input (shown above); it uses geopandas for GIS data preprocessing, Flask for the web framework, and Leaflet.js, Turf.js for the front-end geography interactiveness, and D3.js for the data visuals. Various models can be employed, with accuracies between 75 % to 90 %
+* A Python application that can predict traffic volume level in NYC given the street and time of day, with a clickable roadmap and clock input (shown above). It uses: 
+    * Geopandas (or alternatively dbt with PostGIS - a geospatial extension of PostgreSQL) for GIS data processing
+    * Pandas, NumPy, and Polars for the general data processing.
+    * Flask for the web framework
+    * Leaflet.js, Turf.js for the interactive Javascript geography, and D3.js for the interactive Javascript data visuals.
+    * Various models can be employed, with accuracies between 75 % to 90 %.
+    * To run this as seen above in the gif, Docker will need to be installed.
+    * I wrote the project's python code to be easily extensible with Airflow.
 
 * A Kaggle article that I wrote, giving a tutorial on how to replicate my project (without cosmetics) using ArcGIS (an industry standard software for GIS data analysis). In addition, it provides various exploratory data analysis, including line plots of traffic volume across time of day according to various factors, and hypothesis testing such as ANOVA.
 
