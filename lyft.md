@@ -25,7 +25,7 @@
     * Each **Frame** has rows for all **Entities** (the AI car, other vehicles around it, etc) observed in that frame in time, with an **EntityID** column (also not a true "ID" column as it reuses numbers 1 & up in each scene).
     * Each **entity**'s row has columns for location in x/y, velocity in x/y, yaw, physical dimensions, and "Entity category" (which only has 4 types: vehicle, pedestrian, cyclist, and "Unknown").
     * So the lowest data-level is (**SceneID**+**FrameID**+**EntityID**, or a given **entity** in a given **frame** in a given **scene**.
-* There is also 2 other data files for the crosswalks, and the roadmap.
+* There is also 2 other data files for the crosswalks and roadmap.
 * Since 20GB was too much, we trimmed it down to 1GB by randomly selecting 100 scenes
 
 ## Data Processing {#Data-Processing}
@@ -52,9 +52,9 @@
 * PCA, and Hypothesis Testing.
 * Our Process
     * We added potentially helpful derived-columns like the entity's size (length x width), "slenderness" (ratio of length and width), speed (vector norm of x/y velocity columns)
-    * We set the dataset apart by the known and unknown.
-    * Within the known table, representation across the 3 categories were imbalanced, so we undersampled each category with the amount of the smallest category.
-    * We did the usual train-test split (75-to-25) on the known table and ran **Logistic Regression**. The test set accuracy was very promising, and we ran the trained model on the unknown table, imputing the Unknown categories.
+    * We split the dataset into known and unknown.
+    * In the known table, category representation was imbalanced, so we undersampled each category by the smallest category's amount. We did train-test split (75:25) and ran **Logistic Regression**.
+    * The test set accuracy was very promising, and we ran the trained model on the unknown table, imputing the Unknown categories.
 
 
 
