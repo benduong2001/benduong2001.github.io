@@ -44,7 +44,7 @@
 * I worked with another teammate to help determine if the Unknowns could be relabeled with the 3 other known categories.
 * This depends on the assumption that "unknown" could be just a data-recording error, or MCAR (Missing Completely at Random), or if it is indeed things that could not be grouped as pedestrians, vehicles, or cyclists. **70%** of the data had a Unknown category.
 * I went through determining if it was MCAR, MAR, or MNAR. I did Null-permutation Hypothesis Testing
-* Our Process (scikit-learn and 
+* Our Process 
     * We added potentially helpful derived-columns like the entity's size (length x width), "slenderness" (ratio of length and width), speed (vector norm of x/y velocity columns)
     * We split the dataset into known and unknown.
     * In the known table, category representation was imbalanced, so we undersampled each category by the smallest category's amount. We did train-test split (75:25) and ran **Logistic Regression**.
