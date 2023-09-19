@@ -24,8 +24,8 @@
     * Each **Frame** has rows for all **Entities** (the AI car, other vehicles around it, etc) observed in that frame in time, with an **EntityID** column (also not a true "ID" column as it reuses numbers 1 & up in each scene).
     * Each **entity**'s row has columns for location in x/y, velocity in x/y, yaw, physical dimensions, and "Entity category" (which only has 4 types: vehicle, pedestrian, cyclist, and "Unknown").
     * So the lowest data-level is (**SceneID**+**FrameID**+**EntityID**, or a given **entity** in a given **frame** in a given **scene**.
-* There is also 2 other data files for the crosswalks and roadmap.
 * Since 20GB was too much, we trimmed it down to 1GB by randomly selecting 100 scenes
+* There is also 2 other data files for the crosswalks and roadmap.
 
 ## Data Analysis {#Data-Analysis}
 * These are what we faced in data processing, data cleaning, and exploratory data analysis.
