@@ -46,10 +46,10 @@
 * 
 
 #### Handling of Missing Data - Imputation of Unknown-Category Entities with Logistic Regression
-* As said earlier, the dataset's entities are listed of 4 categories: Vehicle, Pedestrian, Cyclist, and "Unknown".
-* I worked with another teammate to help determine if the Unknown category could be relabeled with the 3 other known categories.
+* As said earlier, the dataset's entities are of 4 categories: Vehicle, Pedestrian, Cyclist, and "Unknown".
+* I worked with another teammate to help determine if the Unknowns could be relabeled with the 3 other known categories.
 * This depends on the assumption that "unknown" could be just a data-recording error, or MCAR (Missing Completely at Random), or if it is indeed things that could not be grouped as pedestrians, vehicles, or cyclists. **70%** of the data had a Unknown category.
-* PCA, and Hypothesis Testing.
+* I went through determining if it was MCAR, MAR, or MNAR. I did Null-permutation Hypothesis Testing
 * Our Process
     * We added potentially helpful derived-columns like the entity's size (length x width), "slenderness" (ratio of length and width), speed (vector norm of x/y velocity columns)
     * We split the dataset into known and unknown.
