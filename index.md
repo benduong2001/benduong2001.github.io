@@ -33,7 +33,7 @@ Hello, I am **Benson Duong**, a Data Science student at the University of Califo
 
 ---
 ### Restaurant ML Recommender *(Fall 2022 - Winter 2023)*
-[Food Recommendation Data Science Project](food_recommendation_intro.md)
+[Restaurant Recommendation Data Science Project](food_recommendation_intro.md)
 <img src="images/images_food_recommendation/keywords_business.png?raw=true"/>
 ---
 
@@ -52,8 +52,8 @@ Hello, I am **Benson Duong**, a Data Science student at the University of Califo
 ---
 
 ---
-### - AI Image Auto-Captioner *(Fall 2022)*
-[AI Image Auto-Captioner PyTorch Project with PyTorch](cse151b.md)
+### - Image ML Auto-Captioner *(Fall 2022)*
+[Image ML Auto-Captioner PyTorch Project with PyTorch](cse151b.md)
 <img src="images/images_cse151b/image_autocaptioner.png">
 ---
 
