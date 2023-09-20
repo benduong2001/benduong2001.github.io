@@ -3,7 +3,7 @@
 ![](images/images_food_recommendation/foodcluster.png) 
 * **We can recommend a user of user-group 7 (pizza-lovers), to a restaurant of restaurant-group 9 (pizzarias). Or dessert lovers (user groups 2, 5, 19) to dessert restaurants (restaurant-group 7). Or seafood-lovers (user-groups 1, 16) to seafood restaurants (restaurant-group 8).**
 
-[(Click here for a more in-depth and ML-technical description of this project!)](/food_recommendation_technical.md)
+[(Click here for a more in-depth and ML-technical description of this project!)](/food_recommendation.md)
 
 [(Link to Github Repo)](https://github.com/benduong2001/Food-Recommendation)
 
