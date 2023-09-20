@@ -33,7 +33,7 @@ Hello, I am **Benson Duong**, a Data Science student at the University of Califo
 
 ---
 ### Restaurant ML Recommender *(Fall 2022 - Winter 2023)*
-[Food Recommendation Data Science Project](food_recommendation.md)
+[Food Recommendation Data Science Project](food_recommendation_intro.md)
 <img src="images/images_food_recommendation/keywords_business.png?raw=true"/>
 ---
 
