@@ -1,17 +1,24 @@
 
-# Food Recommendation Data Science Project
+# Restaurant Recommendation Data Science Project
+![](images/images_food_recommendation/foodcluster.png) 
+* **We can recommend a user of user-group 7 (pizza-lovers), to a restaurant of restaurant-group 9 (pizzarias). Or dessert lovers (user groups 2, 5, 19) to dessert restaurants (restaurant-group 7). Or seafood-lovers (user-groups 1, 16) to seafood restaurants (restaurant-group 8).**
 
-* This independent data science project of mines, explores food related datasets (unstructured text data) for prediction data analysis tasks involving customer recommendation. Two tasks or "sub-projects" were done:
-    * Task 1 is about predicting whether a given user will rate a given restaurant negatively, with their text reviews as input data.
-    * Task 2 is about predicting whether a given user likely would visit a given restaurant, using text and images as input data.
-       * During the feature analysis, the unsupervised ML code also serendipitously uncovered indirect associations shared amongst users and restaurants (that would have been too subtle for a human analyst to notice), allowing a automated way to divide the users and restaurants demographic into indirect sub-groups, based on the types of restaurants they visit and the types of customers they get -respectively. 
+[(Link to Github Repo)](https://github.com/benduong2001/Food-Recommendation)
 
+* This independent data science project of mines explores food related datasets (unstructured text data) for prediction data analysis tasks involving customer recommendation. Two sub-projects were done.
+    * The 1st sub-project is building a classification model that uses the textual contents of a customer's review to predict if they rate the restaurant favorably or not. 
+    * The 2nd sub-project is building an auto-recommender model that can decide if a customer and a restaurant are compatible. The findings also help create segmentations of the customers and restaurants based on food vocabulary.
 * This project will show:
-   * Articulately-reasoned Feature Engineering using NLP techniques (Word2Vec and Tf-Idf), to transform unstructured text data into a structured tabular format, so that it can be compatibly trained with linear models as baseline (specifically logistic regression).
    * Data Analysis and results applicable to useful business questions on customer recommendation, such as providing insights to user demographic sub-groups.
    * Succinct and Intuitive Data visualizations
-   * A balanced use of both basic machine learning (e.g. Sklearn logistic regression) vs deep learning (e.g. multi-layered neural networks, pretrained models)- nuanced understanding when either should be used appropriately, thereby seeing their pro's and con's.
-   * Python code that includes object oriented programming, and Pyspark. It is also designed in a way to be updateable, and extensible for new incoming data
+   * Articulately-reasoned Feature Engineering using NLP techniques (Word2Vec and Tf-Idf), to transform unstructured text data into a structured tabular format, so that it can be compatibly trained with linear models as baseline (specifically logistic regression).
+
+* Used Tools (Everything is done in Python)
+  * Scikit-learn (for TfIdf Vectorizer and Logistic Regression)
+  * Matplotlib for visualizations
+  * Pandas
+  * NumPy
+  * Tensorflow and Keras
 
 [(Link to Github Repo)](https://github.com/benduong2001/Food-Recommendation)
 
