@@ -26,8 +26,8 @@ Hello, I am **Benson Duong**, a Data Science student at the University of Califo
 # Data Science Project Portfolio
 
 ---
-### - Industry Research Project *(Fall 2022 - Winter 2023)*
-[Industry Research Project](capstoneproject.md)
+### - Industry Research Capstone Project *(Fall 2022 - Winter 2023)*
+[Industry Research Capstone Project](capstoneproject.md)
 <img src="images/images_dsc180/image4.png?raw=true"/>
 ---
 
