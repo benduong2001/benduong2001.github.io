@@ -166,6 +166,9 @@ I employed various actions and improved the baseline model's accuracy from being
         * LOG(TEMPERATURE): the average temperature of all the counties that the order's delivery route crosses through
         * POPULATION_DENSITY: the average population density (or urban-ness) of all the counties that the order's delivery route crosses through
         * APPROXIMATE_DRIVING_ROUTE_MILEAGE: the length of the order's delivery route (the euclidean distance between the origin and destination zipcode node)
+     
+![](images/images_dsc180/carrier_map.png)
+
 
 ### PowerBI Visuals {#PowerBI-Visuals}
 
