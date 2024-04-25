@@ -1,6 +1,8 @@
-# Welcome to My Portfolio Website
+# Website
 
+<!--
 Hello, I am **Benson Duong**, a Data Science student at the University of California, San Diego, learning about the fields of data science, programming, analysis, statistics, and machine learning. My projects and work have a recurring interest in social data, looking into business data or map data.
+-->
 
 <!--* In my work and projects, I've handled with all aspects of the data science project process for actionable, business impact:
   * Using ETL to retrieve online raw data and transform them to be usable for analysis and modeling
@@ -9,6 +11,7 @@ Hello, I am **Benson Duong**, a Data Science student at the University of Califo
   * Developing predictive ML model and iteratively improving its accuracy metrics
   * Using Python programming to streamline and productionize these steps, making said business impacts easier to find, and more tidy for teammates
 -->
+<!--
 * I work with the following data tools and more:
   * **Python**- 5 years of fluency (Pandas, NumPy, GeoPandas, Scikit-Learn, Matplotlib, TensorFlow, PyTorch, PySpark)
   * **SQL** (PostGreSQL, DuckDB, SQLite, Microsoft SQL Server), Snowflake
@@ -17,6 +20,7 @@ Hello, I am **Benson Duong**, a Data Science student at the University of Califo
   * **R**
   * Other non data-science related languages or tools:
     * JavaScript, Java, Git, Docker. 
+-->
 
 <!--[Resume](BensonDuongLtxResumeV13tqh.pdf)-->
 
