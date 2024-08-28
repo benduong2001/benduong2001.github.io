@@ -30,15 +30,16 @@ Hello, I am **Benson Duong**, a Data Science student at the University of Califo
 # Data Science Project Portfolio
 
 ---
-### - Industry Research Capstone Project *(Fall 2022 - Winter 2023)*
+<!--### - Industry Research Capstone Project *(Fall 2022 - Winter 2023)*
 [Industry Research Capstone Project](capstoneproject.md)
-<img src="images/images_dsc180/image4.png?raw=true"/>
+<img src="images/images_dsc180/image4.png?raw=true"/>-->
 ---
 
 ---
+<!--
 ### Restaurant ML Recommender *(Fall 2022 - Winter 2023)*
 [Restaurant Recommendation Data Science Project](food_recommendation_intro.md)
-<img src="images/images_food_recommendation/keywords_business.png?raw=true"/>
+<img src="images/images_food_recommendation/keywords_business.png?raw=true"/>-->
 ---
 
 ---
@@ -55,6 +56,7 @@ Hello, I am **Benson Duong**, a Data Science student at the University of Califo
 <!---img src="images/images_airbnb_sd/sd_airbnb_cover_img.png?raw=true"/--->
 ---
 
+<!--
 ---
 ### - Image ML Auto-Captioner *(Fall 2022)*
 [Image ML Auto-Captioner PyTorch Project with PyTorch](cse151b.md)
@@ -67,3 +69,4 @@ Hello, I am **Benson Duong**, a Data Science student at the University of Califo
 ---
 
 Pages: **1**,   [2](index_pg2.md)
+-->
